@@ -89,7 +89,7 @@ def _build_generate_prompt(grade, question_type, count, knowledge_point=None, hi
     """构建生成题目的 prompt。
 
     Args:
-        grade: 年级（1-6）
+        grade: 年级（1-5）
         question_type: 题型（choice/fill/judge/correction）
         count: 题目数量
         knowledge_point: 可选，指定知识点
@@ -205,7 +205,7 @@ def generate_questions(grade, question_type, count=5, knowledge_point=None, hist
     """生成指定年级和题型的英语语法题。
 
     Args:
-        grade: 年级（1-6）
+        grade: 年级（1-5）
         question_type: 题型（choice/fill/judge/correction）
         count: 题目数量，默认5
         knowledge_point: 可选，指定知识点
