@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学习报告</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
     <script>
 var StorageManager = (function () {
     var STORAGE_KEY = "grammar_app_data";
@@ -84,6 +85,7 @@ var StorageManager = (function () {
             --success: #51CF66;
             --success-light: #8CE99A;
             --danger: #FF6B6B;
+            --danger-dark: #C92A2A;
             --info: #74C0FC;
             --info-light: #A5D8FF;
             --bg: #FFF4E6;
@@ -107,9 +109,49 @@ var StorageManager = (function () {
             font-size: var(--font-md);
             line-height: 1.7;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
-        .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
-        h1 { font-size: 32px; color: var(--primary-dark); text-align: center; font-weight: 800; }
+
+        /* === Background Blobs === */
+        .bg-blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.35;
+            z-index: 0;
+            pointer-events: none;
+            animation: blobDrift 18s ease-in-out infinite alternate;
+        }
+        .bg-blob-1 {
+            width: 320px; height: 320px;
+            background: radial-gradient(circle, #FF6B6B 0%, transparent 70%);
+            top: -80px; left: -60px;
+            animation-duration: 20s;
+        }
+        .bg-blob-2 {
+            width: 280px; height: 280px;
+            background: radial-gradient(circle, #FFA94D 0%, transparent 70%);
+            top: 40%; right: -80px;
+            animation-duration: 24s;
+            animation-delay: -6s;
+        }
+        .bg-blob-3 {
+            width: 240px; height: 240px;
+            background: radial-gradient(circle, #FFD43B 0%, transparent 70%);
+            bottom: -60px; left: 30%;
+            animation-duration: 22s;
+            animation-delay: -12s;
+        }
+        @keyframes blobDrift {
+            0%   { transform: translate(0, 0) scale(1); }
+            33%  { transform: translate(30px, -20px) scale(1.08); }
+            66%  { transform: translate(-20px, 25px) scale(0.95); }
+            100% { transform: translate(15px, -10px) scale(1.04); }
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; position: relative; z-index: 1; }
+        h1 { font-size: 32px; text-align: center; font-weight: 800; background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: titleFloat 3s ease-in-out infinite; }
+        @keyframes titleFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
         h2 { font-size: 22px; color: var(--text); margin-bottom: 16px; font-weight: 700; }
         .subtitle { text-align: center; color: var(--text-light); font-size: var(--font-lg); margin-top: 8px; }
         .hero { padding: 40px 0 28px; text-align: center; }
@@ -117,9 +159,29 @@ var StorageManager = (function () {
             background: var(--card-bg);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            padding: 28px 24px;
+            padding: 32px 28px;
             margin-bottom: 20px;
             border: 2px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.5s ease both;
+        }
+        .card:nth-child(2) { animation-delay: 0.08s; }
+        .card:nth-child(3) { animation-delay: 0.16s; }
+        .card:nth-child(4) { animation-delay: 0.24s; }
+        .card::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+        }
+        .card:hover::after { left: 120%; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
         .page-header { padding: 16px 0 0; }
         .page-header .back-link {
@@ -142,12 +204,17 @@ var StorageManager = (function () {
             padding: 20px;
             text-align: center;
             border: 2px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-tile:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(255, 107, 107, 0.15);
         }
         .stat-tile.accent { background: linear-gradient(135deg, #FFF9DB, #FFF3BF); border-color: var(--accent); }
         .stat-tile.success { background: linear-gradient(135deg, #EBFBEE, #C3FAE8); border-color: var(--success); }
         .stat-tile.info { background: linear-gradient(135deg, #F0F6FF, #E0ECFF); border-color: var(--info); }
         .stat-icon { font-size: 32px; margin-bottom: 6px; }
-        .stat-value { font-size: 28px; font-weight: 800; color: var(--primary-dark); }
+        .stat-value { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, var(--primary-dark), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .stat-label { font-size: var(--font-sm); color: var(--text-light); margin-top: 4px; }
         
         /* === Knowledge Point Mastery === */
@@ -167,7 +234,19 @@ var StorageManager = (function () {
             overflow: hidden;
             margin-bottom: 6px;
         }
-        .kp-bar { height: 100%; border-radius: 8px; transition: width 0.6s ease; }
+        .kp-bar { height: 100%; border-radius: 8px; transition: width 0.6s ease; position: relative; overflow: hidden; }
+        .kp-bar::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 200%; height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+            animation: shimmer 2.5s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0%   { transform: translateX(-50%); }
+            100% { transform: translateX(50%); }
+        }
         .kp-bar.green { background: linear-gradient(90deg, var(--success), var(--success-light)); }
         .kp-bar.yellow { background: linear-gradient(90deg, var(--secondary), var(--accent)); }
         .kp-bar.red { background: linear-gradient(90deg, var(--danger), var(--primary-light)); }
@@ -195,6 +274,20 @@ var StorageManager = (function () {
             border: 2px solid var(--accent);
             opacity: 1;
             box-shadow: 0 2px 8px rgba(255, 212, 59, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .badge-item.earned::after {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: badgeShine 3s ease-in-out infinite;
+        }
+        @keyframes badgeShine {
+            0%, 70%, 100% { left: -100%; }
+            85% { left: 120%; }
         }
         .badge-item-icon { font-size: 36px; margin-bottom: 4px; }
         .badge-item-title { font-size: var(--font-sm); font-weight: 700; color: var(--text); }
@@ -209,22 +302,35 @@ var StorageManager = (function () {
             border: none;
             border-radius: var(--radius-sm);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.15s ease;
             text-decoration: none;
             text-align: center;
+            position: relative;
         }
+        .btn:active:not(:disabled) { transform: translateY(3px) !important; }
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: #fff;
-            box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 5px 0 #C92A2A, 0 8px 18px rgba(255, 107, 107, 0.3);
         }
-        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 7px 0 #C92A2A, 0 12px 24px rgba(255, 107, 107, 0.4); }
+        .btn-primary:active:not(:disabled) { box-shadow: 0 2px 0 #C92A2A, 0 4px 10px rgba(255, 107, 107, 0.2); }
         .btn-danger {
             background: linear-gradient(135deg, #ADB5BD, #CED4DA);
             color: #fff;
+            box-shadow: 0 5px 0 #868E96, 0 8px 18px rgba(134, 142, 150, 0.3);
         }
+        .btn-danger:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 7px 0 #868E96, 0 12px 24px rgba(134, 142, 150, 0.4); }
+        .btn-danger:active:not(:disabled) { box-shadow: 0 2px 0 #868E96, 0 4px 10px rgba(134, 142, 150, 0.2); }
         .btn-large { width: 100%; padding: 18px; font-size: 20px; margin-top: 12px; }
         
+        /* === Reduced Motion === */
+        @media (prefers-reduced-motion: reduce) {
+            .bg-blob, h1, .card { animation: none !important; }
+            .btn, .card, .stat-tile { transition: none !important; }
+            .card::after, .badge-item.earned::after, .kp-bar::after { display: none; }
+        }
+
         @media (max-width: 480px) {
             .container { padding: 16px 10px 40px; }
             h1 { font-size: 26px; }
@@ -236,6 +342,9 @@ var StorageManager = (function () {
     </style>
 </head>
 <body>
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
     <div class="container">
         <div class="page-header">
             <a href="{{ config.APPLICATION_ROOT }}/" class="back-link">← 返回首页</a>
@@ -311,17 +420,31 @@ var StorageManager = (function () {
             return div.innerHTML;
         }
         
+        function animateCountUp(el, start, end, duration, suffix) {
+            var startTime = null;
+            suffix = suffix || "";
+            function step(ts) {
+                if (!startTime) startTime = ts;
+                var progress = Math.min((ts - startTime) / duration, 1);
+                var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+                var val = Math.round(start + (end - start) * eased);
+                el.textContent = val + suffix;
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
         function init() {
             var data = StorageManager.load();
             var totalAnswered = data.totalAnswered || 0;
             var totalCorrect = data.totalCorrect || 0;
             var accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
-            
-            document.getElementById("stat-total").textContent = totalAnswered;
-            document.getElementById("stat-correct").textContent = totalCorrect;
-            document.getElementById("stat-accuracy").textContent = accuracy + "%";
-            document.getElementById("stat-best-streak").textContent = data.bestStreak || 0;
-            document.getElementById("stat-score").textContent = data.totalScore || 0;
+
+            animateCountUp(document.getElementById("stat-total"), 0, totalAnswered, 700);
+            animateCountUp(document.getElementById("stat-correct"), 0, totalCorrect, 700);
+            animateCountUp(document.getElementById("stat-accuracy"), 0, accuracy, 700, "%");
+            animateCountUp(document.getElementById("stat-best-streak"), 0, data.bestStreak || 0, 700);
+            animateCountUp(document.getElementById("stat-score"), 0, data.totalScore || 0, 800);
             
             renderKnowledgeStats(data);
             renderBadges(data);

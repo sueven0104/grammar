@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英语语法练习</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
     <style>
 /* === Reset & Base === */
 *, *::before, *::after {
@@ -25,6 +26,7 @@
     --success-light: #8CE99A;
     --danger: #FF6B6B;
     --danger-light: #FFA8A8;
+    --danger-dark: #C92A2A;
     --info: #74C0FC;
     --info-light: #A5D8FF;
     --purple: #B197FC;
@@ -40,7 +42,7 @@
     --radius: 20px;
     --radius-sm: 14px;
     --shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
-    --shadow-hover: 0 8px 30px rgba(255, 107, 107, 0.2);
+    --shadow-hover: 0 12px 36px rgba(255, 107, 107, 0.22);
 
     --font-xl: 22px;
     --font-lg: 18px;
@@ -57,20 +59,68 @@ body {
     font-size: var(--font-md);
     line-height: 1.7;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* === Floating background blobs === */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+    animation: drift 24s ease-in-out infinite;
+}
+.bg-blob.b1 {
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, #FF6B6B, transparent 70%);
+    top: -80px; left: -100px;
+    animation-delay: 0s;
+}
+.bg-blob.b2 {
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, #FFD43B, transparent 70%);
+    bottom: -120px; right: -120px;
+    animation-delay: -8s;
+}
+.bg-blob.b3 {
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, #FFA94D, transparent 70%);
+    top: 40%; right: -80px;
+    animation-delay: -16s;
+}
+@keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(40px, -30px) scale(1.1); }
+    66% { transform: translate(-30px, 40px) scale(0.95); }
 }
 
 .container {
     max-width: 720px;
     margin: 0 auto;
     padding: 24px 16px 48px;
+    position: relative;
+    z-index: 1;
 }
 
 /* === Typography === */
 h1 {
-    font-size: 32px;
-    color: var(--primary-dark);
+    font-size: 34px;
     text-align: center;
     font-weight: 800;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFA94D 50%, #FFD43B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: titleFloat 4s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 h2 {
@@ -92,7 +142,33 @@ h2 {
 .hero {
     padding: 40px 0 28px;
     text-align: center;
+    animation: fadeInUp 0.6s ease both;
 }
+
+/* === Stats chips (home) === */
+.stats-chips {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+.stats-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    font-size: var(--font-sm);
+    font-weight: 700;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.1);
+    border: 1.5px solid var(--border);
+}
+.stats-chip .chip-icon { font-size: 18px; }
+.stats-chip .chip-value { color: var(--primary-dark); }
 
 /* === Card === */
 .card {
@@ -103,6 +179,7 @@ h2 {
     margin-bottom: 24px;
     border: 2px solid var(--border);
     transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeInUp 0.6s ease both;
 }
 
 /* === Form Elements === */
@@ -195,10 +272,22 @@ h2 {
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
     text-decoration: none;
     text-align: center;
     letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+/* glossy highlight on top */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 45%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
+    border-radius: var(--radius-sm) var(--radius-sm) 50% 50%;
+    pointer-events: none;
 }
 
 .btn:disabled {
@@ -208,30 +297,36 @@ h2 {
 }
 
 .btn:active:not(:disabled) {
-    transform: scale(0.95) !important;
+    transform: translateY(3px) !important;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 5px 0 var(--primary-dark), 0 8px 18px rgba(255, 107, 107, 0.3);
 }
 
 .btn-primary:hover:not(:disabled) {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 7px 0 var(--primary-dark), 0 12px 24px rgba(255, 107, 107, 0.4);
+}
+.btn-primary:active:not(:disabled) {
+    box-shadow: 0 2px 0 var(--primary-dark), 0 4px 10px rgba(255, 107, 107, 0.3);
 }
 
 .btn-secondary {
     background: linear-gradient(135deg, var(--success), var(--success-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(81, 207, 102, 0.3);
+    box-shadow: 0 5px 0 #2B8A3E, 0 8px 18px rgba(81, 207, 102, 0.3);
 }
 
 .btn-secondary:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+    box-shadow: 0 7px 0 #2B8A3E, 0 12px 24px rgba(81, 207, 102, 0.4);
+}
+.btn-secondary:active:not(:disabled) {
+    box-shadow: 0 2px 0 #2B8A3E, 0 4px 10px rgba(81, 207, 102, 0.3);
 }
 
 .btn-large {
@@ -819,11 +914,36 @@ h2 {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     border: none;
+    position: relative;
+    overflow: hidden;
 }
+/* Shine sweep on hover */
+.module-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -120%;
+    width: 60%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+.module-card:hover::after { left: 160%; }
 
 .module-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba(255, 107, 107, 0.2);
+    box-shadow: 0 16px 36px rgba(255, 107, 107, 0.2);
+}
+
+.module-card:hover .module-icon {
+    animation: wiggle 0.6s ease;
+}
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    20% { transform: rotate(-12deg) scale(1.1); }
+    40% { transform: rotate(10deg) scale(1.1); }
+    60% { transform: rotate(-6deg); }
+    80% { transform: rotate(4deg); }
 }
 
 .module-card.card-grammar {
@@ -836,9 +956,30 @@ h2 {
     border: 3px solid var(--secondary);
 }
 
+.module-card.card-wrong {
+    background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
+    border: 3px solid var(--primary-light);
+    text-decoration: none;
+}
+
+.module-card.card-stats {
+    background: linear-gradient(135deg, #F0F6FF, #E0ECFF);
+    border: 3px solid var(--info);
+    text-decoration: none;
+}
+
+.module-card.card-clear {
+    background: linear-gradient(135deg, #F5F5F5, #E8E8E8);
+    border: 3px solid #B0B0B0;
+    cursor: pointer;
+}
+.module-card.card-clear .module-title { color: #6B6B6B; }
+
 .module-icon {
     font-size: 56px;
     margin-bottom: 20px;
+    display: inline-block;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
 }
 
 .module-title {
@@ -1048,6 +1189,11 @@ h2 {
     100% { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 /* === Score Float Animation === */
 .score-float {
     position: fixed;
@@ -1127,6 +1273,16 @@ h2 {
     font-size: var(--font-md);
     color: #8B7355;
 }
+
+/* ========================================
+   CARD STAGGER ENTRY
+   ======================================== */
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.15s; }
+.card:nth-child(3) { animation-delay: 0.25s; }
+.module-cards:nth-child(2) { animation-delay: 0.1s; }
+.module-cards:nth-child(3) { animation-delay: 0.2s; }
 
 /* ========================================
    RESPONSIVE
@@ -1253,13 +1409,34 @@ h2 {
         font-size: 20px;
     }
 }
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    .bg-blob { display: none; }
+    h1, .hero, .card { animation: none !important; }
+}
     </style>
 </head>
 <body>
+    <!-- Floating background blobs -->
+    <div class="bg-blob b1"></div>
+    <div class="bg-blob b2"></div>
+    <div class="bg-blob b3"></div>
+
     <div class="container">
         <div class="hero">
             <h1>🌟 英语语法小达人</h1>
             <p class="subtitle">选一个模块，开始你的冒险吧！</p>
+            <div class="stats-chips" id="stats-chips">
+                <span class="stats-chip"><span class="chip-icon">⭐</span>积分 <span class="chip-value" id="chip-score">0</span></span>
+                <span class="stats-chip"><span class="chip-icon">🔥</span>最佳连击 <span class="chip-value" id="chip-streak">0</span></span>
+                <span class="stats-chip"><span class="chip-icon">📚</span>累计答题 <span class="chip-value" id="chip-total">0</span></span>
+            </div>
         </div>
 
         <div class="module-cards">
@@ -1282,21 +1459,21 @@ h2 {
 
         <div class="module-cards" style="margin-top: 16px;">
             <!-- 错题本模块 -->
-            <a href="{{ config.APPLICATION_ROOT }}/wrong-questions" class="card module-card" style="background: linear-gradient(135deg, #FFF0F0, #FFE0E0); border: 3px solid var(--primary-light); text-decoration: none;">
+            <a href="{{ config.APPLICATION_ROOT }}/wrong-questions" class="card module-card card-wrong">
                 <div class="module-icon">📒</div>
                 <h2 class="module-title">错题本</h2>
                 <p class="module-desc">复习答错的题目，巩固薄弱点</p>
             </a>
             
             <!-- 学习报告模块 -->
-            <a href="{{ config.APPLICATION_ROOT }}/stats" class="card module-card" style="background: linear-gradient(135deg, #F0F6FF, #E0ECFF); border: 3px solid var(--info); text-decoration: none;">
+            <a href="{{ config.APPLICATION_ROOT }}/stats" class="card module-card card-stats">
                 <div class="module-icon">📊</div>
                 <h2 class="module-title">学习报告</h2>
                 <p class="module-desc">查看学习进度和知识点掌握情况</p>
             </a>
             
             <!-- 清除数据模块 -->
-            <button id="clear-data-btn" class="card module-card" style="background: linear-gradient(135deg, #F5F5F5, #E8E8E8); border: 3px solid #999; cursor: pointer;">
+            <button id="clear-data-btn" class="card module-card card-clear">
                 <div class="module-icon">🗑️</div>
                 <h2 class="module-title">清除数据</h2>
                 <p class="module-desc">清除做题历史和错题记录</p>
@@ -1342,6 +1519,16 @@ h2 {
         
         // 绑定清除按钮事件
         document.getElementById("clear-data-btn").addEventListener("click", clearAllData);
+
+        // 填充统计标签（只读展示）
+        (function fillStatsChips() {
+            try {
+                var data = JSON.parse(localStorage.getItem("grammar_app_data") || "{}");
+                document.getElementById("chip-score").textContent = data.totalScore || 0;
+                document.getElementById("chip-streak").textContent = data.bestStreak || 0;
+                document.getElementById("chip-total").textContent = data.totalAnswered || 0;
+            } catch (e) {}
+        })();
     </script>
 </body>
 </html>

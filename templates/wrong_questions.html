@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>错题本</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
 var StorageManager = (function () {
@@ -134,6 +135,8 @@ var LearningBuddy = (function () {
     --text-light: #8B7355;
     --border: #FFD8A8;
 
+    --danger-dark: #C92A2A;
+
     --radius: 20px;
     --radius-sm: 14px;
     --shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
@@ -154,20 +157,69 @@ body {
     font-size: var(--font-md);
     line-height: 1.7;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* === Background Blobs === */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+    animation: blobDrift 18s ease-in-out infinite alternate;
+}
+.bg-blob-1 {
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, #FF6B6B 0%, transparent 70%);
+    top: -80px; left: -60px;
+    animation-duration: 20s;
+}
+.bg-blob-2 {
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, #FFA94D 0%, transparent 70%);
+    top: 40%; right: -80px;
+    animation-duration: 24s;
+    animation-delay: -6s;
+}
+.bg-blob-3 {
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, #FFD43B 0%, transparent 70%);
+    bottom: -60px; left: 30%;
+    animation-duration: 22s;
+    animation-delay: -12s;
+}
+@keyframes blobDrift {
+    0%   { transform: translate(0, 0) scale(1); }
+    33%  { transform: translate(30px, -20px) scale(1.08); }
+    66%  { transform: translate(-20px, 25px) scale(0.95); }
+    100% { transform: translate(15px, -10px) scale(1.04); }
 }
 
 .container {
     max-width: 720px;
     margin: 0 auto;
     padding: 24px 16px 48px;
+    position: relative;
+    z-index: 1;
 }
 
 /* === Typography === */
 h1 {
     font-size: 32px;
-    color: var(--primary-dark);
     text-align: center;
     font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleFloat 3s ease-in-out infinite;
+}
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 h2 {
@@ -200,6 +252,20 @@ h2 {
     margin-bottom: 24px;
     border: 2px solid var(--border);
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+.card:hover::after {
+    left: 120%;
 }
 
 /* === Page Header === */
@@ -231,54 +297,89 @@ h2 {
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.15s ease;
     text-decoration: none;
     text-align: center;
     letter-spacing: 0.5px;
+    position: relative;
 }
 
 .btn:disabled {
     opacity: 0.45;
     cursor: not-allowed;
     transform: none !important;
+    box-shadow: none !important;
 }
 
 .btn:active:not(:disabled) {
-    transform: scale(0.95) !important;
+    transform: translateY(3px) !important;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 5px 0 #C92A2A, 0 8px 18px rgba(255, 107, 107, 0.3);
 }
 
 .btn-primary:hover:not(:disabled) {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 7px 0 #C92A2A, 0 12px 24px rgba(255, 107, 107, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+    box-shadow: 0 2px 0 #C92A2A, 0 4px 10px rgba(255, 107, 107, 0.2);
 }
 
 .btn-secondary {
     background: linear-gradient(135deg, var(--success), var(--success-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(81, 207, 102, 0.3);
+    box-shadow: 0 5px 0 #2B8A3E, 0 8px 18px rgba(81, 207, 102, 0.3);
 }
 
 .btn-secondary:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+    box-shadow: 0 7px 0 #2B8A3E, 0 12px 24px rgba(81, 207, 102, 0.4);
+}
+
+.btn-secondary:active:not(:disabled) {
+    box-shadow: 0 2px 0 #2B8A3E, 0 4px 10px rgba(81, 207, 102, 0.2);
 }
 
 .btn-warning {
     background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255, 169, 77, 0.3);
+    box-shadow: 0 5px 0 #E67700, 0 8px 18px rgba(255, 169, 77, 0.3);
 }
 
 .btn-warning:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 169, 77, 0.4);
+    box-shadow: 0 7px 0 #E67700, 0 12px 24px rgba(255, 169, 77, 0.4);
+}
+
+.btn-warning:active:not(:disabled) {
+    box-shadow: 0 2px 0 #E67700, 0 4px 10px rgba(255, 169, 77, 0.2);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #339AF0, #74C0FC);
+    color: #fff;
+    box-shadow: 0 5px 0 #1864AB, 0 8px 18px rgba(51, 154, 240, 0.3);
+}
+
+.btn-info:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #1864AB, 0 12px 24px rgba(51, 154, 240, 0.4);
+}
+
+.btn-info:active:not(:disabled) {
+    box-shadow: 0 2px 0 #1864AB, 0 4px 10px rgba(51, 154, 240, 0.2);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+    box-shadow: 0 3px 0 currentColor, 0 5px 12px rgba(0,0,0,0.1);
 }
 
 .btn-large {
@@ -389,7 +490,8 @@ h2 {
 
 /* === Choice Options === */
 .option-btn {
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 18px 22px;
     margin-bottom: 14px;
@@ -402,6 +504,21 @@ h2 {
     cursor: pointer;
     transition: all 0.2s ease;
     color: var(--text);
+    gap: 14px;
+}
+.option-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-light);
+    flex-shrink: 0;
+    transition: all 0.2s ease;
 }
 .option-btn:hover {
     border-color: var(--primary);
@@ -414,14 +531,26 @@ h2 {
     font-weight: 700;
     box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
 }
+.option-btn.selected .option-badge {
+    background: var(--primary);
+    color: #fff;
+}
 .option-btn.correct {
     border-color: var(--success);
     background: #EBFBEE;
     color: #2B8A3E;
 }
+.option-btn.correct .option-badge {
+    background: var(--success);
+    color: #fff;
+}
 .option-btn.wrong {
     border-color: var(--danger);
     background: #FFF0F0;
+}
+.option-btn.wrong .option-badge {
+    background: var(--danger);
+    color: #fff;
 }
 .option-btn:disabled {
     cursor: default;
@@ -530,7 +659,10 @@ h2 {
 .score-display {
     font-size: 72px;
     font-weight: 800;
-    color: var(--primary);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin: 20px 0;
 }
 
@@ -545,6 +677,14 @@ h2 {
     padding: 16px;
     border-radius: var(--radius-sm);
     font-weight: 700;
+}
+.encourage-gold {
+    background: linear-gradient(135deg, #FFF9DB, #FFF3BF);
+    border: 2px solid var(--accent);
+}
+.encourage-orange {
+    background: linear-gradient(135deg, #FFF4E6, #FFE8CC);
+    border: 2px solid var(--secondary);
 }
 
 /* === Review List === */
@@ -591,6 +731,26 @@ h2 {
 
 .review-badge.wrong {
     background: var(--danger);
+}
+
+.review-progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--bg-alt);
+    border-radius: 3px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+.review-progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+.review-progress-fill.mastered {
+    background: linear-gradient(90deg, var(--success), var(--success-light));
+}
+.review-progress-fill.in-progress {
+    background: linear-gradient(90deg, var(--secondary), var(--secondary-light));
 }
 
 .review-item-question {
@@ -721,6 +881,65 @@ h2 {
     50% { transform: scale(1.15); }
     70% { transform: scale(0.95); }
     100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.06); opacity: 0.9; }
+}
+
+/* === Empty State Breathing === */
+#empty-state {
+    animation: breathe 3s ease-in-out infinite;
+}
+
+/* === Review Progress Dots === */
+.progress-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 12px 0;
+}
+.progress-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    transition: all 0.3s ease;
+}
+.progress-dot.active {
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+.progress-dot.done-correct {
+    background: #51CF66;
+    box-shadow: 0 0 6px rgba(81,207,102,0.5);
+}
+.progress-dot.done-wrong {
+    background: #FF6B6B;
+    box-shadow: 0 0 6px rgba(255,107,107,0.5);
+}
+
+/* === Review Item fadeInUp === */
+.review-item {
+    animation: fadeInUp 0.4s ease both;
+}
+.review-item:nth-child(1) { animation-delay: 0.0s; }
+.review-item:nth-child(2) { animation-delay: 0.06s; }
+.review-item:nth-child(3) { animation-delay: 0.12s; }
+.review-item:nth-child(4) { animation-delay: 0.18s; }
+.review-item:nth-child(5) { animation-delay: 0.24s; }
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+    .bg-blob, h1, #empty-state, .review-item { animation: none !important; }
+    .btn, .card, .option-btn { transition: none !important; }
+    .card::after { display: none; }
 }
 
 /* === Learning Buddy === */
@@ -880,6 +1099,9 @@ h2 {
     </style>
 </head>
 <body>
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
     <div class="container">
         <div class="page-header">
             <a href="{{ config.APPLICATION_ROOT }}/" class="back-link">← 返回首页</a>
@@ -1028,6 +1250,7 @@ h2 {
                         '<div>✅ 正确答案：' + escapeHtml(String(q.correctAnswer)) + '</div>' +
                         (q.knowledgePoint ? '<div>💡 知识点：' + escapeHtml(q.knowledgePoint) + '</div>' : '') +
                         '<div style="margin-top: 10px; color: var(--primary);">🔄 已复习：' + q.reviewCount + '/3 ' + (q.reviewCount >= 3 ? '✨已掌握' : '') + '</div>' +
+                        '<div class="review-progress-bar"><div class="review-progress-fill ' + (q.reviewCount >= 3 ? 'mastered' : 'in-progress') + '" style="width:' + Math.min(q.reviewCount / 3 * 100, 100) + '%;"></div></div>' +
                         '<button class="btn btn-info btn-small explain-wrong-btn" data-id="' + q.id + '" style="margin-top: 8px;">🤖 AI 讲解</button>' +
                         '<div class="explain-result hidden" id="explain-wrong-' + q.id + '" style="margin-top: 8px;"></div>' +
                     '</div>';
@@ -1154,8 +1377,28 @@ h2 {
             currentIndex: 0,
             correct: 0,
             isSubmitted: false,
-            selectedAnswer: null
+            selectedAnswer: null,
+            results: [] // track correct/wrong per question
         };
+
+        function buildProgressDots() {
+            var html = "";
+            for (var i = 0; i < reviewState.questions.length; i++) {
+                var cls = "progress-dot";
+                if (i < reviewState.results.length) {
+                    cls += reviewState.results[i] ? " done-correct" : " done-wrong";
+                } else if (i === reviewState.currentIndex) {
+                    cls += " active";
+                }
+                html += '<span class="' + cls + '"></span>';
+            }
+            return html;
+        }
+
+        function updateProgressDots() {
+            var dotsEl = document.getElementById("review-dots");
+            if (dotsEl) dotsEl.innerHTML = buildProgressDots();
+        }
 
         function startReview() {
             var data = StorageManager.load();
@@ -1168,6 +1411,7 @@ h2 {
             reviewState.questions = shuffled.slice(0, 5);
             reviewState.currentIndex = 0;
             reviewState.correct = 0;
+            reviewState.results = [];
 
             document.getElementById("content-area").classList.add("hidden");
             document.getElementById("review-mode").classList.remove("hidden");
@@ -1186,7 +1430,7 @@ h2 {
                 inputHtml = '<div class="choice-options">';
                 q.options.forEach(function(opt, idx) {
                     var letter = String.fromCharCode(65 + idx);
-                    inputHtml += '<button class="option-btn" data-letter="' + letter + '">' + escapeHtml(opt) + '</button>';
+                    inputHtml += '<button class="option-btn" data-letter="' + letter + '"><span class="option-badge">' + letter + '</span><span>' + escapeHtml(opt) + '</span></button>';
                 });
                 inputHtml += '</div>';
             } else if (q.questionType === "judge") {
@@ -1205,6 +1449,7 @@ h2 {
                     '<span class="back-link" onclick="exitReview()" style="cursor:pointer;">← 退出复习</span>' +
                     '<div class="progress-info"><span id="review-progress">' + (reviewState.currentIndex + 1) + ' / ' + reviewState.questions.length + '</span></div>' +
                 '</div>' +
+                '<div class="progress-dots" id="review-dots">' + buildProgressDots() + '</div>' +
                 '<div class="card question-card">' +
                     '<div class="question-text"><span>' + escapeHtml(q.question) + '</span></div>' +
                     '<div class="answer-area" id="review-answer-area">' + inputHtml + '</div>' +
@@ -1297,6 +1542,7 @@ h2 {
             feedbackEl.classList.remove("hidden");
             if (isCorrect) {
                 reviewState.correct++;
+                reviewState.results.push(true);
                 // Increment review count
                 var data = StorageManager.load();
                 for (var i = 0; i < data.wrongQuestions.length; i++) {
@@ -1311,6 +1557,7 @@ h2 {
                 feedbackEl.innerHTML = "✅ 答对了！这道题你又掌握了一次！";
                 LearningBuddy.onCorrect(reviewState.correct);
             } else {
+                reviewState.results.push(false);
                 feedbackEl.className = "feedback-area wrong";
                 var correctDisplay = q.questionType === "judge" ? (q.correctAnswer === true ? "对" : "错") : q.correctAnswer;
                 feedbackEl.innerHTML = "❌ 答错了" +
@@ -1344,6 +1591,7 @@ h2 {
 
             document.getElementById("review-submit").classList.add("hidden");
             document.getElementById("review-next").classList.remove("hidden");
+            updateProgressDots();
         }
 
         function nextReview() {
@@ -1358,11 +1606,12 @@ h2 {
         function showReviewSummary() {
             var modeEl = document.getElementById("review-mode");
             var total = reviewState.questions.length;
+            var encourageClass = reviewState.correct === total ? 'encourage-gold' : 'encourage-orange';
             modeEl.innerHTML =
                 '<div class="card results-card">' +
                     '<h2>🎉 复习完成！</h2>' +
-                    '<div class="score-display"><span>' + reviewState.correct + '</span><span class="score-total"> / ' + total + '</span></div>' +
-                    '<div class="encourage-text" style="background:' + (reviewState.correct === total ? 'var(--success-light)' : 'var(--secondary-light)') + ';">' +
+                    '<div class="score-display"><span id="review-score-num">0</span><span class="score-total"> / ' + total + '</span></div>' +
+                    '<div class="encourage-text ' + encourageClass + '">' +
                         (reviewState.correct === total ? '太棒了！全部答对！' : '加油，多复习就会掌握的！') +
                     '</div>' +
                     '<div class="action-buttons" style="margin-top: 24px;">' +
@@ -1370,6 +1619,19 @@ h2 {
                         '<a href="' + APP_ROOT + '/" class="btn btn-secondary btn-large">🏠 返回首页</a>' +
                     '</div>' +
                 '</div>';
+            animateCountUp(document.getElementById("review-score-num"), 0, reviewState.correct, 600);
+        }
+
+        function animateCountUp(el, start, end, duration) {
+            var startTime = null;
+            function step(ts) {
+                if (!startTime) startTime = ts;
+                var progress = Math.min((ts - startTime) / duration, 1);
+                var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+                el.textContent = Math.round(start + (end - start) * eased);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
         }
 
         function exitReview() {

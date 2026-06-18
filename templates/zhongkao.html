@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中考题练习</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
     <style>
 /* === Reset & Base === */
 *, *::before, *::after {
@@ -24,6 +25,7 @@
     --success: #51CF66;
     --success-light: #8CE99A;
     --danger: #FF6B6B;
+    --danger-dark: #C92A2A;
     --danger-light: #FFA8A8;
     --info: #74C0FC;
     --info-light: #A5D8FF;
@@ -57,20 +59,69 @@ body {
     font-size: var(--font-md);
     line-height: 1.7;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* === Background Blobs === */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+    animation: blobDrift 18s ease-in-out infinite alternate;
+}
+.bg-blob-1 {
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, #FF6B6B 0%, transparent 70%);
+    top: -80px; left: -60px;
+    animation-duration: 20s;
+}
+.bg-blob-2 {
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, #FFA94D 0%, transparent 70%);
+    top: 40%; right: -80px;
+    animation-duration: 24s;
+    animation-delay: -6s;
+}
+.bg-blob-3 {
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, #FFD43B 0%, transparent 70%);
+    bottom: -60px; left: 30%;
+    animation-duration: 22s;
+    animation-delay: -12s;
+}
+@keyframes blobDrift {
+    0%   { transform: translate(0, 0) scale(1); }
+    33%  { transform: translate(30px, -20px) scale(1.08); }
+    66%  { transform: translate(-20px, 25px) scale(0.95); }
+    100% { transform: translate(15px, -10px) scale(1.04); }
 }
 
 .container {
     max-width: 720px;
     margin: 0 auto;
     padding: 24px 16px 48px;
+    position: relative;
+    z-index: 1;
 }
 
 /* === Typography === */
 h1 {
     font-size: 32px;
-    color: var(--primary-dark);
     text-align: center;
     font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleFloat 3s ease-in-out infinite;
+}
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
 }
 
 h2 {
@@ -103,6 +154,22 @@ h2 {
     margin-bottom: 24px;
     border: 2px solid var(--border);
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+.card:hover::after { left: 120%; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* === Form Elements === */
@@ -195,43 +262,53 @@ h2 {
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.15s ease;
     text-decoration: none;
     text-align: center;
     letter-spacing: 0.5px;
+    position: relative;
 }
 
 .btn:disabled {
     opacity: 0.45;
     cursor: not-allowed;
     transform: none !important;
+    box-shadow: none !important;
 }
 
 .btn:active:not(:disabled) {
-    transform: scale(0.95) !important;
+    transform: translateY(3px) !important;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 5px 0 #C92A2A, 0 8px 18px rgba(255, 107, 107, 0.3);
 }
 
 .btn-primary:hover:not(:disabled) {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 7px 0 #C92A2A, 0 12px 24px rgba(255, 107, 107, 0.4);
+}
+
+.btn-primary:active:not(:disabled) {
+    box-shadow: 0 2px 0 #C92A2A, 0 4px 10px rgba(255, 107, 107, 0.2);
 }
 
 .btn-secondary {
     background: linear-gradient(135deg, var(--success), var(--success-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(81, 207, 102, 0.3);
+    box-shadow: 0 5px 0 #2B8A3E, 0 8px 18px rgba(81, 207, 102, 0.3);
 }
 
 .btn-secondary:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+    box-shadow: 0 7px 0 #2B8A3E, 0 12px 24px rgba(81, 207, 102, 0.4);
+}
+
+.btn-secondary:active:not(:disabled) {
+    box-shadow: 0 2px 0 #2B8A3E, 0 4px 10px rgba(81, 207, 102, 0.2);
 }
 
 .btn-large {
@@ -1132,6 +1209,13 @@ h2 {
    RESPONSIVE
    ======================================== */
 
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+    .bg-blob, h1 { animation: none !important; }
+    .btn, .card, .type-btn { transition: none !important; }
+    .card::after { display: none; }
+}
+
 @media (max-width: 600px) {
     .module-cards {
         grid-template-columns: 1fr;
@@ -1256,6 +1340,9 @@ h2 {
     </style>
 </head>
 <body>
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
     <div class="container">
         <div class="hero">
             <h1>📝 中考题练习</h1>

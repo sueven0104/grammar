@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中考题练习</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
     <!-- Markdown渲染库 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
@@ -122,6 +123,7 @@ var LearningBuddy = (function () {
     --success-light: #8CE99A;
     --danger: #FF6B6B;
     --danger-light: #FFA8A8;
+    --danger-dark: #C92A2A;
     --info: #74C0FC;
     --info-light: #A5D8FF;
     --purple: #B197FC;
@@ -137,7 +139,7 @@ var LearningBuddy = (function () {
     --radius: 20px;
     --radius-sm: 14px;
     --shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
-    --shadow-hover: 0 8px 30px rgba(255, 107, 107, 0.2);
+    --shadow-hover: 0 12px 36px rgba(255, 107, 107, 0.22);
 
     --font-xl: 22px;
     --font-lg: 18px;
@@ -154,12 +156,49 @@ body {
     font-size: var(--font-md);
     line-height: 1.7;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* === Floating background blobs === */
+.bg-blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+    animation: drift 24s ease-in-out infinite;
+}
+.bg-blob.b1 {
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, #FF6B6B, transparent 70%);
+    top: -80px; left: -100px;
+}
+.bg-blob.b2 {
+    width: 380px; height: 380px;
+    background: radial-gradient(circle, #FFD43B, transparent 70%);
+    bottom: -120px; right: -120px;
+    animation-delay: -8s;
+}
+.bg-blob.b3 {
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, #FFA94D, transparent 70%);
+    top: 40%; right: -80px;
+    animation-delay: -16s;
+}
+@keyframes drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(40px, -30px) scale(1.1); }
+    66% { transform: translate(-30px, 40px) scale(0.95); }
 }
 
 .container {
     max-width: 720px;
     margin: 0 auto;
     padding: 24px 16px 48px;
+    position: relative;
+    z-index: 1;
 }
 
 /* === Typography === */
@@ -292,10 +331,21 @@ h2 {
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
     text-decoration: none;
     text-align: center;
     letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 45%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
+    border-radius: var(--radius-sm) var(--radius-sm) 50% 50%;
+    pointer-events: none;
 }
 
 .btn:disabled {
@@ -305,30 +355,36 @@ h2 {
 }
 
 .btn:active:not(:disabled) {
-    transform: scale(0.95) !important;
+    transform: translateY(3px) !important;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 5px 0 var(--primary-dark), 0 8px 18px rgba(255, 107, 107, 0.3);
 }
 
 .btn-primary:hover:not(:disabled) {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary));
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 7px 0 var(--primary-dark), 0 12px 24px rgba(255, 107, 107, 0.4);
+}
+.btn-primary:active:not(:disabled) {
+    box-shadow: 0 2px 0 var(--primary-dark), 0 4px 10px rgba(255, 107, 107, 0.3);
 }
 
 .btn-secondary {
     background: linear-gradient(135deg, var(--success), var(--success-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(81, 207, 102, 0.3);
+    box-shadow: 0 5px 0 #2B8A3E, 0 8px 18px rgba(81, 207, 102, 0.3);
 }
 
 .btn-secondary:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+    box-shadow: 0 7px 0 #2B8A3E, 0 12px 24px rgba(81, 207, 102, 0.4);
+}
+.btn-secondary:active:not(:disabled) {
+    box-shadow: 0 2px 0 #2B8A3E, 0 4px 10px rgba(81, 207, 102, 0.3);
 }
 
 .btn-large {
@@ -451,6 +507,13 @@ h2 {
 
 .score-display-header .score-icon {
     font-size: 22px;
+    display: inline-block;
+    animation: scoreWiggle 2s ease-in-out infinite;
+}
+@keyframes scoreWiggle {
+    0%, 100% { transform: rotate(0) scale(1); }
+    25% { transform: rotate(-8deg) scale(1.1); }
+    75% { transform: rotate(8deg) scale(1.1); }
 }
 
 .streak-badge {
@@ -462,7 +525,17 @@ h2 {
     font-size: 13px;
     font-weight: 700;
     margin-left: 6px;
-    animation: pulse 0.8s ease-in-out infinite;
+    animation: flameGlow 0.8s ease-in-out infinite;
+}
+@keyframes flameGlow {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 6px rgba(255, 169, 77, 0.5), 0 0 12px rgba(255, 107, 107, 0.3);
+    }
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 10px rgba(255, 169, 77, 0.8), 0 0 20px rgba(255, 107, 107, 0.5);
+    }
 }
 
 .timer {
@@ -473,6 +546,42 @@ h2 {
     background: rgba(255, 255, 255, 0.2);
     padding: 6px 14px;
     border-radius: 20px;
+}
+
+/* === Progress Bar === */
+.progress-wrap {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(255, 107, 107, 0.08);
+}
+.progress-track {
+    position: relative;
+    height: 12px;
+    background: rgba(255, 216, 168, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--success), var(--success-light));
+    border-radius: 8px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    width: 0;
+}
+.progress-fill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+}
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 /* === Question Card === */
@@ -489,6 +598,20 @@ h2 {
     border-radius: var(--radius-sm);
     border-left: 5px solid var(--secondary);
     font-weight: 600;
+    position: relative;
+}
+
+.question-tag {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(255, 169, 77, 0.4);
 }
 
 /* === Answer Area === */
@@ -498,7 +621,9 @@ h2 {
 
 /* Choice options */
 .option-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 14px;
     width: 100%;
     padding: 18px 22px;
     margin-bottom: 14px;
@@ -523,11 +648,32 @@ h2 {
     transform: scale(0.98);
 }
 
+.option-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFF0E0, #FFE0C0);
+    color: var(--secondary);
+    font-weight: 800;
+    font-size: var(--font-md);
+    flex-shrink: 0;
+    border: 2px solid var(--border);
+    transition: all 0.2s ease;
+}
+
 .option-btn.selected {
     border-color: var(--primary);
     background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
     font-weight: 700;
     box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+.option-btn.selected .option-badge {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
 }
 
 .option-btn.correct {
@@ -536,12 +682,22 @@ h2 {
     color: #2B8A3E;
     animation: popIn 0.3s ease;
 }
+.option-btn.correct .option-badge {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+}
 
 .option-btn.wrong {
     border-color: var(--danger);
     background: #FFF0F0;
     color: var(--danger-dark);
     animation: shake 0.4s ease;
+}
+.option-btn.wrong .option-badge {
+    background: var(--danger);
+    color: #fff;
+    border-color: var(--danger);
 }
 
 .option-btn:disabled {
@@ -1133,24 +1289,30 @@ h2 {
 .btn-warning {
     background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255, 169, 77, 0.3);
+    box-shadow: 0 5px 0 #D9840A, 0 8px 18px rgba(255, 169, 77, 0.3);
 }
 
 .btn-warning:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 169, 77, 0.4);
+    box-shadow: 0 7px 0 #D9840A, 0 12px 24px rgba(255, 169, 77, 0.4);
+}
+.btn-warning:active:not(:disabled) {
+    box-shadow: 0 2px 0 #D9840A, 0 4px 10px rgba(255, 169, 77, 0.3);
 }
 
 /* === Info Button === */
 .btn-info {
     background: linear-gradient(135deg, var(--info), var(--info-light));
     color: #fff;
-    box-shadow: 0 4px 14px rgba(116, 192, 252, 0.3);
+    box-shadow: 0 5px 0 #1C7ED6, 0 8px 18px rgba(116, 192, 252, 0.3);
 }
 
 .btn-info:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(116, 192, 252, 0.4);
+    box-shadow: 0 7px 0 #1C7ED6, 0 12px 24px rgba(116, 192, 252, 0.4);
+}
+.btn-info:active:not(:disabled) {
+    box-shadow: 0 2px 0 #1C7ED6, 0 4px 10px rgba(116, 192, 252, 0.3);
 }
 
 /* === Similar Question Area === */
@@ -1238,6 +1400,11 @@ h2 {
 @keyframes slideDown {
     0% { transform: translateY(-100%); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* === Score Float Animation === */
@@ -1549,9 +1716,24 @@ h2 {
     #learning-buddy { bottom: 16px; right: 16px; }
     .buddy-body { width: 52px; height: 52px; }
 }
+
+/* === Reduced motion === */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    .bg-blob { display: none; }
+}
     </style>
 </head>
 <body>
+    <!-- Floating background blobs -->
+    <div class="bg-blob b1"></div>
+    <div class="bg-blob b2"></div>
+    <div class="bg-blob b3"></div>
+
     <!-- Confetti container for animations -->
     <div id="confetti-container" class="confetti-container"></div>
 
@@ -1576,9 +1758,17 @@ h2 {
             <div id="timer" class="timer">⏱ 00:00</div>
         </div>
 
+        <!-- Progress bar -->
+        <div class="progress-wrap" id="progress-wrap">
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
         <!-- Question area -->
         <div id="question-area" class="card question-card hidden">
             <div id="question-text" class="question-text"></div>
+            <div id="question-tag" class="question-tag hidden"></div>
             <div id="answer-area" class="answer-area"></div>
             <div id="feedback-area" class="feedback-area hidden"></div>
             <div id="explain-area" class="explain-area hidden"></div>
@@ -1847,6 +2037,8 @@ function initZhongkaoQuizPage() {
     var scoreText = document.getElementById("score-text");
     var streakBadge = document.getElementById("streak-badge");
     var confettiContainer = document.getElementById("confetti-container");
+    var progressFill = document.getElementById("progress-fill");
+    var questionTag = document.getElementById("question-tag");
 
     // Start timer
     state.timerInterval = setInterval(function () {
@@ -1940,8 +2132,16 @@ function initZhongkaoQuizPage() {
         questionText.appendChild(qSpan);
         var qSpeakBtn = createSpeakButton(q.stem, "en-US", "\uD83D\uDD0A");
         qSpeakBtn.title = "朗读题目";
+        qSpeakBtn.setAttribute("aria-label", "朗读题目");
         qSpeakBtn.classList.add("speak-btn-inline");
         questionText.appendChild(qSpeakBtn);
+
+        // Show question type tag
+        if (questionTag) {
+            var tagLabel = state.questionType === "cloze" ? "完形填空" : "选择题";
+            questionTag.textContent = tagLabel;
+            questionTag.classList.remove("hidden");
+        }
         
         // 显示wordBox（如果有）
         if (q.wordBox && q.wordBox.length > 0) {
@@ -1988,8 +2188,14 @@ function initZhongkaoQuizPage() {
         options.forEach(function (opt, i) {
             var btn = document.createElement("button");
             btn.className = "option-btn";
-            btn.textContent = letters[i] + ". " + opt;
             if (disabled) btn.disabled = true;
+            var badge = document.createElement("span");
+            badge.className = "option-badge";
+            badge.textContent = letters[i];
+            btn.appendChild(badge);
+            var textSpan = document.createElement("span");
+            textSpan.textContent = opt;
+            btn.appendChild(textSpan);
             btn.addEventListener("click", function () {
                 if (disabled) return;
                 container.querySelectorAll(".option-btn").forEach(function (b) {
@@ -2250,6 +2456,11 @@ function initZhongkaoQuizPage() {
     // ---- UI helpers ----
     function updateProgress() {
         progressText.textContent = "已完成 " + state.totalAnswered + " 题 · 正确 " + state.totalCorrect;
+        // Update progress bar (grows with each answer)
+        if (progressFill) {
+            var pct = Math.min(state.totalAnswered * 10, 100);
+            progressFill.style.width = pct + "%";
+        }
     }
 
     function updateScoreDisplay() {
