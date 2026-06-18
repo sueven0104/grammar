@@ -1,0 +1,2922 @@
+{
+  "sh-2020-part2-choice-34": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2013-part2-choice-41": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2009-part2-cloze-69": {
+    "correctAnswer": "how to",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2011-part2-choice-49": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2018-part2-cloze-55": {
+    "correctAnswer": "sixth",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-26": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2010-part2-choice-48": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2018-part2-choice-38": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2012-part2-choice-41": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2013-part2-cloze-60": {
+    "correctAnswer": "sixth",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-cloze-65": {
+    "correctAnswer": "Neither, nor",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2019-part2-choice-31": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2020-part2-cloze-53": {
+    "correctAnswer": "E",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2010-part2-cloze-70": {
+    "correctAnswer": "because of/due to",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-choice-34": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2020-part2-cloze-63": {
+    "correctAnswer": "How long",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2021-part2-cloze-44": {
+    "correctAnswer": "minutes",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-67": {
+    "correctAnswer": "if/whether, would",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2008-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2013-part2-cloze-55": {
+    "correctAnswer": "outdoor",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-50": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2015-part2-cloze-62": {
+    "correctAnswer": "Dictionaries are",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2014-part2-cloze-68": {
+    "correctAnswer": "The students are doing an experiment in the lab.",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2014-part2-cloze-53": {
+    "correctAnswer": "advice",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-56": {
+    "correctAnswer": "breath",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-cloze-65": {
+    "correctAnswer": "don't keep",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2019-part2-cloze-63": {
+    "correctAnswer": "How soon",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2018-part2-choice-33": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2019-part2-cloze-46": {
+    "correctAnswer": "compare",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-42": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2012-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2017-part2-cloze-58": {
+    "correctAnswer": "safety",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-choice-33": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2017-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2012-part2-cloze-68": {
+    "correctAnswer": "worked out",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2015-part2-choice-34": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2020-part2-choice-37": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2015-part2-cloze-51": {
+    "correctAnswer": "medicines",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-choice-34": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-noun",
+    "knowledgePointName": "名词"
+  },
+  "sh-2014-part2-cloze-57": {
+    "correctAnswer": "manager",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-50": {
+    "correctAnswer": "pack",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-29": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2018-part2-cloze-53": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-choice-54": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-cloze-62": {
+    "correctAnswer": "successful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-choice-26": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2021-part2-choice-30": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2015-part2-choice-40": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2017-part2-cloze-54": {
+    "correctAnswer": "accidents",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-52": {
+    "correctAnswer": "weak",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-52": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2017-part2-cloze-66": {
+    "correctAnswer": "if/whether, had",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2015-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2014-part2-cloze-48": {
+    "correctAnswer": "mad",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-cloze-64": {
+    "correctAnswer": "thankful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-58": {
+    "correctAnswer": "Wisdom",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-cloze-58": {
+    "correctAnswer": "four",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-68": {
+    "correctAnswer": "Success belongs to hardworking students in the end. / In the end, success belongs to hardworking students.",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2008-part2-cloze-59": {
+    "correctAnswer": "him",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-cloze-53": {
+    "correctAnswer": "depends on",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-70": {
+    "correctAnswer": "enough to",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2020-part2-cloze-54": {
+    "correctAnswer": "robots",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-49": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2015-part2-cloze-47": {
+    "correctAnswer": "in trouble",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-57": {
+    "correctAnswer": "boring",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-46": {
+    "correctAnswer": "exciting",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-cloze-61": {
+    "correctAnswer": "painting",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-cloze-65": {
+    "correctAnswer": "Do, work",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2020-part2-choice-40": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2008-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2015-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2021-part2-cloze-57": {
+    "correctAnswer": "whether/if, had",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2008-part2-choice-31": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2008-part2-choice-50": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2015-part2-cloze-68": {
+    "correctAnswer": "They are going to the amusement park after the speech contest.",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2008-part2-choice-43": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2015-part2-choice-35": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2016-part2-cloze-60": {
+    "correctAnswer": "discuss",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-choice-27": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2016-part2-choice-27": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2010-part2-choice-49": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2011-part2-choice-43": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2018-part2-cloze-48": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-cloze-58": {
+    "correctAnswer": "easily",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-50": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2017-part2-choice-45": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "q-005": {
+    "correctAnswer": "am",
+    "knowledgePoint": "kp-be-verb",
+    "knowledgePointName": "be动词用法"
+  },
+  "sh-2015-part2-cloze-66": {
+    "correctAnswer": "Jim sent",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2012-part2-choice-42": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2011-part2-cloze-67": {
+    "correctAnswer": "What a",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2015-part2-choice-41": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2013-part2-choice-47": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2012-part2-cloze-66": {
+    "correctAnswer": "dishonest",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-33": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2008-part2-choice-37": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2014-part2-cloze-66": {
+    "correctAnswer": "are used",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2015-part2-choice-30": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-cloze-50": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2014-part2-choice-37": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2008-part2-cloze-70": {
+    "correctAnswer": "different from",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2015-part2-cloze-48": {
+    "correctAnswer": "various",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-41": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2008-part2-choice-40": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2016-part2-cloze-54": {
+    "correctAnswer": "policemen",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-choice-29": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2018-part2-cloze-49": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-cloze-67": {
+    "correctAnswer": "How often",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2012-part2-choice-47": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2014-part2-choice-35": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2009-part2-cloze-61": {
+    "correctAnswer": "writer",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-46": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2019-part2-cloze-62": {
+    "correctAnswer": "doesn't practise",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2011-part2-cloze-58": {
+    "correctAnswer": "finally",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-67": {
+    "correctAnswer": "Does, have",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2014-part2-choice-44": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2019-part2-choice-35": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2009-part2-cloze-60": {
+    "correctAnswer": "unusual",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-68": {
+    "correctAnswer": "The Internet enables teenagers to collect various information.",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2012-part2-choice-34": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2013-part2-cloze-70": {
+    "correctAnswer": "so, that",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2018-part2-choice-44": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2018-part2-cloze-56": {
+    "correctAnswer": "herself",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-44": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2009-part2-choice-35": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2008-part2-cloze-63": {
+    "correctAnswer": "favourite",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-cloze-63": {
+    "correctAnswer": "disappear",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-54": {
+    "correctAnswer": "politely",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-48": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2017-part2-cloze-53": {
+    "correctAnswer": "appear",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-51": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-choice-53": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-cloze-63": {
+    "correctAnswer": "How much",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2021-part2-choice-22": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2009-part2-choice-46": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2018-part2-cloze-54": {
+    "correctAnswer": "stamps",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-59": {
+    "correctAnswer": "Happily",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-62": {
+    "correctAnswer": "Did, change",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2017-part2-choice-42": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2010-part2-choice-55": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2015-part2-choice-45": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2008-part2-cloze-60": {
+    "correctAnswer": "glasses",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-71": {
+    "correctAnswer": "what he",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2014-part2-cloze-67": {
+    "correctAnswer": "if/whether, could",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2018-part2-choice-27": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2016-part2-cloze-47": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2020-part2-choice-41": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2017-part2-cloze-59": {
+    "correctAnswer": "politely",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-34": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2014-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2015-part2-cloze-58": {
+    "correctAnswer": "clearer",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-choice-37": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2008-part2-choice-33": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2009-part2-choice-32": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2014-part2-choice-29": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2021-part2-cloze-50": {
+    "correctAnswer": "collection",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-choice-29": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2018-part2-cloze-59": {
+    "correctAnswer": "development",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-choice-50": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2008-part2-cloze-56": {
+    "correctAnswer": "again",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-62": {
+    "correctAnswer": "British",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2014-part2-cloze-61": {
+    "correctAnswer": "dislike",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-55": {
+    "correctAnswer": "is delicious",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-65": {
+    "correctAnswer": "how I",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2010-part2-choice-32": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2010-part2-cloze-62": {
+    "correctAnswer": "clearly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-53": {
+    "correctAnswer": "does ... a favour",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-cloze-53": {
+    "correctAnswer": "How much",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2014-part2-choice-45": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2011-part2-cloze-57": {
+    "correctAnswer": "eleventh",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-choice-28": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2011-part2-cloze-62": {
+    "correctAnswer": "impossible",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-61": {
+    "correctAnswer": "enter",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-52": {
+    "correctAnswer": "seas",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-67": {
+    "correctAnswer": "bad for/harmful to",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2020-part2-cloze-52": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2014-part2-cloze-51": {
+    "correctAnswer": "closer to",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2010-part2-choice-56": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2011-part2-choice-37": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2014-part2-cloze-47": {
+    "correctAnswer": "refused",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-58": {
+    "correctAnswer": "windy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2015-part2-cloze-67": {
+    "correctAnswer": "are translated",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2010-part2-choice-41": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2018-part2-cloze-63": {
+    "correctAnswer": "How often",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2010-part2-choice-52": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2012-part2-choice-44": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2010-part2-choice-54": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-60": {
+    "correctAnswer": "invention",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-59": {
+    "correctAnswer": "homeless",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-choice-29": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2014-part2-cloze-50": {
+    "correctAnswer": "completely",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-choice-43": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2015-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2014-part2-cloze-64": {
+    "correctAnswer": "To, surprise",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2020-part2-cloze-51": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2018-part2-cloze-60": {
+    "correctAnswer": "forget",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-cloze-50": {
+    "correctAnswer": "control",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-cloze-59": {
+    "correctAnswer": "useful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-cloze-70": {
+    "correctAnswer": "so that",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2018-part2-choice-26": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-choice-38": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2019-part2-cloze-54": {
+    "correctAnswer": "boxes",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-45": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2013-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2013-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2013-part2-cloze-66": {
+    "correctAnswer": "change",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "q-004": {
+    "correctAnswer": "reading",
+    "knowledgePoint": "kp-like-v-ing",
+    "knowledgePointName": "like后接动词形式"
+  },
+  "sh-2017-part2-cloze-65": {
+    "correctAnswer": "How popular",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2019-part2-cloze-68": {
+    "correctAnswer": "Teenagers should learn to plan their future by themselves.",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2011-part2-choice-51": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-choice-33": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2019-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2020-part2-cloze-57": {
+    "correctAnswer": "softly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-cloze-49": {
+    "correctAnswer": "serve",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-cloze-59": {
+    "correctAnswer": "flowers",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2014-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2019-part2-choice-38": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2012-part2-cloze-51": {
+    "correctAnswer": "possibly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-choice-41": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2018-part2-choice-45": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2012-part2-choice-35": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2019-part2-choice-26": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2014-part2-choice-27": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2011-part2-cloze-70": {
+    "correctAnswer": "neither, nor",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2009-part2-choice-31": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2009-part2-choice-40": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2015-part2-cloze-46": {
+    "correctAnswer": "familiar",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "q-002": {
+    "correctAnswer": "on",
+    "knowledgePoint": "kp-preposition-time",
+    "knowledgePointName": "时间介词"
+  },
+  "sh-2015-part2-choice-28": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2011-part2-cloze-66": {
+    "correctAnswer": "How often",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2018-part2-cloze-57": {
+    "correctAnswer": "unusual",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-choice-47": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2020-part2-choice-44": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2020-part2-choice-30": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2010-part2-choice-36": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2015-part2-cloze-55": {
+    "correctAnswer": "them",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-choice-53": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-51": {
+    "correctAnswer": "probably",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-cloze-56": {
+    "correctAnswer": "enjoyed myself / had fun / had a great time / had a nice time / had a wonderful time",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2013-part2-choice-35": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2020-part2-cloze-61": {
+    "correctAnswer": "unhealthy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-67": {
+    "correctAnswer": "said sorry",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2011-part2-cloze-68": {
+    "correctAnswer": "whether/if, are",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2014-part2-cloze-52": {
+    "correctAnswer": "together",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-27": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2008-part2-cloze-65": {
+    "correctAnswer": "actors",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-27": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2021-part2-choice-21": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2014-part2-choice-30": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2019-part2-cloze-64": {
+    "correctAnswer": "make, better",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2013-part2-choice-45": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2012-part2-cloze-64": {
+    "correctAnswer": "collection",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-cloze-63": {
+    "correctAnswer": "pollution",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-choice-41": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2018-part2-choice-37": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2013-part2-choice-44": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2017-part2-cloze-49": {
+    "correctAnswer": "changeable",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2014-part2-choice-28": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2017-part2-choice-43": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2013-part2-choice-48": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2011-part2-choice-31": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2016-part2-cloze-56": {
+    "correctAnswer": "Our",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-cloze-54": {
+    "correctAnswer": "were saved",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "q-003": {
+    "correctAnswer": "We",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2008-part2-cloze-64": {
+    "correctAnswer": "sell",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-67": {
+    "correctAnswer": "when, would",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2017-part2-choice-30": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2010-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2014-part2-cloze-58": {
+    "correctAnswer": "quietly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-28": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2011-part2-choice-36": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2019-part2-cloze-53": {
+    "correctAnswer": "now",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-43": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2019-part2-choice-30": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2011-part2-cloze-60": {
+    "correctAnswer": "himself",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-37": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-choice-36": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2016-part2-cloze-52": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2017-part2-choice-28": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2008-part2-cloze-52": {
+    "correctAnswer": "take place",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-43": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2016-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2013-part2-cloze-53": {
+    "correctAnswer": "take part in",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-46": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-cloze-46": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2010-part2-choice-35": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2020-part2-cloze-66": {
+    "correctAnswer": "made up",
+    "knowledgePoint": "kp-noun",
+    "knowledgePointName": "名词"
+  },
+  "sh-2016-part2-choice-39": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2021-part2-choice-35": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2014-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2011-part2-choice-32": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2017-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2019-part2-choice-44": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2008-part2-choice-42": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2011-part2-choice-34": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-cloze-53": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2010-part2-choice-42": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2014-part2-cloze-56": {
+    "correctAnswer": "mine",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-65": {
+    "correctAnswer": "how to",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2013-part2-choice-36": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-noun",
+    "knowledgePointName": "名词"
+  },
+  "sh-2012-part2-choice-48": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2020-part2-choice-35": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2012-part2-cloze-58": {
+    "correctAnswer": "do well in",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-choice-25": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2013-part2-cloze-63": {
+    "correctAnswer": "unhealthy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-63": {
+    "correctAnswer": "too, young",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2010-part2-cloze-57": {
+    "correctAnswer": "gifts",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-choice-46": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2013-part2-cloze-54": {
+    "correctAnswer": "choices",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-cloze-63": {
+    "correctAnswer": "suggest",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-61": {
+    "correctAnswer": "fourth",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-49": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2021-part2-cloze-51": {
+    "correctAnswer": "disappear",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-54": {
+    "correctAnswer": "decided",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2014-part2-cloze-65": {
+    "correctAnswer": "where to",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2012-part2-choice-49": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2021-part2-cloze-48": {
+    "correctAnswer": "clearly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-45": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2019-part2-cloze-51": {
+    "correctAnswer": "ways",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-55": {
+    "correctAnswer": "confident",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-choice-35": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2008-part2-choice-46": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2018-part2-cloze-66": {
+    "correctAnswer": "If you",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2021-part2-choice-23": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2017-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2017-part2-cloze-61": {
+    "correctAnswer": "helpless",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-40": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2016-part2-choice-30": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2013-part2-cloze-61": {
+    "correctAnswer": "herself",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-choice-41": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2013-part2-cloze-72": {
+    "correctAnswer": "How amazing",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2016-part2-choice-45": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2021-part2-cloze-45": {
+    "correctAnswer": "seven",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2021-part2-choice-24": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2020-part2-cloze-47": {
+    "correctAnswer": "E",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2012-part2-choice-33": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2020-part2-choice-42": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2009-part2-choice-55": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2016-part2-cloze-66": {
+    "correctAnswer": "was, invented",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2020-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2013-part2-cloze-56": {
+    "correctAnswer": "wild",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-43": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2012-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2019-part2-cloze-56": {
+    "correctAnswer": "yourself",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-59": {
+    "correctAnswer": "mix",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-choice-45": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2018-part2-choice-36": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2012-part2-cloze-63": {
+    "correctAnswer": "recently",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-cloze-47": {
+    "correctAnswer": "harmful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-32": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2015-part2-cloze-54": {
+    "correctAnswer": "others",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-choice-27": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2010-part2-choice-47": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2013-part2-cloze-57": {
+    "correctAnswer": "offer",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-cloze-51": {
+    "correctAnswer": "recently",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-choice-44": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2012-part2-cloze-67": {
+    "correctAnswer": "Does, consist",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2016-part2-choice-43": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2011-part2-choice-35": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2010-part2-choice-33": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-noun",
+    "knowledgePointName": "名词"
+  },
+  "sh-2018-part2-choice-42": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2016-part2-choice-42": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2017-part2-cloze-55": {
+    "correctAnswer": "themselves",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-cloze-52": {
+    "correctAnswer": "destroy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2017-part2-choice-40": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2016-part2-choice-26": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2017-part2-cloze-63": {
+    "correctAnswer": "When does",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2011-part2-choice-42": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2010-part2-cloze-59": {
+    "correctAnswer": "mine",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-29": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2020-part2-cloze-64": {
+    "correctAnswer": "How hard",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2019-part2-choice-39": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2016-part2-choice-37": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2008-part2-choice-35": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2016-part2-cloze-64": {
+    "correctAnswer": "prefer, to",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2014-part2-choice-33": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "q-006": {
+    "correctAnswer": "Her",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2008-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2018-part2-choice-30": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2008-part2-choice-49": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2011-part2-choice-45": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2015-part2-cloze-49": {
+    "correctAnswer": "with care",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-57": {
+    "correctAnswer": "at the end of",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-cloze-68": {
+    "correctAnswer": "too, to",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2018-part2-cloze-46": {
+    "correctAnswer": "E",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-choice-34": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2020-part2-cloze-55": {
+    "correctAnswer": "ten",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-51": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2009-part2-choice-45": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2013-part2-cloze-68": {
+    "correctAnswer": "How far",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2014-part2-cloze-60": {
+    "correctAnswer": "sell",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-choice-31": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2011-part2-choice-55": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2020-part2-choice-33": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2016-part2-choice-40": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2008-part2-choice-45": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2009-part2-choice-51": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-phrasal-verb",
+    "knowledgePointName": "动词短语"
+  },
+  "sh-2012-part2-choice-37": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2016-part2-cloze-61": {
+    "correctAnswer": "disappear",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-60": {
+    "correctAnswer": "unhappy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-44": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2020-part2-choice-39": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2019-part2-cloze-50": {
+    "correctAnswer": "hardly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-52": {
+    "correctAnswer": "E",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2011-part2-cloze-64": {
+    "correctAnswer": "artist",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-35": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2015-part2-choice-37": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2009-part2-cloze-66": {
+    "correctAnswer": "shall we",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2014-part2-choice-41": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2017-part2-choice-32": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-noun",
+    "knowledgePointName": "名词"
+  },
+  "sh-2008-part2-cloze-51": {
+    "correctAnswer": "apologized",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-41": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2013-part2-cloze-71": {
+    "correctAnswer": "at last",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2008-part2-cloze-68": {
+    "correctAnswer": "Which car",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2020-part2-choice-26": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2012-part2-cloze-53": {
+    "correctAnswer": "hobbies",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-33": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2016-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2019-part2-choice-40": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2010-part2-cloze-67": {
+    "correctAnswer": "has, she",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2021-part2-choice-34": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2009-part2-choice-37": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2011-part2-choice-40": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2014-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2011-part2-choice-54": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-cloze-58": {
+    "correctAnswer": "go abroad",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-choice-45": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2008-part2-choice-48": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2013-part2-cloze-52": {
+    "correctAnswer": "results",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-60": {
+    "correctAnswer": "teenagers",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2021-part2-cloze-52": {
+    "correctAnswer": "didn't, borrow",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2013-part2-choice-34": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2013-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2010-part2-cloze-60": {
+    "correctAnswer": "difficult",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-choice-44": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2009-part2-choice-49": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2019-part2-cloze-58": {
+    "correctAnswer": "owner",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-61": {
+    "correctAnswer": "careless",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-29": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2020-part2-choice-31": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2019-part2-choice-34": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2008-part2-choice-47": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2013-part2-choice-46": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2015-part2-cloze-56": {
+    "correctAnswer": "cloudy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-65": {
+    "correctAnswer": "develop",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-32": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2017-part2-choice-33": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2020-part2-cloze-48": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-noun",
+    "knowledgePointName": "名词"
+  },
+  "sh-2018-part2-cloze-51": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2011-part2-choice-46": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2018-part2-cloze-64": {
+    "correctAnswer": "be held",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2014-part2-cloze-46": {
+    "correctAnswer": "argued",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-choice-38": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2009-part2-cloze-64": {
+    "correctAnswer": "herself",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-33": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2019-part2-cloze-49": {
+    "correctAnswer": "eaten",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-39": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2018-part2-choice-40": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2017-part2-cloze-48": {
+    "correctAnswer": "situation",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-choice-52": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2020-part2-cloze-62": {
+    "correctAnswer": "Can, tell",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2014-part2-choice-34": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2015-part2-cloze-61": {
+    "correctAnswer": "Luckily",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-choice-44": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2014-part2-cloze-49": {
+    "correctAnswer": "behaviours",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-48": {
+    "correctAnswer": "manage",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-cloze-62": {
+    "correctAnswer": "funny",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-cloze-50": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2011-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2008-part2-cloze-62": {
+    "correctAnswer": "useful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-62": {
+    "correctAnswer": "Does, want",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2014-part2-cloze-59": {
+    "correctAnswer": "wood",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-44": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2018-part2-choice-31": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2017-part2-choice-35": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2008-part2-cloze-69": {
+    "correctAnswer": "How expensive",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2008-part2-cloze-66": {
+    "correctAnswer": "possibly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2020-part2-choice-38": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2011-part2-choice-33": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2011-part2-choice-56": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2019-part2-cloze-57": {
+    "correctAnswer": "widely",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-33": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-pronoun",
+    "knowledgePointName": "人称代词"
+  },
+  "sh-2019-part2-choice-37": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2016-part2-cloze-68": {
+    "correctAnswer": "Fresh fruits and vegetables are good for people to keep fit.",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2017-part2-cloze-47": {
+    "correctAnswer": "disaster",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-choice-40": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2018-part2-choice-39": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2016-part2-cloze-49": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2013-part2-cloze-69": {
+    "correctAnswer": "were destroyed",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2012-part2-cloze-73": {
+    "correctAnswer": "whether/if, was",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2012-part2-cloze-71": {
+    "correctAnswer": "are, shared",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2010-part2-cloze-66": {
+    "correctAnswer": "Where, did",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2012-part2-cloze-69": {
+    "correctAnswer": "Whose, did",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2021-part2-choice-32": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2010-part2-choice-50": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2020-part2-cloze-65": {
+    "correctAnswer": "were attracted",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2013-part2-cloze-65": {
+    "correctAnswer": "building",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-42": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2014-part2-cloze-63": {
+    "correctAnswer": "How long",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2009-part2-choice-43": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2012-part2-choice-38": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2011-part2-cloze-61": {
+    "correctAnswer": "attract",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-28": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2011-part2-choice-50": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2017-part2-cloze-52": {
+    "correctAnswer": "nearby",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2016-part2-cloze-57": {
+    "correctAnswer": "Careful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-47": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-choice-29": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2009-part2-choice-56": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2014-part2-cloze-55": {
+    "correctAnswer": "twice",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-choice-41": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2014-part2-cloze-62": {
+    "correctAnswer": "hasn't finished",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2020-part2-choice-36": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2009-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2012-part2-cloze-72": {
+    "correctAnswer": "won't, unless",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2014-part2-choice-43": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2017-part2-cloze-64": {
+    "correctAnswer": "is organized",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2019-part2-choice-36": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2013-part2-cloze-67": {
+    "correctAnswer": "doesn't plan",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2016-part2-cloze-65": {
+    "correctAnswer": "Why, did",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2017-part2-choice-26": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2021-part2-cloze-55": {
+    "correctAnswer": "how to",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2021-part2-cloze-58": {
+    "correctAnswer": "The community is trying to make a meal plan for the aged.",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2011-part2-choice-48": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2016-part2-cloze-48": {
+    "correctAnswer": "E",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2016-part2-cloze-55": {
+    "correctAnswer": "seventh",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-cloze-57": {
+    "correctAnswer": "movies",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2015-part2-choice-43": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2014-part2-choice-39": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  },
+  "sh-2009-part2-cloze-59": {
+    "correctAnswer": "third",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "q-001": {
+    "correctAnswer": "is",
+    "knowledgePoint": "kp-be-verb",
+    "knowledgePointName": "be动词用法"
+  },
+  "sh-2011-part2-choice-38": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2015-part2-cloze-59": {
+    "correctAnswer": "enrich",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2014-part2-choice-40": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2012-part2-choice-39": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2016-part2-choice-28": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-preposition",
+    "knowledgePointName": "介词"
+  },
+  "sh-2020-part2-cloze-56": {
+    "correctAnswer": "himself",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2009-part2-choice-42": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2017-part2-choice-27": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-article",
+    "knowledgePointName": "冠词"
+  },
+  "sh-2017-part2-choice-34": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2009-part2-choice-47": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2010-part2-choice-53": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2011-part2-cloze-69": {
+    "correctAnswer": "be invited",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2018-part2-cloze-68": {
+    "correctAnswer": "There are many ways for us to keep in touch.",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2014-part2-choice-42": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-nonfinite",
+    "knowledgePointName": "非谓语动词"
+  },
+  "sh-2021-part2-choice-28": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2010-part2-cloze-65": {
+    "correctAnswer": "Does, help",
+    "knowledgePoint": "kp-question",
+    "knowledgePointName": "特殊疑问句"
+  },
+  "sh-2014-part2-choice-26": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2019-part2-cloze-66": {
+    "correctAnswer": "was released",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2016-part2-choice-32": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2021-part2-choice-31": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-passive-voice",
+    "knowledgePointName": "被动语态"
+  },
+  "sh-2010-part2-cloze-68": {
+    "correctAnswer": "It, took",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2015-part2-cloze-57": {
+    "correctAnswer": "suggestion(s)",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-choice-43": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-adjective-adverb",
+    "knowledgePointName": "形容词和副词"
+  },
+  "sh-2015-part2-cloze-60": {
+    "correctAnswer": "unfair",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2008-part2-cloze-58": {
+    "correctAnswer": "don't know",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-62": {
+    "correctAnswer": "didn't, go",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2015-part2-choice-42": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2014-part2-cloze-54": {
+    "correctAnswer": "mistakes",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-cloze-61": {
+    "correctAnswer": "snowy",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2013-part2-choice-40": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-modal",
+    "knowledgePointName": "情态动词"
+  },
+  "sh-2016-part2-choice-44": {
+    "correctAnswer": "A",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2013-part2-cloze-64": {
+    "correctAnswer": "correctly",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-37": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-conjunction",
+    "knowledgePointName": "连词"
+  },
+  "sh-2011-part2-choice-41": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-tense",
+    "knowledgePointName": "时态"
+  },
+  "sh-2018-part2-cloze-58": {
+    "correctAnswer": "seriously",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-57": {
+    "correctAnswer": "useful",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-47": {
+    "correctAnswer": "modern",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-56": {
+    "correctAnswer": "tenth",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-choice-34": {
+    "correctAnswer": "B",
+    "knowledgePoint": "kp-comparative",
+    "knowledgePointName": "比较级和最高级"
+  },
+  "sh-2015-part2-cloze-64": {
+    "correctAnswer": "came/went back",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2013-part2-cloze-73": {
+    "correctAnswer": "who was",
+    "knowledgePoint": "kp-object-clause",
+    "knowledgePointName": "宾语从句"
+  },
+  "sh-2021-part2-cloze-46": {
+    "correctAnswer": "its",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2010-part2-cloze-69": {
+    "correctAnswer": "Both, and",
+    "knowledgePoint": "kp-sentence-transformation",
+    "knowledgePointName": "句型转换"
+  },
+  "sh-2012-part2-cloze-59": {
+    "correctAnswer": "three",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2017-part2-cloze-60": {
+    "correctAnswer": "suggest",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2018-part2-cloze-50": {
+    "correctAnswer": "D",
+    "knowledgePoint": "kp-mixed",
+    "knowledgePointName": "综合语法"
+  },
+  "sh-2019-part2-cloze-55": {
+    "correctAnswer": "eighth",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2019-part2-cloze-67": {
+    "correctAnswer": "if/whether, was",
+    "knowledgePoint": "kp-word-formation",
+    "knowledgePointName": "词形变化"
+  },
+  "sh-2012-part2-choice-43": {
+    "correctAnswer": "C",
+    "knowledgePoint": "kp-exclamation",
+    "knowledgePointName": "感叹句"
+  }
+}

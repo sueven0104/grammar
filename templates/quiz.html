@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语语法练习</title>
+    <!-- Markdown渲染库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+var StorageManager = (function () {
+    var STORAGE_KEY = "grammar_app_data";
+    var DEFAULT_DATA = {
+        wrongQuestions: [], knowledgeStats: {}, totalScore: 0, badges: [],
+        totalAnswered: 0, totalCorrect: 0, currentStreak: 0, bestStreak: 0, questionHistory: []
+    };
+    function load() {
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return JSON.parse(JSON.stringify(DEFAULT_DATA));
+            var data = JSON.parse(raw);
+            for (var key in DEFAULT_DATA) { if (!(key in data)) { data[key] = DEFAULT_DATA[key]; } }
+            return data;
+        } catch (e) { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+    }
+    function save(data) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
+        catch (e) { if (data.wrongQuestions.length > 20) { data.wrongQuestions = data.wrongQuestions.slice(-20); try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e2) {} } }
+    }
+    function addWrongQuestion(q) {
+        var data = load(); var id = simpleHash(q.question);
+        for (var i = 0; i < data.wrongQuestions.length; i++) {
+            if (data.wrongQuestions[i].id === id) { data.wrongQuestions[i].reviewCount = 0; data.wrongQuestions[i].timestamp = Date.now(); save(data); return; }
+        }
+        data.wrongQuestions.push({ id: id, question: q.question, questionType: q.questionType || q.type || "", grade: q.grade || 0, knowledgePoint: q.knowledge || q.knowledgePoint || "", userAnswer: q.userAnswer, correctAnswer: q.correctAnswer || q.answer, options: q.options || null, timestamp: Date.now(), reviewCount: 0 });
+        if (data.wrongQuestions.length > 50) { data.wrongQuestions = data.wrongQuestions.slice(-50); } save(data);
+    }
+    function removeWrongQuestion(id) { var data = load(); data.wrongQuestions = data.wrongQuestions.filter(function (q) { return q.id !== id; }); save(data); }
+    function updateKnowledgeStat(grade, knowledgePoint, isCorrect) {
+        var data = load(); var key = grade + "_" + knowledgePoint;
+        if (!data.knowledgeStats[key]) { data.knowledgeStats[key] = { total: 0, correct: 0 }; }
+        data.knowledgeStats[key].total++; if (isCorrect) { data.knowledgeStats[key].correct++; } save(data);
+    }
+    function addBadge(badgeId) { var data = load(); if (data.badges.indexOf(badgeId) === -1) { data.badges.push(badgeId); save(data); } }
+    function updateStats(isCorrect) {
+        var data = load(); data.totalAnswered++;
+        if (isCorrect) { data.totalCorrect++; data.currentStreak++; if (data.currentStreak > data.bestStreak) { data.bestStreak = data.currentStreak; } }
+        else { data.currentStreak = 0; } save(data);
+    }
+    function updateScore(points) { var data = load(); data.totalScore += points; save(data); }
+    function simpleHash(str) { var hash = 0; for (var i = 0; i < str.length; i++) { var ch = str.charCodeAt(i); hash = ((hash << 5) - hash) + ch; hash = hash & hash; } return Math.abs(hash).toString(36); }
+    function addQuestionHistory(questionText) {
+        var data = load();
+        if (!data.questionHistory) { data.questionHistory = []; }
+        for (var i = 0; i < data.questionHistory.length; i++) {
+            if (data.questionHistory[i] === questionText) { return; }
+        }
+        data.questionHistory.push(questionText);
+        if (data.questionHistory.length > 200) {
+            data.questionHistory = data.questionHistory.slice(-200);
+        }
+        save(data);
+    }
+    function getQuestionHistory() {
+        var data = load();
+        return data.questionHistory || [];
+    }
+    function clearQuestionHistory() {
+        var data = load();
+        data.questionHistory = [];
+        save(data);
+    }
+    return { load: load, save: save, addWrongQuestion: addWrongQuestion, removeWrongQuestion: removeWrongQuestion, updateKnowledgeStat: updateKnowledgeStat, addBadge: addBadge, updateStats: updateStats, updateScore: updateScore, simpleHash: simpleHash, addQuestionHistory: addQuestionHistory, getQuestionHistory: getQuestionHistory, clearQuestionHistory: clearQuestionHistory };
+})();
+var LearningBuddy = (function () {
+    var buddyEl = null, speechEl = null, idleTimer = null, IDLE_TIMEOUT = 5000;
+    var CORRECT_PHRASES = ["太棒了！", "你真厉害！", "完美！", "答对了！继续加油！", "很棒哦！"];
+    var WRONG_PHRASES = ["没关系，再试一次！", "加油，你可以的！", "别灰心，下次一定行！", "我们一起进步！"];
+    var STREAK_PHRASES = ["连续答对！你是语法大师！", "太强了，继续保持！", "哇，你真是太厉害了！"];
+    var IDLE_PHRASES = ["来做道题吧！", "准备好了吗？", "一起学英语！"];
+    function create() {
+        if (buddyEl) return;
+        buddyEl = document.createElement("div"); buddyEl.id = "learning-buddy";
+        buddyEl.innerHTML = '<div class="buddy-body"><div class="buddy-face"><div class="buddy-eyes"><span class="buddy-eye left"></span><span class="buddy-eye right"></span></div><div class="buddy-mouth"></div></div></div><div class="buddy-speech hidden"></div>';
+        document.body.appendChild(buddyEl); speechEl = buddyEl.querySelector(".buddy-speech"); resetIdle();
+    }
+    function say(text, duration) { if (!speechEl) return; speechEl.textContent = text; speechEl.classList.remove("hidden"); if (duration) { setTimeout(function () { speechEl.classList.add("hidden"); }, duration); } }
+    function onCorrect(streak) {
+        if (!buddyEl) return; clearIdle(); buddyEl.className = "buddy-happy";
+        if (streak >= 3) { buddyEl.className = "buddy-star"; say(STREAK_PHRASES[Math.floor(Math.random() * STREAK_PHRASES.length)], 2000); }
+        else { say(CORRECT_PHRASES[Math.floor(Math.random() * CORRECT_PHRASES.length)], 1800); }
+        setTimeout(function () { buddyEl.className = ""; }, 1500); resetIdle();
+    }
+    function onWrong() {
+        if (!buddyEl) return; clearIdle(); buddyEl.className = "buddy-sad";
+        say(WRONG_PHRASES[Math.floor(Math.random() * WRONG_PHRASES.length)], 2000);
+        setTimeout(function () { buddyEl.className = ""; speechEl.classList.add("hidden"); }, 2000); resetIdle();
+    }
+    function onIdle() { if (!buddyEl) return; say(IDLE_PHRASES[Math.floor(Math.random() * IDLE_PHRASES.length)], 3000); }
+    function resetIdle() { clearIdle(); idleTimer = setTimeout(onIdle, IDLE_TIMEOUT); }
+    function clearIdle() { if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; } }
+    return { create: create, onCorrect: onCorrect, onWrong: onWrong, say: say };
+})();
+    </script>
+    <style>
+/* === Reset & Base === */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Warm kid-friendly palette */
+    --primary: #FF6B6B;
+    --primary-light: #FF8E8E;
+    --primary-dark: #E55A5A;
+    --secondary: #FFA94D;
+    --secondary-light: #FFBE7D;
+    --accent: #FFD43B;
+    --accent-light: #FFE066;
+    --success: #51CF66;
+    --success-light: #8CE99A;
+    --danger: #FF6B6B;
+    --danger-light: #FFA8A8;
+    --info: #74C0FC;
+    --info-light: #A5D8FF;
+    --purple: #B197FC;
+    --purple-light: #D0BFFF;
+
+    --bg: #FFF4E6;
+    --bg-alt: #FFE8CC;
+    --card-bg: #FFFFFF;
+    --text: #4A3728;
+    --text-light: #8B7355;
+    --border: #FFD8A8;
+
+    --radius: 20px;
+    --radius-sm: 14px;
+    --shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
+    --shadow-hover: 0 8px 30px rgba(255, 107, 107, 0.2);
+
+    --font-xl: 22px;
+    --font-lg: 18px;
+    --font-md: 16px;
+    --font-sm: 14px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 50%, #FFD8A8 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-size: var(--font-md);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+/* === Typography === */
+h1 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    text-align: center;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 26px;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: var(--font-lg);
+    margin-top: 8px;
+}
+
+/* === Hero === */
+.hero {
+    padding: 40px 0 28px;
+    text-align: center;
+}
+
+/* === Card === */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* === Form Elements === */
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.grade-select {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: var(--font-lg);
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    color: var(--text);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10'%3E%3Cpath d='M1 2l6 6 6-6' stroke='%238B7355' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grade-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+
+/* === Question Type Buttons === */
+.question-type-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 16px;
+    font-size: var(--font-lg);
+    font-weight: 600;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text);
+}
+
+.type-btn:hover {
+    border-color: var(--primary);
+    background: #FFF0F0;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.15);
+}
+
+.type-btn:active {
+    transform: scale(0.97);
+}
+
+.type-btn.active {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.25);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.type-icon {
+    font-size: 36px;
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn:active:not(:disabled) {
+    transform: scale(0.95) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--success), var(--success-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(81, 207, 102, 0.3);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    margin-top: 12px;
+    border-radius: var(--radius-sm);
+}
+
+/* === Error Message === */
+.error-msg {
+    color: var(--danger);
+    font-size: var(--font-md);
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* === Hidden === */
+.hidden {
+    display: none !important;
+}
+
+/* === Loading Overlay === */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 244, 230, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.loading-overlay.hidden {
+    display: none !important;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 5px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    margin-top: 20px;
+    font-size: var(--font-lg);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+/* === Quiz Header (Top Status Bar) === */
+.quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: var(--radius);
+    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.25);
+    color: #fff;
+}
+
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--font-md);
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.2s;
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+}
+
+.progress-info {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+}
+
+#progress-text {
+    font-size: var(--font-md);
+    font-weight: 700;
+    display: block;
+    color: #fff;
+}
+
+/* Score display in header */
+.score-display-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--font-lg);
+    font-weight: 800;
+    color: var(--accent);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.score-display-header .score-icon {
+    font-size: 22px;
+}
+
+.streak-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    background: var(--accent);
+    color: var(--text);
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 6px;
+    animation: pulse 0.8s ease-in-out infinite;
+}
+
+.timer {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* === Question Card === */
+.question-card {
+    padding: 32px 28px;
+}
+
+.question-text {
+    font-size: var(--font-xl);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFF8F0, #FFF0E0);
+    border-radius: var(--radius-sm);
+    border-left: 5px solid var(--secondary);
+    font-weight: 600;
+}
+
+/* === Answer Area === */
+.answer-area {
+    margin-bottom: 24px;
+}
+
+/* Choice options */
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    font-size: var(--font-lg);
+    font-weight: 600;
+    text-align: left;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text);
+}
+
+.option-btn:hover {
+    border-color: var(--primary);
+    background: #FFF0F0;
+    transform: translateX(4px);
+}
+
+.option-btn:active {
+    transform: scale(0.98);
+}
+
+.option-btn.selected {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
+    font-weight: 700;
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+
+.option-btn.correct {
+    border-color: var(--success);
+    background: #EBFBEE;
+    color: #2B8A3E;
+    animation: popIn 0.3s ease;
+}
+
+.option-btn.wrong {
+    border-color: var(--danger);
+    background: #FFF0F0;
+    color: var(--danger-dark);
+    animation: shake 0.4s ease;
+}
+
+.option-btn:disabled {
+    cursor: default;
+}
+
+/* Fill / Correction input */
+.answer-input {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: var(--font-lg);
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+
+.answer-input.correct {
+    border-color: var(--success);
+    background: #EBFBEE;
+}
+
+.answer-input.wrong {
+    border-color: var(--danger);
+    background: #FFF0F0;
+    animation: shake 0.4s ease;
+}
+
+.answer-input:disabled {
+    background: #FFF8F0;
+}
+
+/* Judge buttons */
+.judge-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.judge-btn {
+    flex: 1;
+    padding: 22px;
+    font-size: 22px;
+    font-weight: 700;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text);
+}
+
+.judge-btn:hover {
+    transform: translateY(-2px);
+}
+
+.judge-btn:active {
+    transform: scale(0.95);
+}
+
+.judge-btn.judge-true:hover {
+    border-color: var(--success);
+    background: #EBFBEE;
+}
+
+.judge-btn.judge-false:hover {
+    border-color: var(--danger);
+    background: #FFF0F0;
+}
+
+.judge-btn.selected.judge-true {
+    border-color: var(--success);
+    background: #EBFBEE;
+    color: #2B8A3E;
+    box-shadow: 0 0 0 4px rgba(81, 207, 102, 0.25);
+}
+
+.judge-btn.selected.judge-false {
+    border-color: var(--danger);
+    background: #FFF0F0;
+    color: var(--danger-dark);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.25);
+}
+
+.judge-btn.correct {
+    border-color: var(--success);
+    background: #EBFBEE;
+}
+
+.judge-btn.wrong {
+    border-color: var(--danger);
+    background: #FFF0F0;
+}
+
+.judge-btn:disabled {
+    cursor: default;
+}
+
+/* === Feedback Area === */
+.feedback-area {
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    text-align: center;
+    animation: popIn 0.3s ease;
+}
+
+.feedback-area.correct {
+    background: #EBFBEE;
+    border: 3px solid var(--success);
+    color: #2B8A3E;
+}
+
+.feedback-area.wrong {
+    background: #FFF0F0;
+    border: 3px solid var(--danger);
+    color: var(--danger-dark);
+}
+
+.feedback-area .correct-answer {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: var(--font-md);
+}
+
+.feedback-area .encourage-text {
+    margin-top: 8px;
+    font-size: var(--font-md);
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.feedback-area .question-meta {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    font-size: var(--font-sm);
+    color: var(--text-light);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.feedback-area .question-meta .meta-source,
+.feedback-area .question-meta .meta-kp {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.feedback-area.correct .question-meta {
+    background: rgba(235, 251, 238, 0.8);
+}
+
+.feedback-area.wrong .question-meta {
+    background: rgba(255, 240, 240, 0.8);
+}
+
+/* === Explain Area === */
+.explain-area {
+    padding: 20px;
+    background: linear-gradient(135deg, #FFF9DB, #FFF3BF);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    font-size: var(--font-md);
+    line-height: 1.8;
+    color: #5C4700;
+}
+
+.explain-area h4 {
+    margin-bottom: 10px;
+    font-size: var(--font-lg);
+    color: #7A6000;
+}
+
+/* === Explain Result (Summary & Wrong Questions) === */
+.explain-result {
+    padding: 16px;
+    background: linear-gradient(135deg, #FFF9DB, #FFF3BF);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-sm);
+    margin-top: 12px;
+    font-size: var(--font-md);
+    line-height: 1.8;
+    color: #5C4700;
+    text-align: left;
+}
+
+.explain-result h4 {
+    margin-bottom: 12px;
+    font-size: var(--font-lg);
+    color: #7A6000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.explain-result p {
+    margin-bottom: 10px;
+}
+
+.explain-result ul, .explain-result ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.explain-result li {
+    margin-bottom: 6px;
+}
+
+.explain-result code {
+    background: rgba(255,255,255,0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.explain-result .explain-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.explain-result .explain-actions button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* === Speak Buttons === */
+.speak-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 10px 18px;
+    font-size: var(--font-md);
+    font-weight: 600;
+    color: var(--primary);
+    background: #fff;
+    border: 2px solid var(--primary);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.speak-btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.speak-btn.speaking {
+    background: var(--primary);
+    color: #fff;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.speak-btn-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 18px;
+    color: var(--primary);
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    vertical-align: middle;
+}
+
+.speak-btn-inline:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.speak-btn-inline.speaking {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* === Action Buttons === */
+.action-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* === Results === */
+.results-card {
+    text-align: center;
+    padding: 40px 28px;
+}
+
+.score-display {
+    font-size: 72px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.score-display .score-total {
+    font-size: 36px;
+    color: var(--text-light);
+}
+
+.time-display {
+    font-size: var(--font-lg);
+    color: var(--text-light);
+    margin-bottom: 16px;
+}
+
+.encourage-text {
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+}
+
+/* Review list */
+.review-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid var(--border);
+}
+
+.review-item:hover {
+    transform: translateY(-2px);
+}
+
+.review-item-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.review-badge.correct {
+    background: var(--success);
+}
+
+.review-badge.wrong {
+    background: var(--danger);
+}
+
+.review-item-question {
+    flex: 1;
+    font-size: var(--font-md);
+    color: var(--text);
+}
+
+.review-item-detail {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 2px solid var(--border);
+    font-size: var(--font-md);
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.review-item-detail .explain-content {
+    margin-top: 10px;
+    padding: 14px;
+    background: #FFF9DB;
+    border-radius: 10px;
+    color: #5C4700;
+}
+
+/* === Module Cards (Home Page) === */
+.module-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.module-card {
+    text-align: center;
+    padding: 40px 28px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.module-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(255, 107, 107, 0.2);
+}
+
+.module-card.card-grammar {
+    background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
+    border: 3px solid var(--primary-light);
+}
+
+.module-card.card-zhongkao {
+    background: linear-gradient(135deg, #FFF4E6, #FFE0C0);
+    border: 3px solid var(--secondary);
+}
+
+.module-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.module-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 14px;
+}
+
+.module-desc {
+    font-size: var(--font-md);
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.module-card .btn {
+    width: 100%;
+}
+
+/* === Page Header === */
+.page-header {
+    padding: 16px 0 0;
+}
+
+.page-header .back-link {
+    font-size: var(--font-md);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.page-header .back-link:hover {
+    text-decoration: underline;
+}
+
+/* === Grade Cards Grid === */
+.grade-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.grade-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 22px 14px;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text);
+}
+
+.grade-card:hover {
+    border-color: var(--primary);
+    background: #FFF0F0;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.15);
+}
+
+.grade-card:active {
+    transform: scale(0.95);
+}
+
+.grade-card.active {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.25);
+    color: var(--primary-dark);
+}
+
+.grade-card .grade-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.grade-card .grade-emoji {
+    font-size: 28px;
+}
+
+/* === Zhongkao Module === */
+.zhongkao-home-card {
+    text-align: center;
+}
+
+.zhongkao-type-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* === Warning Button === */
+.btn-warning {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(255, 169, 77, 0.3);
+}
+
+.btn-warning:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 169, 77, 0.4);
+}
+
+/* === Info Button === */
+.btn-info {
+    background: linear-gradient(135deg, var(--info), var(--info-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(116, 192, 252, 0.3);
+}
+
+.btn-info:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(116, 192, 252, 0.4);
+}
+
+/* === Similar Question Area === */
+.similar-area {
+    margin-top: 24px;
+    padding: 24px;
+    background: linear-gradient(135deg, #F0F6FF, #E0ECFF);
+    border: 3px dashed var(--info);
+    border-radius: var(--radius-sm);
+}
+
+.similar-title {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: #1C7ED6;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.similar-area .question-text {
+    background: #fff;
+    border-left-color: var(--info);
+}
+
+.similar-area .answer-area {
+    margin-bottom: 14px;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.15); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-60px); opacity: 0; }
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes starFall {
+    0% { transform: translateY(-20px) rotate(0deg) scale(1); opacity: 1; }
+    100% { transform: translateY(80vh) rotate(360deg) scale(0); opacity: 0; }
+}
+
+@keyframes badgePop {
+    0% { transform: scale(0) rotate(-10deg); opacity: 0; }
+    60% { transform: scale(1.2) rotate(3deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes badgeGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 212, 59, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(255, 212, 59, 0.8), 0 0 60px rgba(255, 169, 77, 0.4); }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* === Score Float Animation === */
+.score-float {
+    position: fixed;
+    pointer-events: none;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    text-shadow: 0 2px 8px rgba(255, 169, 77, 0.5);
+    z-index: 2000;
+    animation: floatUp 1.2s ease-out forwards;
+}
+
+/* === Confetti Container === */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1500;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    animation: confettiFall 2.5s ease-in forwards;
+}
+
+.star-piece {
+    position: absolute;
+    font-size: 24px;
+    animation: starFall 2s ease-in forwards;
+}
+
+/* === Badge Overlay === */
+.badge-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    pointer-events: none;
+}
+
+.badge-popup {
+    background: linear-gradient(135deg, #FFF9DB, #FFF3BF);
+    border: 4px solid var(--accent);
+    border-radius: 24px;
+    padding: 32px 40px;
+    text-align: center;
+    animation: badgePop 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards,
+               badgeGlow 2s ease-in-out infinite 0.6s;
+    box-shadow: 0 8px 40px rgba(255, 169, 77, 0.3);
+}
+
+.badge-popup .badge-icon {
+    font-size: 64px;
+    margin-bottom: 12px;
+}
+
+.badge-popup .badge-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #7A6000;
+    margin-bottom: 6px;
+}
+
+.badge-popup .badge-desc {
+    font-size: var(--font-md);
+    color: #8B7355;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 600px) {
+    .module-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .module-card {
+        padding: 32px 24px;
+    }
+
+    .module-icon {
+        font-size: 48px;
+    }
+
+    .module-title {
+        font-size: 22px;
+    }
+
+    .grade-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .grade-card {
+        padding: 16px 10px;
+    }
+
+    .grade-card .grade-num {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 16px 10px 40px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .question-type-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .type-btn {
+        padding: 16px 10px;
+        font-size: var(--font-md);
+    }
+
+    .type-icon {
+        font-size: 30px;
+    }
+
+    .question-text {
+        font-size: var(--font-lg);
+        padding: 16px;
+    }
+
+    .quiz-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .back-link {
+        text-align: center;
+    }
+
+    .timer {
+        text-align: center;
+    }
+
+    .progress-info {
+        order: -1;
+    }
+
+    .score-display {
+        font-size: 56px;
+    }
+
+    .judge-buttons {
+        flex-direction: row;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+
+    .option-btn {
+        padding: 16px 18px;
+        font-size: var(--font-md);
+    }
+
+    .grade-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .badge-popup {
+        padding: 24px 28px;
+        margin: 0 20px;
+    }
+
+    .badge-popup .badge-icon {
+        font-size: 48px;
+    }
+
+    .badge-popup .badge-title {
+        font-size: 20px;
+    }
+}
+
+/* === Learning Buddy === */
+#learning-buddy {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+.buddy-body {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFD43B, #FFA94D);
+    box-shadow: 0 4px 16px rgba(255, 169, 77, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.buddy-face {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.buddy-eyes {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    margin-top: 6px;
+}
+.buddy-eye {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4A3728;
+    display: block;
+}
+.buddy-mouth {
+    width: 12px;
+    height: 6px;
+    border-bottom: 3px solid #4A3728;
+    border-radius: 0 0 50% 50%;
+    margin: 6px auto 0;
+}
+.buddy-happy .buddy-body {
+    animation: bounceIn 0.5s ease;
+}
+.buddy-happy .buddy-mouth {
+    width: 16px;
+    height: 8px;
+    border-bottom: 4px solid #4A3728;
+}
+.buddy-sad .buddy-body {
+    transform: rotate(-5deg);
+}
+.buddy-sad .buddy-eye {
+    height: 3px;
+    border-radius: 2px;
+    margin-top: 3px;
+}
+.buddy-sad .buddy-mouth {
+    border-bottom: none;
+    border-top: 3px solid #4A3728;
+    border-radius: 50% 50% 0 0;
+}
+.buddy-star .buddy-body {
+    animation: bounceIn 0.5s ease;
+    box-shadow: 0 0 30px rgba(255, 212, 59, 0.6);
+}
+.buddy-star .buddy-eye {
+    background: none;
+    position: relative;
+}
+.buddy-star .buddy-eye::before {
+    content: "\2605";
+    font-size: 10px;
+    color: #4A3728;
+    position: absolute;
+    top: -6px;
+    left: -3px;
+}
+.buddy-speech {
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 150px;
+    text-align: center;
+    animation: popIn 0.3s ease;
+}
+.buddy-speech.hidden { display: none; }
+
+@media (max-width: 480px) {
+    #learning-buddy { bottom: 16px; right: 16px; }
+    .buddy-body { width: 52px; height: 52px; }
+}
+    </style>
+</head>
+<body>
+    <!-- Confetti container for animations -->
+    <div id="confetti-container" class="confetti-container"></div>
+
+    <div class="container">
+        <!-- Loading overlay -->
+        <div id="loading-overlay" class="loading-overlay">
+            <div class="spinner"></div>
+            <p id="loading-text">正在出题...</p>
+        </div>
+
+        <!-- Quiz header - gradient status bar -->
+        <div class="quiz-header">
+            <a href="{{ config.APPLICATION_ROOT }}/grammar" class="back-link">← 返回</a>
+            <div class="progress-info">
+                <span id="progress-text">已完成 0 题 · 正确 0</span>
+            </div>
+            <div class="score-display-header">
+                <span class="score-icon">⭐</span>
+                <span id="score-text">0</span>
+                <span id="streak-badge" class="streak-badge hidden"></span>
+            </div>
+            <div id="timer" class="timer">⏱ 00:00</div>
+        </div>
+
+        <!-- Question area -->
+        <div id="question-area" class="card question-card hidden">
+            <div id="question-text" class="question-text"></div>
+            <div id="answer-area" class="answer-area"></div>
+            <div id="feedback-area" class="feedback-area hidden"></div>
+            <div id="explain-area" class="explain-area hidden"></div>
+            <div class="action-buttons">
+                <button id="submit-btn" class="btn btn-primary">✅ 提交答案</button>
+                <button id="next-btn" class="btn btn-secondary hidden">下一题 ➡️</button>
+            </div>
+            <p id="quiz-error" class="error-msg hidden"></p>
+        </div>
+    </div>
+
+    <script>
+        const GRADE = {{ grade }};
+        const QUESTION_TYPE = "{{ question_type }}";
+        var KNOWLEDGE_POINT = "{{ knowledge_point|safe }}" || "";
+    </script>
+    <script>
+// SoundFX - Web Audio API sound effects (no external files needed)
+(function () {
+    'use strict';
+
+    var AudioCtx = window.AudioContext || window.webkitAudioContext;
+    var ctx = null;
+
+    function getCtx() {
+        if (!AudioCtx) return null;
+        if (!ctx) {
+            ctx = new AudioCtx();
+        }
+        if (ctx.state === 'suspended') {
+            ctx.resume();
+        }
+        return ctx;
+    }
+
+    function playTone(ctx, freq, startTime, duration, type, gainValue) {
+        var osc = ctx.createOscillator();
+        var gain = ctx.createGain();
+        osc.type = type || 'sine';
+        osc.frequency.setValueAtTime(freq, startTime);
+        gain.gain.setValueAtTime(gainValue || 0.3, startTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(startTime);
+        osc.stop(startTime + duration);
+    }
+
+    function playCorrect() {
+        var c = getCtx();
+        if (!c) return;
+        var now = c.currentTime;
+        playTone(c, 523.25, now,         0.1, 'sine', 0.3);
+        playTone(c, 659.25, now + 0.1,   0.1, 'sine', 0.3);
+        playTone(c, 783.99, now + 0.2,   0.1, 'sine', 0.3);
+        playTone(c, 783.99, now + 0.3,   0.2, 'sine', 0.25);
+    }
+
+    function playWrong() {
+        var c = getCtx();
+        if (!c) return;
+        var now = c.currentTime;
+        playTone(c, 329.63, now,         0.15, 'triangle', 0.25);
+        playTone(c, 261.63, now + 0.15,  0.15, 'triangle', 0.25);
+    }
+
+    function playBadge() {
+        var c = getCtx();
+        if (!c) return;
+        var now = c.currentTime;
+        playTone(c, 523.25, now,         0.08, 'sine', 0.3);
+        playTone(c, 659.25, now + 0.08,  0.08, 'sine', 0.3);
+        playTone(c, 783.99, now + 0.16,  0.08, 'sine', 0.3);
+        playTone(c, 1046.5, now + 0.24,  0.08, 'sine', 0.3);
+        var chordStart = now + 0.35;
+        playTone(c, 523.25, chordStart, 0.5, 'sine', 0.2);
+        playTone(c, 659.25, chordStart, 0.5, 'sine', 0.2);
+        playTone(c, 783.99, chordStart, 0.5, 'sine', 0.2);
+        playTone(c, 1046.5, chordStart, 0.5, 'sine', 0.2);
+    }
+
+    window.SoundFX = {
+        playCorrect: playCorrect,
+        playWrong: playWrong,
+        playBadge: playBadge
+    };
+})();
+    </script>
+    <script>
+// ========== Shared Utilities ==========
+
+function fetchJSON(url, body) {
+    return fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+    }).then(function (resp) {
+        if (!resp.ok) {
+            throw new Error("HTTP " + resp.status);
+        }
+        return resp.json();
+    });
+}
+
+function formatTime(totalSeconds) {
+    var mins = Math.floor(totalSeconds / 60);
+    var secs = totalSeconds % 60;
+    return padZero(mins) + ":" + padZero(secs);
+}
+
+function padZero(n) {
+    return n < 10 ? "0" + n : "" + n;
+}
+
+function escapeHtml(str) {
+    if (typeof str !== "string") return str;
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
+function showError(el, msg) {
+    el.textContent = msg;
+    el.classList.remove("hidden");
+}
+
+function hideError(el) {
+    el.textContent = "";
+    el.classList.add("hidden");
+}
+
+// ========== Voice Playback (Web Speech API) ==========
+
+function speakText(text, lang) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    var utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang || "zh-CN";
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+}
+
+function stopSpeaking() {
+    if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+    }
+}
+
+function createSpeakButton(text, lang, label) {
+    var btn = document.createElement("button");
+    btn.className = "speak-btn";
+    btn.textContent = label || "🔊 朗读";
+    btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (window.speechSynthesis.speaking) {
+            stopSpeaking();
+            btn.classList.remove("speaking");
+            return;
+        }
+        btn.classList.add("speaking");
+        speakText(text, lang);
+        var checkDone = setInterval(function () {
+            if (!window.speechSynthesis.speaking) {
+                btn.classList.remove("speaking");
+                clearInterval(checkDone);
+            }
+        }, 200);
+    });
+    return btn;
+}
+    </script>
+    <script>
+        const APP_ROOT = "{{ config.APPLICATION_ROOT|safe }}";
+    </script>
+    <script>
+/* ========================================
+   英语语法练习 - 前端逻辑
+   ======================================== */
+
+// ========== 主页逻辑 ==========
+
+function initHomePage() {
+    var selectedGrade = "";
+    var selectedType = "";
+    var gradeCards = document.querySelectorAll(".grade-card");
+    var typeButtons = document.querySelectorAll(".type-btn");
+    var startBtn = document.getElementById("start-btn");
+    var errorMsg = document.getElementById("home-error");
+
+    gradeCards.forEach(function (card) {
+        card.addEventListener("click", function () {
+            gradeCards.forEach(function (c) { c.classList.remove("active"); });
+            card.classList.add("active");
+            selectedGrade = card.getAttribute("data-grade");
+            hideError(errorMsg);
+        });
+    });
+
+    typeButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            typeButtons.forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            selectedType = btn.getAttribute("data-type");
+            hideError(errorMsg);
+        });
+    });
+
+    startBtn.addEventListener("click", function () {
+        if (!selectedGrade) {
+            showError(errorMsg, "请先选择年级！");
+            return;
+        }
+        if (!selectedType) {
+            showError(errorMsg, "请选择题型！");
+            return;
+        }
+        window.location.href = APP_ROOT + "/quiz?grade=" + selectedGrade + "&type=" + selectedType;
+    });
+}
+
+// ========== 答题页逻辑（5题练习模式） ==========
+
+function initQuizPage() {
+    var state = {
+        questionSet: [],  // 当前5道题
+        currentIndex: 0,  // 当前题目索引
+        results: [],  // 每道题的答题结果
+        selectedAnswer: null,
+        isSubmitted: false,
+        startTime: Date.now(),
+        timerInterval: null,
+        elapsedSeconds: 0,
+        totalAnswered: 0,
+        totalCorrect: 0,
+        score: 0,
+        streak: 0,
+        badgesEarned: {},
+        questionHistory: []  // 记录已做过的题目，用于去重
+    };
+
+    var loadingOverlay = document.getElementById("loading-overlay");
+    var loadingText = document.getElementById("loading-text");
+    var questionArea = document.getElementById("question-area");
+    var questionText = document.getElementById("question-text");
+    var answerArea = document.getElementById("answer-area");
+    var feedbackArea = document.getElementById("feedback-area");
+    var explainArea = document.getElementById("explain-area");
+    var submitBtn = document.getElementById("submit-btn");
+    var nextBtn = document.getElementById("next-btn");
+    var progressText = document.getElementById("progress-text");
+    var timerEl = document.getElementById("timer");
+    var quizError = document.getElementById("quiz-error");
+    var scoreText = document.getElementById("score-text");
+    var streakBadge = document.getElementById("streak-badge");
+    var confettiContainer = document.getElementById("confetti-container");
+
+    // Create Learning Buddy
+    LearningBuddy.create();
+
+    // Start timer
+    state.timerInterval = setInterval(function () {
+        state.elapsedSeconds++;
+        timerEl.textContent = "⏱ " + formatTime(state.elapsedSeconds);
+    }, 1000);
+
+    // Keyboard shortcuts
+    document.addEventListener("keydown", function(e) {
+        if (state.isSubmitted) return;
+        if (QUESTION_TYPE === "choice") {
+            var key = e.key.toUpperCase();
+            if (["A", "B", "C", "D"].indexOf(key) !== -1) {
+                var btns = answerArea.querySelectorAll(".option-btn");
+                var idx = key.charCodeAt(0) - 65;
+                if (btns[idx]) btns[idx].click();
+            }
+        }
+        if (e.key === "Enter") {
+            if (QUESTION_TYPE === "fill" || QUESTION_TYPE === "correction") {
+                submitAnswer();
+            }
+        }
+    });
+
+    // Load first question set (5 questions)
+    loadQuestionSet();
+
+    // Submit button
+    submitBtn.addEventListener("click", function () {
+        submitAnswer();
+    });
+
+    // Next button
+    nextBtn.addEventListener("click", function () {
+        goToNextQuestion();
+    });
+
+    // ---- Render question ----
+    function loadQuestionSet() {
+        showLoading("正在出题...");
+        questionArea.classList.add("hidden");
+
+        fetchJSON(APP_ROOT + "/api/questions", {
+            grade: GRADE,
+            question_type: QUESTION_TYPE,
+            count: 5,
+            knowledge_point: KNOWLEDGE_POINT || "",
+            history: StorageManager.getQuestionHistory()
+        }).then(function (data) {
+            if (data.success && data.questions && data.questions.length > 0) {
+                // 直接使用返回的题目（后端已通过history参数去重）
+                state.questionSet = data.questions;
+                state.currentIndex = 0;
+                state.results = [];
+                
+                // 记录题目历史
+                for (var i = 0; i < data.questions.length; i++) {
+                    state.questionHistory.push(data.questions[i].question);
+                }
+                
+                // 检查题目数量
+                if (state.questionSet.length < 5) {
+                    console.warn("题目数量不足5题，实际：" + state.questionSet.length);
+                }
+                
+                if (state.questionSet.length > 0) {
+                    hideLoading();  // 题目加载完成后才隐藏loading
+                    questionArea.classList.remove("hidden");
+                    renderQuestion(state.questionSet[0]);
+                    updateProgress();
+                } else {
+                    hideLoading();
+                    showError(quizError, "获取题目失败，请返回重试。");
+                }
+            } else {
+                hideLoading();
+                showError(quizError, "获取题目失败，请返回重试。");
+            }
+        }).catch(function () {
+            hideLoading();
+            showError(quizError, "网络错误，请检查网络连接后返回重试。");
+        });
+    }
+    
+    // ---- Go to next question ----
+    function goToNextQuestion() {
+        state.currentIndex++;
+        
+        if (state.currentIndex < state.questionSet.length) {
+            // 还有下一题
+            renderQuestion(state.questionSet[state.currentIndex]);
+            updateProgress();
+        } else {
+            // 做完所有题目，显示总结
+            showSummary();
+        }
+    }
+    
+    // ---- Show summary ----
+    function showSummary() {
+        // 停止计时器
+        if (state.timerInterval) {
+            clearInterval(state.timerInterval);
+            state.timerInterval = null;
+        }
+        
+        questionArea.classList.add("hidden");
+        
+        // 创建总结区域
+        var summaryArea = document.createElement("div");
+        summaryArea.className = "card results-card";
+        summaryArea.innerHTML = 
+            '<h2>🎉 练习完成！</h2>' +
+            '<div class="score-display">' +
+                '<span>' + state.totalCorrect + '</span>' +
+                '<span class="score-total">/ ' + state.questionSet.length + '</span>' +
+            '</div>' +
+            '<div class="time-display">用时：' + formatTime(state.elapsedSeconds) + '</div>' +
+            '<div class="encourage-text" style="background: ' + 
+                (state.totalCorrect >= state.questionSet.length * 0.8 ? 'var(--success-light)' : 'var(--secondary-light)') + 
+                '">' +
+                (state.totalCorrect >= state.questionSet.length * 0.8 ? '太棒了！继续保持！' : '加油！多多练习就会进步！') +
+            '</div>' +
+            '<div class="review-list" id="review-list"></div>' +
+            '<div class="action-buttons" style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px;">' +
+                '<button class="btn btn-primary" style="flex: 1; min-width: 140px; padding: 14px; font-size: 16px;" onclick="location.reload()">🔄 再练一组</button>' +
+                '<a href="' + APP_ROOT + '/grammar" class="btn btn-secondary" style="flex: 1; min-width: 140px; padding: 14px; font-size: 16px;">🏠 返回首页</a>' +
+                '<a href="' + APP_ROOT + '/wrong-questions" class="btn btn-warning" style="flex: 1; min-width: 140px; padding: 14px; font-size: 16px;">📒 错题本</a>' +
+                '<a href="' + APP_ROOT + '/stats" class="btn btn-info" style="flex: 1; min-width: 140px; padding: 14px; font-size: 16px;">📊 学习报告</a>' +
+            '</div>';
+        
+        // 添加每道题的回顾
+        var reviewList = summaryArea.querySelector("#review-list");
+        for (var i = 0; i < state.results.length; i++) {
+            var result = state.results[i];
+            var question = state.questionSet[i];
+            var optionsHtml = "";
+            if (question.options && question.options.length > 0) {
+                optionsHtml = '<div style="margin-top: 4px;">选项：';
+                question.options.forEach(function(opt, idx) {
+                    optionsHtml += '<span style="display: inline-block; margin-right: 16px; padding: 4px 8px; background: #f5f5f5; border-radius: 4px;">' + escapeHtml(opt) + '</span>';
+                });
+                optionsHtml += '</div>';
+            }
+            var reviewItem = document.createElement("div");
+            reviewItem.className = "review-item";
+            reviewItem.dataset.questionIndex = i;
+            reviewItem.innerHTML = 
+                '<div class="review-item-header">' +
+                    '<span class="review-badge ' + (result.isCorrect ? 'correct' : 'wrong') + '">' +
+                        (result.isCorrect ? '✓' : '✗') +
+                    '</span>' +
+                    '<span class="review-item-question">' + escapeHtml(question.question) + '</span>' +
+                '</div>' +
+                '<div class="review-item-detail">' +
+                    optionsHtml +
+                    '<div>你的答案：' + escapeHtml(result.userAnswer || "未作答") + '</div>' +
+                    '<div>正确答案：' + escapeHtml(result.correctAnswer) + '</div>' +
+                    '<div>知识点：' + escapeHtml(question.knowledge || "") + '</div>' +
+                    '<button class="btn btn-info btn-small explain-summary-btn" data-index="' + i + '" style="margin-top: 8px;">🤖 AI 讲解</button>' +
+                    '<div class="explain-result hidden" id="explain-result-' + i + '" style="margin-top: 8px;"></div>' +
+                '</div>';
+            reviewList.appendChild(reviewItem);
+        }
+        
+        // 替换questionArea
+        questionArea.parentNode.insertBefore(summaryArea, questionArea.nextSibling);
+        
+        // 绑定AI讲解按钮事件
+        summaryArea.querySelectorAll(".explain-summary-btn").forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                var idx = parseInt(this.getAttribute("data-index"));
+                explainQuestionInSummary(idx);
+            });
+        });
+        
+        // 滚动到顶部
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    
+    // ---- Explain question in summary ----
+    function explainQuestionInSummary(index) {
+        var question = state.questionSet[index];
+        var result = state.results[index];
+        var btn = document.querySelector('.explain-summary-btn[data-index="' + index + '"]');
+        var resultEl = document.getElementById("explain-result-" + index);
+        
+        btn.textContent = "正在生成讲解...";
+        btn.disabled = true;
+        
+        fetchJSON(APP_ROOT + "/api/explain", {
+            question: question.question,
+            user_answer: result.userAnswer,
+            correct_answer: result.correctAnswer,
+            is_correct: result.isCorrect,
+            question_type: QUESTION_TYPE,
+            knowledge: question.knowledge || ""
+        }).then(function(data) {
+            btn.textContent = "🤖 AI 讲解";
+            btn.disabled = false;
+            
+            if (data.success && data.explanation) {
+                resultEl.classList.remove("hidden");
+                var renderedContent = "";
+                if (typeof marked !== "undefined") {
+                    renderedContent = marked.parse(data.explanation);
+                } else {
+                    renderedContent = "<p>" + escapeHtml(data.explanation) + "</p>";
+                }
+                // 添加朗读和收起按钮
+                var speakBtn = createSpeakButton(data.explanation, "zh-CN", "🔊 朗读讲解");
+                resultEl.innerHTML = 
+                    "<h4>💡 语法讲解</h4>" + 
+                    renderedContent + 
+                    '<div class="explain-actions">' +
+                        '<button class="speak-btn" id="speak-btn-' + index + '">🔊 朗读讲解</button>' +
+                        '<button class="btn btn-secondary btn-small" onclick="this.closest(\'.explain-result\').classList.add(\'hidden\');">收起讲解</button>' +
+                    '</div>';
+                // 绑定朗读按钮事件
+                var speakBtnEl = document.getElementById("speak-btn-" + index);
+                if (speakBtnEl) {
+                    speakBtnEl.addEventListener("click", function(e) {
+                        e.stopPropagation();
+                        if (window.speechSynthesis.speaking) {
+                            stopSpeaking();
+                            speakBtnEl.classList.remove("speaking");
+                            return;
+                        }
+                        speakBtnEl.classList.add("speaking");
+                        speakText(data.explanation, "zh-CN");
+                        var checkDone = setInterval(function() {
+                            if (!window.speechSynthesis.speaking) {
+                                speakBtnEl.classList.remove("speaking");
+                                clearInterval(checkDone);
+                            }
+                        }, 200);
+                    });
+                }
+                // 不隐藏讲解按钮，用户可以再次点击展开
+            } else {
+                resultEl.classList.remove("hidden");
+                resultEl.innerHTML = "<p class='error-msg'>生成讲解失败，请重试。</p>";
+            }
+        }).catch(function(err) {
+            btn.textContent = "🤖 AI 讲解";
+            btn.disabled = false;
+            resultEl.classList.remove("hidden");
+            resultEl.innerHTML = "<p class='error-msg'>网络错误，请重试。</p>";
+        });
+    }
+    
+    // ---- Check duplicate question ----
+    function checkDuplicate(question) {
+        var questionText = question.question;
+        // 检查是否与历史题目完全相同或高度相似
+        for (var i = 0; i < state.questionHistory.length; i++) {
+            var historyQuestion = state.questionHistory[i];
+            // 完全相同
+            if (questionText === historyQuestion) {
+                return true;
+            }
+            // 高度相似（去除空格和标点后比较）
+            var normalizedNew = questionText.replace(/[^\w]/g, '').toLowerCase();
+            var normalizedHistory = historyQuestion.replace(/[^\w]/g, '').toLowerCase();
+            if (normalizedNew === normalizedHistory) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // ---- Render question ----
+    function renderQuestion(q) {
+        state.selectedAnswer = null;
+        state.isSubmitted = false;
+        state.currentResult = null;
+
+        // Reset UI
+        feedbackArea.classList.add("hidden");
+        feedbackArea.className = "feedback-area hidden";
+        explainArea.classList.add("hidden");
+        explainArea.className = "explain-area hidden";
+        submitBtn.classList.remove("hidden");
+        submitBtn.disabled = false;
+        nextBtn.classList.add("hidden");
+        hideError(quizError);
+
+        // Reset confetti
+        confettiContainer.innerHTML = "";
+
+        // Render question text
+        questionText.innerHTML = "";
+        var qSpan = document.createElement("span");
+        qSpan.textContent = q.question;
+        questionText.appendChild(qSpan);
+        var qSpeakBtn = createSpeakButton(q.question, "en-US", "🔊");
+        qSpeakBtn.title = "朗读题目";
+        qSpeakBtn.classList.add("speak-btn-inline");
+        questionText.appendChild(qSpeakBtn);
+        answerArea.innerHTML = "";
+
+        if (QUESTION_TYPE === "choice") {
+            renderChoice(q);
+        } else if (QUESTION_TYPE === "fill") {
+            renderFill(q);
+        } else if (QUESTION_TYPE === "judge") {
+            renderJudge(q);
+        } else if (QUESTION_TYPE === "correction") {
+            renderCorrection(q);
+        }
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function renderChoice(q) {
+        // 验证选项是否存在
+        if (!q.options || !Array.isArray(q.options) || q.options.length < 4) {
+            showError(quizError, "题目选项不完整，请返回重试。");
+            console.error("选择题选项缺失:", q);
+            return;
+        }
+        q.options.forEach(function (opt) {
+            var btn = document.createElement("button");
+            btn.className = "option-btn";
+            btn.textContent = opt;
+            btn.addEventListener("click", function () {
+                if (state.isSubmitted) return;
+                answerArea.querySelectorAll(".option-btn").forEach(function (b) {
+                    b.classList.remove("selected");
+                });
+                btn.classList.add("selected");
+                state.selectedAnswer = opt.charAt(0);
+            });
+            answerArea.appendChild(btn);
+        });
+    }
+
+    function renderFill() {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.className = "answer-input";
+        input.placeholder = "请输入你的答案...";
+        input.id = "fill-input";
+        input.addEventListener("input", function () {
+            state.selectedAnswer = input.value.trim();
+        });
+        answerArea.appendChild(input);
+        setTimeout(function () { input.focus(); }, 100);
+    }
+
+    function renderJudge() {
+        var wrapper = document.createElement("div");
+        wrapper.className = "judge-buttons";
+
+        var trueBtn = document.createElement("button");
+        trueBtn.className = "judge-btn judge-true";
+        trueBtn.textContent = "👍 对";
+        trueBtn.addEventListener("click", function () {
+            if (state.isSubmitted) return;
+            wrapper.querySelectorAll(".judge-btn").forEach(function (b) {
+                b.classList.remove("selected");
+            });
+            trueBtn.classList.add("selected");
+            state.selectedAnswer = "true";
+        });
+
+        var falseBtn = document.createElement("button");
+        falseBtn.className = "judge-btn judge-false";
+        falseBtn.textContent = "👎 错";
+        falseBtn.addEventListener("click", function () {
+            if (state.isSubmitted) return;
+            wrapper.querySelectorAll(".judge-btn").forEach(function (b) {
+                b.classList.remove("selected");
+            });
+            falseBtn.classList.add("selected");
+            state.selectedAnswer = "false";
+        });
+
+        wrapper.appendChild(trueBtn);
+        wrapper.appendChild(falseBtn);
+        answerArea.appendChild(wrapper);
+    }
+
+    function renderCorrection() {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.className = "answer-input";
+        input.placeholder = "请写出正确的句子...";
+        input.id = "correction-input";
+        input.addEventListener("input", function () {
+            state.selectedAnswer = input.value.trim();
+        });
+        answerArea.appendChild(input);
+        setTimeout(function () { input.focus(); }, 100);
+    }
+
+    // ---- Submit answer ----
+    function submitAnswer() {
+        if (state.isSubmitted) return;
+
+        var userAnswer = state.selectedAnswer;
+        if (userAnswer === null || userAnswer === "") {
+            showError(quizError, "请先作答再提交！");
+            return;
+        }
+
+        var q = state.questionSet[state.currentIndex];
+
+        showLoading("正在批改...");
+        fetchJSON(APP_ROOT + "/api/grade", {
+            question: q,
+            user_answer: userAnswer,
+            question_type: QUESTION_TYPE
+        }).then(function (data) {
+            hideLoading();
+            if (!data.success) {
+                showError(quizError, "批改失败，请重试。");
+                return;
+            }
+
+            state.isSubmitted = true;
+            var isCorrect = data.is_correct;
+
+            // Update stats
+            state.totalAnswered++;
+            if (isCorrect) {
+                state.totalCorrect++;
+                state.score += 10;
+                state.streak++;
+                if (state.streak >= 3) {
+                    state.score += 5;
+                }
+            } else {
+                state.streak = 0;
+            }
+            updateScoreDisplay();
+            checkBadges();
+            showScoreFloat(isCorrect, state.streak >= 3 && isCorrect);
+            updateProgress();
+
+            // StorageManager integration
+            StorageManager.updateStats(isCorrect);
+            StorageManager.updateScore(isCorrect ? (state.streak >= 3 ? 15 : 10) : 0);
+            var currentQ = state.questionSet[state.currentIndex];
+            StorageManager.updateKnowledgeStat(GRADE, currentQ.knowledge || KNOWLEDGE_POINT, isCorrect);
+            // 存储题目历史（用于去重）
+            StorageManager.addQuestionHistory(currentQ.question);
+            if (!isCorrect) {
+                StorageManager.addWrongQuestion({
+                    question: currentQ.question,
+                    questionType: QUESTION_TYPE,
+                    grade: GRADE,
+                    knowledge: currentQ.knowledge || KNOWLEDGE_POINT,
+                    userAnswer: userAnswer,
+                    correctAnswer: data.correct_answer,
+                    options: currentQ.options || null
+                });
+            }
+
+            // Save result for this question
+            state.results.push({
+                userAnswer: userAnswer,
+                isCorrect: isCorrect,
+                correctAnswer: data.correct_answer,
+                explanation: ""
+            });
+
+            // Show feedback
+            showFeedback(isCorrect, data.correct_answer);
+
+            // Handle is_close fuzzy grading feedback
+            if (!isCorrect && data.is_close) {
+                var encourageDiv = document.createElement("div");
+                encourageDiv.className = "encourage-text";
+                encourageDiv.style.color = "var(--secondary)";
+                encourageDiv.textContent = "你的答案和正确答案很接近，再想想！";
+                feedbackArea.appendChild(encourageDiv);
+            }
+
+            // Highlight correct/wrong in answer area
+            highlightAnswer(isCorrect, data.correct_answer);
+
+            // Sound, confetti and LearningBuddy
+            if (isCorrect) {
+                LearningBuddy.onCorrect(state.streak);
+                SoundFX.playCorrect();
+                spawnConfetti();
+            } else {
+                LearningBuddy.onWrong();
+                SoundFX.playWrong();
+            }
+
+            // Show next button
+            submitBtn.disabled = true;
+            submitBtn.classList.add("hidden");
+            nextBtn.classList.remove("hidden");
+            
+            // 更新按钮文本
+            if (state.currentIndex < state.questionSet.length - 1) {
+                nextBtn.textContent = "下一题 ➡️";
+            } else {
+                nextBtn.textContent = "查看总结 📊";
+            }
+            nextBtn.focus();
+        }).catch(function () {
+            hideLoading();
+            showError(quizError, "网络错误，请重试。");
+        });
+    }
+
+    // ---- Fetch AI Explanation (manual trigger) ----
+    function showExplanationArea(explanation) {
+        explainArea.classList.remove("hidden");
+        var speakBtn = createSpeakButton(explanation, "zh-CN", "🔊 朗读讲解");
+        // 使用markdown渲染
+        var renderedContent = "";
+        if (typeof marked !== "undefined") {
+            renderedContent = marked.parse(explanation);
+        } else {
+            // 如果marked库未加载，降级为纯文本
+            renderedContent = "<p>" + escapeHtml(explanation) + "</p>";
+        }
+        explainArea.innerHTML = "<h4>💡 语法讲解</h4>" + renderedContent;
+        explainArea.appendChild(speakBtn);
+    }
+
+    function showFeedback(isCorrect, correctAnswer) {
+        feedbackArea.classList.remove("hidden", "correct", "wrong");
+        if (isCorrect) {
+            feedbackArea.classList.add("correct");
+            feedbackArea.innerHTML = "✅ 回答正确！太棒了！";
+        } else {
+            feedbackArea.classList.add("wrong");
+            var answerText = formatCorrectAnswer(correctAnswer);
+            feedbackArea.innerHTML = "❌ 回答错误" +
+                '<div class="correct-answer">正确答案：' + escapeHtml(answerText) + '</div>' +
+                '<div class="encourage-text">💪 没关系，再试一次吧！</div>';
+        }
+    }
+
+    function formatCorrectAnswer(answer) {
+        if (typeof answer === "boolean") {
+            return answer ? "对" : "错";
+        }
+        return String(answer);
+    }
+
+    function highlightAnswer(isCorrect, correctAnswer) {
+        if (QUESTION_TYPE === "choice") {
+            var btns = answerArea.querySelectorAll(".option-btn");
+            btns.forEach(function (btn) {
+                btn.disabled = true;
+                var letter = btn.textContent.charAt(0);
+                if (letter === correctAnswer) {
+                    btn.classList.add("correct");
+                } else if (btn.classList.contains("selected") && !isCorrect) {
+                    btn.classList.add("wrong");
+                }
+            });
+        } else if (QUESTION_TYPE === "fill") {
+            var input = document.getElementById("fill-input");
+            if (input) {
+                input.disabled = true;
+                input.classList.add(isCorrect ? "correct" : "wrong");
+            }
+        } else if (QUESTION_TYPE === "judge") {
+            var jBtns = answerArea.querySelectorAll(".judge-btn");
+            jBtns.forEach(function (btn) {
+                btn.disabled = true;
+            });
+        } else if (QUESTION_TYPE === "correction") {
+            var cInput = document.getElementById("correction-input");
+            if (cInput) {
+                cInput.disabled = true;
+                cInput.classList.add(isCorrect ? "correct" : "wrong");
+            }
+        }
+    }
+
+    function updateProgress() {
+        var current = state.currentIndex + 1;
+        var total = state.questionSet.length;
+        progressText.textContent = "第" + current + "题/共" + total + "题 · 正确 " + state.totalCorrect;
+    }
+
+    function updateScoreDisplay() {
+        scoreText.textContent = state.score;
+        if (state.streak >= 3) {
+            streakBadge.classList.remove("hidden");
+            streakBadge.textContent = "🔥 x" + state.streak;
+        } else {
+            streakBadge.classList.add("hidden");
+        }
+    }
+
+    function showScoreFloat(isCorrect, streakBonus) {
+        var el = document.createElement("div");
+        el.className = "score-float";
+        var points = 10;
+        var text = "+10";
+        if (isCorrect && streakBonus) {
+            points = 15;
+            text = "+15 连击!";
+        }
+        el.textContent = text;
+        var header = document.querySelector(".quiz-header");
+        var rect = header.getBoundingClientRect();
+        el.style.left = (rect.left + rect.width / 2 - 30) + "px";
+        el.style.top = (rect.top + 10) + "px";
+        document.body.appendChild(el);
+        setTimeout(function () { el.remove(); }, 1300);
+    }
+
+    function spawnConfetti() {
+        var colors = ["#FF6B6B", "#FFD43B", "#51CF66", "#74C0FC", "#B197FC", "#FFA94D"];
+        var emojis = ["⭐", "🌟", "✨", "🎉", "🎊", "💫"];
+        var container = confettiContainer;
+        for (var i = 0; i < 30; i++) {
+            var piece = document.createElement("div");
+            if (i < 20) {
+                piece.className = "confetti-piece";
+                piece.style.left = Math.random() * 100 + "%";
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDelay = Math.random() * 0.5 + "s";
+                piece.style.animationDuration = (2 + Math.random() * 1.5) + "s";
+            } else {
+                piece.className = "star-piece";
+                piece.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                piece.style.left = Math.random() * 100 + "%";
+                piece.style.animationDelay = Math.random() * 0.3 + "s";
+                piece.style.animationDuration = (1.5 + Math.random() * 1) + "s";
+            }
+            container.appendChild(piece);
+            setTimeout(function () { piece.remove(); }, 3000);
+        }
+    }
+
+    function checkBadges() {
+        var data = StorageManager.load();
+        if (state.totalCorrect === 1 && data.badges.indexOf("first_win") === -1) {
+            StorageManager.addBadge("first_win");
+            showBadge("🏆", "初次胜利", "答对了第一道题！继续加油！");
+        }
+        if (state.streak === 5 && data.badges.indexOf("streak_5") === -1) {
+            StorageManager.addBadge("streak_5");
+            showBadge("🔥", "连击达人", "连续答对 5 题！太厉害了！");
+        }
+        if (state.totalCorrect === 10 && data.badges.indexOf("star_10") === -1) {
+            StorageManager.addBadge("star_10");
+            showBadge("⭐", "学习之星", "累计答对 10 题！你是语法小天才！");
+        }
+        if (data.totalAnswered >= 50 && data.badges.indexOf("persistent_50") === -1) {
+            StorageManager.addBadge("persistent_50");
+            showBadge("💪", "坚持不懈", "累计做了 50 题！你太有毅力了！");
+        }
+        if (state.questionSet && state.totalCorrect === state.questionSet.length && data.badges.indexOf("perfect_clear") === -1) {
+            StorageManager.addBadge("perfect_clear");
+            showBadge("🎯", "完美通关", "5 题全对！太厉害了！");
+        }
+    }
+
+    function showBadge(icon, title, desc) {
+        SoundFX.playBadge();
+        var overlay = document.createElement("div");
+        overlay.className = "badge-overlay";
+        overlay.innerHTML = '<div class="badge-popup">' +
+            '<div class="badge-icon">' + icon + '</div>' +
+            '<div class="badge-title">' + title + '</div>' +
+            '<div class="badge-desc">' + desc + '</div>' +
+            '</div>';
+        document.body.appendChild(overlay);
+        setTimeout(function () {
+            overlay.style.opacity = "0";
+            overlay.style.transition = "opacity 0.5s";
+            setTimeout(function () { overlay.remove(); }, 500);
+        }, 2500);
+    }
+
+    // ---- Helpers ----
+    function showLoading(text) {
+        loadingText.textContent = text || "加载中...";
+        loadingOverlay.classList.remove("hidden");
+        // 暂停计时器
+        if (state.timerInterval) {
+            clearInterval(state.timerInterval);
+            state.timerInterval = null;
+        }
+    }
+
+    function hideLoading() {
+        loadingOverlay.classList.add("hidden");
+        // 恢复计时器（如果还没完成）
+        if (!state.timerInterval && state.questionSet.length > 0 && state.currentIndex < state.questionSet.length) {
+            state.timerInterval = setInterval(function () {
+                state.elapsedSeconds++;
+                timerEl.textContent = "⏱ " + formatTime(state.elapsedSeconds);
+            }, 1000);
+        }
+    }
+}
+    </script>
+    <script>
+        initQuizPage();
+    </script>
+</body>
+</html>

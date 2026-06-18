@@ -1,0 +1,2929 @@
+[
+    {
+        "id": "q-004",
+        "sourceType": "cloze",
+        "stem": "Lucy likes ____ (read) storybooks after dinner.",
+        "gradeBand": "primary-upper",
+        "examSource": "项目内置示例题",
+        "knowledgePointId": "kp-like-v-ing",
+        "difficulty": "easy"
+    },
+    {
+        "id": "q-005",
+        "sourceType": "cloze",
+        "stem": "I ____ twelve years old.",
+        "gradeBand": "primary-upper",
+        "examSource": "项目内置示例题",
+        "knowledgePointId": "kp-be-verb",
+        "difficulty": "easy"
+    },
+    {
+        "id": "sh-2008-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "She said sorry to Mike for taking his paper home by mistake. (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "The English party will be held three days before Christmas. (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "Her friend always gives her a hand whenever she is in trouble. (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Nancy has made up her mind to work in the mountain area. (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "\"Mm... the soup tastes very nice!\" (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "\"Could you say it once more?\" (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "\"Do you feel it dull to take a walk for an hour every morning?\" (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "\"I have no idea.\" (closest meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "Billy looks upset. What happened to ______? (he)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "It is said that eight ______ of water a day can help you keep fit. (glass)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "Linton is interested in Chinese history and this is his ______ visit to Beijing. (four)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "Don't throw the old watch away. It is still ______. (use)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "Fishing is one of my ______ outdoor activities. (favour)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "Grandpa is going to ______ his house and live with us. (sale)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "Nowadays too many boys want to become ______. (act)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Mary is good at writing. She will ______ be a reporter in the future. (possible)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "______ Susan ______ her piano lesson on Saturday afternoon? (general question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "______ ______ is your father's? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-69",
+        "sourceType": "cloze",
+        "stem": "______ ______ the new housing estate in the city center is! (exclamation)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-70",
+        "sourceType": "cloze",
+        "stem": "Why do the twins look ______ ______ each other? (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-cloze-71",
+        "sourceType": "cloze",
+        "stem": "Bob hasn't told his friends ______ ______ would like to be in the future. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Many historical ______ will be shown on National Day. (movie)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "With the help of Yellow Pages, we found the address of the theatre ______. (easy)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "Eric, the ______ son of the family, has a special interest in physics. (three)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "It's ______ for him to be so active today as he is always a man of few words. (usual)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "Who is the ______ of the book War and Peace? (write)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "The short play was very ______. I laughed from beginning to end. (fun)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "It's raining heavily. I'd ______ you call a taxi home now. (suggestion)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "I think the girl is old enough to tie up her shoes by ______. (her)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "______ they ______ on the farm with their parents every weekend? (general question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Let's take a picture in front of the fountain, ______ ______? (tag question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "______ ______ is the Shanghai International Arts Festival held? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "He was ______ nervous ______ go on with the job interview. (combine)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-69",
+        "sourceType": "cloze",
+        "stem": "I have no idea ______ ______ operate the new machine. (simple sentence)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-cloze-70",
+        "sourceType": "cloze",
+        "stem": "I'm going to make an early start ______ ______ I won't miss the train. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Joanna received many ______ when graduating from middle school. (gift)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "Alex is ______ years old and is taken good care of in the kindergarten. (fourth)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "Whose school uniform is that on the chair, yours or ______? (my)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "It was ______ for human beings to predict weather in the past. (difficulty)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "There is a beautiful ______ on the wall in each room of my house. (paint)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "You need to explain your opinions quite ______ when having a debate. (clear)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "Let's hope that all our troubles will ______ soon. (appear)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "The local people are ______ that the whole nation is helping them rebuild the town. (thank)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "______ Peter often ______ in the house at the weekend? (general question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "______ ______ you use to stay on family holidays? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "Your mother has never tried shopping on the Internet, ______ ______? (tag question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "______ ______ James ten years to make this amazing film. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-69",
+        "sourceType": "cloze",
+        "stem": "______ Chris ______ Karen have gone to South Africa to enjoy the 2010 World Cup. (combine)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-cloze-70",
+        "sourceType": "cloze",
+        "stem": "Visitors love this city ______ ______ its historical sights and delicious food. (simple form)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Climb up to the ______ floor, and you can enjoy a better view. (eleven)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "______, Grace made up her mind to live abroad with her daughter. (final)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "It is a very ______ book for language learners to improve writing skills. (use)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "Don't worry about your son. He is old enough to be independent and live by ______. (he)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "The movie Kungfu Panda II is sure to ______ a large number of teenagers. (attractive)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "If you don't go on a diet, it is ______ for you to lose weight. (possible)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "The local people had to move away because of the serious ______. (pollute)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "The great ______ gave his first show in Shanghai and the tickets sold out in minutes. (art)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "We ______ ______ in touch with each other by email. (negative form)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "______ ______ does your school organize an English speech contest? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "______ ______ nice place the beach is for tourists! (exclamation)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "The sales manager wants to know ______ there ______ any new markets in Asia. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-69",
+        "sourceType": "cloze",
+        "stem": "Many graduates will ______ ______ by the university to celebrate its 100th birthday. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-cloze-70",
+        "sourceType": "cloze",
+        "stem": "We should ______ talk loudly ______ smoke in the theatre. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "Then you will ______ understand your questions better and get right answers on the day of the interview. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "Then think about yourself - your strong points and ______ ones. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "You might want to speak about your interests and ______ outside school. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "When you first meet the interviewer, greet him or her ______. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "You want the interviewer to think you are ______ and friendly. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "If you get nervous, take a deep ______ to calm yourself down. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Last but not least, ______ the interview, don't forget to thank the interviewer and say goodbye. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "I'm sure that you will ______ your interviews. (from the box)",
+        "wordBox": [
+            "weak",
+            "break",
+            "confident",
+            "at the end of",
+            "possibly",
+            "breath",
+            "do well in",
+            "hobbies",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "The students took the PISA test in ______ subjects - reading, maths and science. (third)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "Board games are more and more popular among ______. (teenager)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "I liked to walk in fields on ______ days and to see my footprints left behind. (snow)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "______ people often begin their conversations by talking about the weather. (Britain)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "The news about education has attracted the public attention ______. (recent)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "The World Chocolate Park showed a ______ of many kinds of chocolates. (collect)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "To improve your writing skills, you'd better ______ a habit of reading. (development)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Don't tell lies. Nobody likes those ______ people. (honest)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "______ the new product ______ of four main parts inside? (general question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "Jessica ______ ______ the physics problems without any help. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-69",
+        "sourceType": "cloze",
+        "stem": "______ advice ______ Susan follow to design smart shoes? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-70",
+        "sourceType": "cloze",
+        "stem": "Lin Dan played badminton well ______ ______ win the Thomas Cup again. (combine)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-71",
+        "sourceType": "cloze",
+        "stem": "Ideas ______ always ______ by my students in class. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-72",
+        "sourceType": "cloze",
+        "stem": "You ______ be able to make the best wine ______ you choose the perfect grapes only. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-cloze-73",
+        "sourceType": "cloze",
+        "stem": "A parent asked ______ it ______ the first boys-only school in the city. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "A newspaper ______ did a survey among a group of students. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "The ______ of the survey show that not everybody wants to have many holidays. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "If you don't want to stay at home and get bored, go out and ______ some interesting activities. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "A lot of schools organize various trips during the holidays, so you have many ______ to make. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "There, students can learn a lot from ______ activities. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "They also learn more about ______ animals. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "In most towns, some other centres ______ students different courses. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "Students can also ______ for school trips. (from the box)",
+        "wordBox": [
+            "results",
+            "outdoor",
+            "recently",
+            "take part in",
+            "wild",
+            "choices",
+            "go abroad",
+            "gently",
+            "offer"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "The prices of many ______ usually go up during festivals. (flower)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "This is the ______ time for our school to hold the robot-making contest. (six)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "I could hardly believe she had made a video about water pollution by ______. (her)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "The company hopes its new product will be ______ on the European market. (success)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "Larry has put on too much weight because of his ______ diet. (healthy)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "Jack finds it difficult to pronounce some English words ______. (correct)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "Don't use the lift when you escape from a high ______ during a fire. (build)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "It is not wise of young people to ______ their jobs from time to time. (changeable)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "Fred ______ ______ to work in the charity hospital in the community. (negative form)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "______ ______ is Jim's office from the nearest underground station? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-69",
+        "sourceType": "cloze",
+        "stem": "Though many houses ______ ______ by the earthquake, people didn't lose hope. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-70",
+        "sourceType": "cloze",
+        "stem": "This year's car exhibition was ______ special ______ it attracted many visitors. (combine)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-71",
+        "sourceType": "cloze",
+        "stem": "With the help of a local guide, they reached the mountain top ______ ______. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-72",
+        "sourceType": "cloze",
+        "stem": "______ ______ our journey to Britain last summer was! (exclamation)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-cloze-73",
+        "sourceType": "cloze",
+        "stem": "The reporter asked ______ ______ responsible for the food safety problem. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "When I was at home, we ______ about many things. (from the box)",
+        "wordBox": [
+            "behaviours",
+            "mad",
+            "refused",
+            "argued",
+            "modern"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "One time, before a big party, she ______ to let me leave the house. (from the box)",
+        "wordBox": [
+            "behaviours",
+            "mad",
+            "refused",
+            "argued",
+            "modern"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "I was the only girl without makeup, and I was so ______. (from the box)",
+        "wordBox": [
+            "behaviours",
+            "mad",
+            "refused",
+            "argued",
+            "modern"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Her ______ always made me upset. (from the box)",
+        "wordBox": [
+            "behaviours",
+            "mad",
+            "refused",
+            "argued",
+            "modern"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "But after a few months at college, I changed myself ______. (from the box)",
+        "wordBox": [
+            "closer to",
+            "completely",
+            "tradition",
+            "together",
+            "advice"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "My new way of thinking brought me ______ my mother. (from the box)",
+        "wordBox": [
+            "closer to",
+            "completely",
+            "tradition",
+            "together",
+            "advice"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "We go to movies ______ and read the same books. (from the box)",
+        "wordBox": [
+            "closer to",
+            "completely",
+            "tradition",
+            "together",
+            "advice"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "I tell her about my problems and she gives me good ______. (from the box)",
+        "wordBox": [
+            "closer to",
+            "completely",
+            "tradition",
+            "together",
+            "advice"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Don't be afraid of making ______. They help you learn. (mistake)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "The medicine should be taken ______ a day after meals, George. (two)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "I plan to enter for a summer camp with a friend of ______. (me)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "I am not satisfied with the service here. I want to speak to the ______. (manage)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "The boy moved ______ into the hall as the concert had already begun. (quiet)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "The soldier saved the boy from the flood with a piece of ______. (wooden)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "Shops are not allowed to ______ cigarettes to anyone under the age of 18. (sale)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "Many people enjoy reading e-books, but I ______ it as it's bad for the eyes. (like)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "Ben ______ ______ the project on reusing natural resources. (negative form)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "______ ______ will Amy study in an international language school? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "______ my ______, I saw my sister's photograph on a magazine cover. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "The girl wondered ______ ______ meet her friends the next morning. (simple sentence)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Sometimes smart phones ______ ______ to take pictures instead of cameras. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "John asked ______ I ______ look after his pet dog while he was away. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "Arrange the words into a sentence: the students / are doing / an experiment / in the lab.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "Are you ______ with rainforests? They're interesting and exciting places! (from the box)",
+        "wordBox": [
+            "various",
+            "similar",
+            "with care",
+            "familiar",
+            "in trouble"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "However, rainforests are ______ now - they are disappearing very fast. (from the box)",
+        "wordBox": [
+            "various",
+            "similar",
+            "with care",
+            "familiar",
+            "in trouble"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "As a result, ______ animals and plants are dying out. (from the box)",
+        "wordBox": [
+            "various",
+            "similar",
+            "with care",
+            "familiar",
+            "in trouble"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Maybe you have never been to a rainforest, so why should you protect them ______? (from the box)",
+        "wordBox": [
+            "various",
+            "similar",
+            "with care",
+            "familiar",
+            "in trouble"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "Rainforests also help to ______ the weather. (from the box)",
+        "wordBox": [
+            "destroy",
+            "medicines",
+            "depends on",
+            "machines",
+            "control"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "Besides, one quarter of our ______ come from plants. (from the box)",
+        "wordBox": [
+            "destroy",
+            "medicines",
+            "depends on",
+            "machines",
+            "control"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "If we ______ them, we will never find out. (from the box)",
+        "wordBox": [
+            "destroy",
+            "medicines",
+            "depends on",
+            "machines",
+            "control"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "In my opinion, our future ______ saving the rainforests. (from the box)",
+        "wordBox": [
+            "destroy",
+            "medicines",
+            "depends on",
+            "machines",
+            "control"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Some people like reading on Wechat, but ______ don't. (other)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "Cut the strawberries into pieces and put ______ into the yogurt. (they)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "The day was ______, but the sun was trying to come through. (cloud)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "I'm thankful to the teacher for her ______ on my interview. (suggest)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "It's our responsibility to make the sky ______ than before. (clear)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "Education is one of the most powerful ways to ______ one's mind. (rich)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "I think it's ______ to judge a person before you really know him. (fair)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "______, the famous temple was not damaged in the earthquake. (luck)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "______ ______ useful for us to understand new words. (plural form)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "______ ______ did Mary pay for a trip to Europe with her mother? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "Mark ______ ______ to his country after he finished university abroad. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "______ Gary ______ I am good at playing badminton. (combine)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "He wondered why ______ ______ flowers to Ms Grey every September. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "Two French storybooks ______ ______ into Chinese by Wesley every year. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "Arrange the words into a sentence: they / are going to / the amusement park / after / the speech contest.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "The scientist was in a hurry. She had to get some water for her ______ before darkness fell.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "Her job was to find out the cause of ______ in the sea at nearby beaches.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "Old clothes, ______ bags and pieces of paper were in the dirty water.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Don't people ______ that everything they throw onto the street gets washed into rivers?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "She ______ the ocean animals as she walked back to the beach.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "They had spent their afternoon cleaning the beach! She was ______ joy.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "With ______ smiles on their faces, they shouted, \"We must do something to protect the ocean!\"",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "\"That's ______ right,\" agreed the scientist, as she smiled at their kindness.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Tony's father and uncle are both ______. They help keep the city safe. (policeman)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "Could you pass me the ______ dictionary from the right on the shelf? (seven)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "Everyone believes that ______ team will win the match this weekend. (we)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "\"Be ______ not to touch the paintings in the museum,\" Mum said. (care)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "The artist's ______ helps him go further on the road to his dream. (wise)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "The children enjoy the life in the country and live ______ with their families. (happy)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "I have something important to ______ with you through video talk. (discussion)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "Some wild animals may ______ forever if we don't stop hunting them. (appear)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "George wants to be a tour guide at the Bund for foreign visitors. (改为一般疑问句) ______ George ______ to be a tour guide at the Bund for foreign visitors?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "Charlie is so young that he can't take the underground alone. (改为简单句) Charlie is ______ ______ to take the underground alone.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "They like playing basketball in the club better than going home after school. (保持句意不变) They ______ playing basketball in the club ______ going home after school.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "The Chinese graduate became a star because of his speech at Harvard. (对划线部分提问) ______ ______ the Chinese graduate become a star?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "A middle school student invented a new robot last term. (改为被动语态) A new robot ______ ______ by a middle school student last term.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "\"When will you finish the project on Internet safety?\" the official asked. (改为宾语从句) The official asked ______ I ______ finish the project on Internet safety.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "are good for, fruits and vegetables, to keep fit, people, fresh (连词成句)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "Experiencing nature is ______, but when you're doing this, always keep yourself safe. (from the box)",
+        "wordBox": [
+            "changeable",
+            "disaster",
+            "responsible",
+            "situation",
+            "exciting"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "It's important not to turn a pleasant outing into a ______. (from the box)",
+        "wordBox": [
+            "changeable",
+            "disaster",
+            "responsible",
+            "situation",
+            "exciting"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "This is especially true in the ______ of travelling in the mountain areas. (from the box)",
+        "wordBox": [
+            "changeable",
+            "disaster",
+            "responsible",
+            "situation",
+            "exciting"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "The weather is really ______ in high mountains. (from the box)",
+        "wordBox": [
+            "changeable",
+            "disaster",
+            "responsible",
+            "situation",
+            "exciting"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "Second, ______ a map, a compass, and a flashlight in your bag. (from the box)",
+        "wordBox": [
+            "appear",
+            "heavily",
+            "nearby",
+            "pack",
+            "probably"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "Many trips that start out in daylight will ______ become nighttime adventures. (from the box)",
+        "wordBox": [
+            "appear",
+            "heavily",
+            "nearby",
+            "pack",
+            "probably"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "Small cuts can be more serious when there is no doctor ______. (from the box)",
+        "wordBox": [
+            "appear",
+            "heavily",
+            "nearby",
+            "pack",
+            "probably"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "Someone will go search for you if troubles ______. (from the box)",
+        "wordBox": [
+            "appear",
+            "heavily",
+            "nearby",
+            "pack",
+            "probably"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "A seat belt can help protect passengers in many car ______. (accident)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "Last week the students went skating and enjoyed ______ very much. (them)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "My school is going to have an open day on the ______ of next month. (ten)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Failure isn't always bad. It can teach you ______ lessons. (use)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "For your ______, smoking is not allowed during the whole flight. (safe)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "Our manager greeted the guest ______ with a smile at the entrance. (polite)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "Scientists often ______ that farmers use natural ways to grow fruits. (suggestion)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "When they felt ______ after the flood, the charity offered them food and clothes. (help)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "______ the invention of smart phones ______ the world in many ways? (general question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "______ ______ does that amusement park have lots of tourists? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "The film festival ______ ______ by the local government every autumn. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "______ ______ shared-bikes are in some big cities! (exclamation)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Melissa asked her mom ______ she ______ ever been in a hot air balloon. (object clause)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "PM 2.5 is ______ ______ people's health and the environment. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "Arrange the words into a sentence: the Internet / enables / teenagers / to collect / various information.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "One ______ of living in a tall building is that you always have help nearby.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "With a candle in his hand, Mr. Smith ______ the door.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "I ______ that all the buildings in our neighbourhood were dark.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Our neighbours went ______ and began chatting outside.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "Then we heard a ______ sound after a bright flash of lightning.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "The weatherman said that the storm was the ______ of all the problems.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "That was the reason why the lights ______ went out before the rain came.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "The ______ made it possible for the neighbours to have a chance to be together.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "My cousin likes to collect ______ in his spare time. (stamp)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "Look! The ______ lady from the left in the photo is my favourite teacher. (six)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "Jessie cooked a meal for her big family by ______ on New Year's Eve. (she)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Shirley is an early bird. It was ______ for her to be late for school today. (usual)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "Fortunately, no one was ______ hurt in the earthquake several weeks ago. (serious)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "The ______ of AI will enable us to learn more about our brains. (develop)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "I will never ______ the days I spent with my host family in Britain. (forgetful)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "As we all know, a ______ driver is always a danger to the public. (care)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "John went to church with his brother last Sunday morning. (改为否定句) John ______ ______ to church with his brother last Sunday morning.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "Grace does online shopping four times a month. (对划线部分提问) ______ ______ does Grace do online shopping?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "We will hold a class meeting to talk about team work next Friday. (改为被动语态) A class meeting will ______ ______ to talk about team work next Friday.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "\"How are you getting along with your new roommate?\" Franklin asked me. (改为宾语从句) Franklin asked me ______ ______ was getting along with my new roommate.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Keep working hard, and you will achieve success. (保持句意不变) ______ ______ keep working hard, you will achieve success.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "The secretary apologized to the manager for making the same mistake again. (保持句意不变) The secretary ______ ______ to the manager for making the same mistake again.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "many ways, for us, are, to keep in touch, there (连词成句)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "Yet not many of us will realize how much we rely on technology until we ______ our lives to those in the past. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "There was no ______ technology at that time, yet the items that people had were quite enough. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "Without necessary cooking tools, the people could still ______ to make their food as nice as our food today. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Animal parts were thrown away if they were not ______. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "Without the television set, the radio and more importantly, the computer, we will ______ have any fun in our homes today. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "However, the people in the past had their own clever ______ of enjoying themselves. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "They could make boats for travelling along the rivers and in the ______. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "Some things are basic for us ______, but people in the past could live to the full even without them. (from the box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Mr. Smith bought three ______ of local snacks for the exchange students. (box)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "On the ______ page of the book, there is an encouraging story. (eight)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "Don't easily follow a fashion. Being ______ is the best rule. (you)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Online libraries are ______ used for learning in the information age. (wide)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "Finally, Jack achieved his goal and became the ______ of a company. (own)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "The main purpose of the charity project is to offer help to ______ people. (home)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "When Andy was ______ about his lost smart phone, his friend gave him a big hug. (happy)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "Hard work pays off. I believe you will ______ your dream school. (entrance)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "Lucy ______ ______ the violin in the club on Friday afternoons. (negative form)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "______ ______ will your sister take part in the Chinese poem contest? (question)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "The government is taking action to ______ air quality ______. (same meaning)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "I have no idea ______ ______ operate the new washing machine. (simple sentence)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "The picture of a black hole ______ ______ to the world by the scientists on April 10. (passive voice)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "Aaron asked me ______ I ______ free to go to his place that Saturday. (indirect speech)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "Arrange the words into a sentence: Teenagers / should / learn / to plan / their future / by themselves.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-sentence-transformation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "A middle school had major problems with some of its buildings. Susan, the head teacher, invited students to share their ideas about how to ____ the school.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "We wanted them to think of ideas to ____ their own interests and hopes.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "The news spread ____ after it was reported by a local newspaper.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-noun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Students ____ seemed very excited.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "In the beginning, the school was asked to close and the buildings would have to be sold off, as the school is in a very good ____.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "But parents and teachers worked together to protect the school and now they are pleased to see the ____.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "This school is an important part of the community and it's ____ that it should continue.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "This gives them the feeling that they are more closely ____ with the school.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Nowadays, many ____ have been used to work in dangerous situations. (robot)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "Uncle Andy tried ____ different jobs, and finally chose to be a lawyer. (tenth)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "The boy started to live in school and learn to manage time by ____. (he)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "Lily asked her son to close the door ____ in order not to disturb others. (soft)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "On ____ days, leaves fall on the ground and the road looks beautiful. (wind)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-59",
+        "sourceType": "cloze",
+        "stem": "If you ____ red and yellow, what colour will you get? (mixture)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-60",
+        "sourceType": "cloze",
+        "stem": "Thanks to the ____ of the smart phone, it's convenient to take photos anytime. (invent)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-61",
+        "sourceType": "cloze",
+        "stem": "Sitting in front of the screen for too long is ____. It's bad for your eyes. (healthy)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-62",
+        "sourceType": "cloze",
+        "stem": "The middle school boy can tell traditional Chinese stories in English. (改为一般疑问句) ____ the middle school boy ____ traditional Chinese stories in English?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-63",
+        "sourceType": "cloze",
+        "stem": "Lee has helped the local people sell their products since he returned to his hometown. (对划线部分提问) ____ ____ has Lee helped the local people sell their products?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-64",
+        "sourceType": "cloze",
+        "stem": "The volunteer worked hard to get more kids back to school. (改为感叹句) ____ ____ the volunteer worked to get more kids back to school!",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-65",
+        "sourceType": "cloze",
+        "stem": "The 13-year-old one-armed basketball player attracted a lot of fans. (改为被动语态) A lot of fans ____ ____ by the 13-year-old one-armed basketball player.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-66",
+        "sourceType": "cloze",
+        "stem": "Julia decided to be a doctor after watching the news programme. (保持句意基本不变) Julia ____ ____ her mind to be a doctor after watching the news programme.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-noun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-67",
+        "sourceType": "cloze",
+        "stem": "\"Will the exhibition be held in Shanghai?\" Olivia asked her secretary. (改为间接引语) Olivia asked her secretary ____ the exhibition ____ be held in Shanghai.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-cloze-68",
+        "sourceType": "cloze",
+        "stem": "belongs to, hardworking, in the end, students, success (连词成句)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-44",
+        "sourceType": "cloze",
+        "stem": "I live near my school. It takes me only ten ______ to walk there. (minute)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-45",
+        "sourceType": "cloze",
+        "stem": "Lily and Mary have known each other for ______ years. (seventh)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-46",
+        "sourceType": "cloze",
+        "stem": "The Bund attracts many people with ______ beautiful night view. (it)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-47",
+        "sourceType": "cloze",
+        "stem": "The organization has set strict rules on the release of ______ chemicals. (harm)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-48",
+        "sourceType": "cloze",
+        "stem": "Without the glasses, he can't see the words on the blackboard ______. (clear)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-49",
+        "sourceType": "cloze",
+        "stem": "Tony has made up his mind to be a soldier to ______ the country after graduation. (service)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-50",
+        "sourceType": "cloze",
+        "stem": "Shanghai Museum has a large ______ of works of art from home and abroad. (collect)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-51",
+        "sourceType": "cloze",
+        "stem": "Some rainforests are likely to ______ if we don't take action to protect them. (appear)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-52",
+        "sourceType": "cloze",
+        "stem": "My deskmate borrowed some books from the library at noon. (改为否定句) My deskmate ______ ______ any books from the library at noon.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-53",
+        "sourceType": "cloze",
+        "stem": "The government has spent 10 million yuan improving the water quality. (对划线部分提问) ______ ______ has the government spent improving the water quality?",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-54",
+        "sourceType": "cloze",
+        "stem": "Doctor Wu Mengchao saved a lot of patients' lives. (改为被动语态) A lot of patients' lives ______ ______ by Doctor Wu Mengchao.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-55",
+        "sourceType": "cloze",
+        "stem": "John is wondering how he can keep the balance between work and play. (改为简单句) John is wondering ______ ______ keep the balance between work and play.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-56",
+        "sourceType": "cloze",
+        "stem": "I had a good time in the ocean park the day before yesterday. (保持句意基本不变) I ______ ______ in the ocean park the day before yesterday.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-57",
+        "sourceType": "cloze",
+        "stem": "\"Have you visited the National Book Expo?\" Linda asked me. (改为间接引语) Linda asked me ______ I ______ visited the National Book Expo.",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-object-clause",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-cloze-58",
+        "sourceType": "cloze",
+        "stem": "a meal plan, the community, make, for the aged, is trying to (连词成句)",
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    }
+]

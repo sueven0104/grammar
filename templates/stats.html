@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习报告</title>
+    <script>
+var StorageManager = (function () {
+    var STORAGE_KEY = "grammar_app_data";
+    var DEFAULT_DATA = {
+        wrongQuestions: [], knowledgeStats: {}, totalScore: 0, badges: [],
+        totalAnswered: 0, totalCorrect: 0, currentStreak: 0, bestStreak: 0, questionHistory: []
+    };
+    function load() {
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return JSON.parse(JSON.stringify(DEFAULT_DATA));
+            var data = JSON.parse(raw);
+            for (var key in DEFAULT_DATA) { if (!(key in data)) { data[key] = DEFAULT_DATA[key]; } }
+            return data;
+        } catch (e) { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+    }
+    function save(data) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
+        catch (e) { if (data.wrongQuestions.length > 20) { data.wrongQuestions = data.wrongQuestions.slice(-20); try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e2) {} } }
+    }
+    function addWrongQuestion(q) {
+        var data = load(); var id = simpleHash(q.question);
+        for (var i = 0; i < data.wrongQuestions.length; i++) {
+            if (data.wrongQuestions[i].id === id) { data.wrongQuestions[i].reviewCount = 0; data.wrongQuestions[i].timestamp = Date.now(); save(data); return; }
+        }
+        data.wrongQuestions.push({ id: id, question: q.question, questionType: q.questionType || q.type || "", grade: q.grade || 0, knowledgePoint: q.knowledge || q.knowledgePoint || "", userAnswer: q.userAnswer, correctAnswer: q.correctAnswer || q.answer, options: q.options || null, timestamp: Date.now(), reviewCount: 0 });
+        if (data.wrongQuestions.length > 50) { data.wrongQuestions = data.wrongQuestions.slice(-50); } save(data);
+    }
+    function removeWrongQuestion(id) { var data = load(); data.wrongQuestions = data.wrongQuestions.filter(function (q) { return q.id !== id; }); save(data); }
+    function updateKnowledgeStat(grade, knowledgePoint, isCorrect) {
+        var data = load(); var key = grade + "_" + knowledgePoint;
+        if (!data.knowledgeStats[key]) { data.knowledgeStats[key] = { total: 0, correct: 0 }; }
+        data.knowledgeStats[key].total++; if (isCorrect) { data.knowledgeStats[key].correct++; } save(data);
+    }
+    function addBadge(badgeId) { var data = load(); if (data.badges.indexOf(badgeId) === -1) { data.badges.push(badgeId); save(data); } }
+    function updateStats(isCorrect) {
+        var data = load(); data.totalAnswered++;
+        if (isCorrect) { data.totalCorrect++; data.currentStreak++; if (data.currentStreak > data.bestStreak) { data.bestStreak = data.currentStreak; } }
+        else { data.currentStreak = 0; } save(data);
+    }
+    function updateScore(points) { var data = load(); data.totalScore += points; save(data); }
+    function simpleHash(str) { var hash = 0; for (var i = 0; i < str.length; i++) { var ch = str.charCodeAt(i); hash = ((hash << 5) - hash) + ch; hash = hash & hash; } return Math.abs(hash).toString(36); }
+    function addQuestionHistory(questionText) {
+        var data = load();
+        if (!data.questionHistory) { data.questionHistory = []; }
+        for (var i = 0; i < data.questionHistory.length; i++) {
+            if (data.questionHistory[i] === questionText) { return; }
+        }
+        data.questionHistory.push(questionText);
+        if (data.questionHistory.length > 200) {
+            data.questionHistory = data.questionHistory.slice(-200);
+        }
+        save(data);
+    }
+    function getQuestionHistory() {
+        var data = load();
+        return data.questionHistory || [];
+    }
+    function clearQuestionHistory() {
+        var data = load();
+        data.questionHistory = [];
+        save(data);
+    }
+    return { load: load, save: save, addWrongQuestion: addWrongQuestion, removeWrongQuestion: removeWrongQuestion, updateKnowledgeStat: updateKnowledgeStat, addBadge: addBadge, updateStats: updateStats, updateScore: updateScore, simpleHash: simpleHash, addQuestionHistory: addQuestionHistory, getQuestionHistory: getQuestionHistory, clearQuestionHistory: clearQuestionHistory };
+})();
+    </script>
+    <style>
+        /* === Reset & Base === */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #FF6B6B;
+            --primary-light: #FF8E8E;
+            --primary-dark: #E55A5A;
+            --secondary: #FFA94D;
+            --secondary-light: #FFBE7D;
+            --accent: #FFD43B;
+            --accent-light: #FFE066;
+            --success: #51CF66;
+            --success-light: #8CE99A;
+            --danger: #FF6B6B;
+            --info: #74C0FC;
+            --info-light: #A5D8FF;
+            --bg: #FFF4E6;
+            --card-bg: #FFFFFF;
+            --text: #4A3728;
+            --text-light: #8B7355;
+            --border: #FFD8A8;
+            --radius: 20px;
+            --radius-sm: 14px;
+            --shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
+            --font-xl: 22px;
+            --font-lg: 18px;
+            --font-md: 16px;
+            --font-sm: 14px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 50%, #FFD8A8 100%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-size: var(--font-md);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+        h1 { font-size: 32px; color: var(--primary-dark); text-align: center; font-weight: 800; }
+        h2 { font-size: 22px; color: var(--text); margin-bottom: 16px; font-weight: 700; }
+        .subtitle { text-align: center; color: var(--text-light); font-size: var(--font-lg); margin-top: 8px; }
+        .hero { padding: 40px 0 28px; text-align: center; }
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px 24px;
+            margin-bottom: 20px;
+            border: 2px solid var(--border);
+        }
+        .page-header { padding: 16px 0 0; }
+        .page-header .back-link {
+            font-size: var(--font-md);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .page-header .back-link:hover { text-decoration: underline; }
+        
+        /* === Stats Grid === */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .stat-tile {
+            background: linear-gradient(135deg, #FFF8F0, #FFF0E0);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid var(--border);
+        }
+        .stat-tile.accent { background: linear-gradient(135deg, #FFF9DB, #FFF3BF); border-color: var(--accent); }
+        .stat-tile.success { background: linear-gradient(135deg, #EBFBEE, #C3FAE8); border-color: var(--success); }
+        .stat-tile.info { background: linear-gradient(135deg, #F0F6FF, #E0ECFF); border-color: var(--info); }
+        .stat-icon { font-size: 32px; margin-bottom: 6px; }
+        .stat-value { font-size: 28px; font-weight: 800; color: var(--primary-dark); }
+        .stat-label { font-size: var(--font-sm); color: var(--text-light); margin-top: 4px; }
+        
+        /* === Knowledge Point Mastery === */
+        .kp-list { margin-top: 12px; }
+        .kp-item {
+            background: #FFF8F0;
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 10px;
+            border: 2px solid var(--border);
+        }
+        .kp-name { font-weight: 700; margin-bottom: 8px; font-size: var(--font-md); }
+        .kp-bar-bg {
+            background: rgba(255, 216, 168, 0.4);
+            border-radius: 8px;
+            height: 16px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .kp-bar { height: 100%; border-radius: 8px; transition: width 0.6s ease; }
+        .kp-bar.green { background: linear-gradient(90deg, var(--success), var(--success-light)); }
+        .kp-bar.yellow { background: linear-gradient(90deg, var(--secondary), var(--accent)); }
+        .kp-bar.red { background: linear-gradient(90deg, var(--danger), var(--primary-light)); }
+        .kp-percent { font-size: var(--font-sm); color: var(--text-light); text-align: right; font-weight: 600; }
+        .kp-empty { text-align: center; color: var(--text-light); padding: 20px; font-style: italic; }
+        
+        /* === Badge Wall === */
+        .badge-wall {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 12px;
+        }
+        .badge-item {
+            background: #F8F8F8;
+            border: 2px dashed #DDD;
+            border-radius: var(--radius-sm);
+            padding: 16px 10px;
+            text-align: center;
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+        .badge-item.earned {
+            background: linear-gradient(135deg, #FFF9DB, #FFF3BF);
+            border: 2px solid var(--accent);
+            opacity: 1;
+            box-shadow: 0 2px 8px rgba(255, 212, 59, 0.3);
+        }
+        .badge-item-icon { font-size: 36px; margin-bottom: 4px; }
+        .badge-item-title { font-size: var(--font-sm); font-weight: 700; color: var(--text); }
+        .badge-item-desc { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+        
+        /* === Buttons === */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: var(--font-lg);
+            font-weight: 700;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-danger {
+            background: linear-gradient(135deg, #ADB5BD, #CED4DA);
+            color: #fff;
+        }
+        .btn-large { width: 100%; padding: 18px; font-size: 20px; margin-top: 12px; }
+        
+        @media (max-width: 480px) {
+            .container { padding: 16px 10px 40px; }
+            h1 { font-size: 26px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .stat-tile { padding: 16px 10px; }
+            .stat-value { font-size: 22px; }
+            .badge-wall { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="{{ config.APPLICATION_ROOT }}/" class="back-link">← 返回首页</a>
+        </div>
+        <div class="hero">
+            <h1>📊 学习报告</h1>
+            <p class="subtitle">看看你的学习成果吧！</p>
+        </div>
+        
+        <div class="card">
+            <h2>📈 总体数据</h2>
+            <div class="stats-grid">
+                <div class="stat-tile">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value" id="stat-total">0</div>
+                    <div class="stat-label">总题数</div>
+                </div>
+                <div class="stat-tile success">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-value" id="stat-correct">0</div>
+                    <div class="stat-label">答对题数</div>
+                </div>
+                <div class="stat-tile info">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" id="stat-accuracy">0%</div>
+                    <div class="stat-label">正确率</div>
+                </div>
+                <div class="stat-tile accent">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-value" id="stat-best-streak">0</div>
+                    <div class="stat-label">最佳连击</div>
+                </div>
+            </div>
+            <div class="stat-tile accent" style="margin-top: 14px;">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-value" id="stat-score">0</div>
+                <div class="stat-label">累计积分</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>💡 知识点掌握度</h2>
+            <div class="kp-list" id="kp-list">
+                <div class="kp-empty">还没有数据，先去练习几道题吧！</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🏆 勋章墙</h2>
+            <div class="badge-wall" id="badge-wall"></div>
+        </div>
+        
+        <button id="reset-btn" class="btn btn-danger btn-large" style="margin-top: 16px;">🗑️ 清空所有学习数据</button>
+    </div>
+    
+    <script>
+        const APP_ROOT = "{{ config.APPLICATION_ROOT|safe }}";
+        
+        var ALL_BADGES = [
+            { id: "first_win", icon: "🏆", title: "初次胜利", desc: "答对1题" },
+            { id: "streak_5", icon: "🔥", title: "连击达人", desc: "连续答对5题" },
+            { id: "star_10", icon: "⭐", title: "学习之星", desc: "累计答对10题" },
+            { id: "knowledge_master", icon: "📚", title: "知识小达人", desc: "知识点正确率>80%" },
+            { id: "persistent_50", icon: "💪", title: "坚持不懈", desc: "累计做50题" },
+            { id: "perfect_clear", icon: "🎯", title: "完美通关", desc: "5题全对" },
+            { id: "wrong_cleared", icon: "✨", title: "错题清零", desc: "错题复习全部通过" }
+        ];
+        
+        function escapeHtml(str) {
+            if (typeof str !== "string") return str;
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+        
+        function init() {
+            var data = StorageManager.load();
+            var totalAnswered = data.totalAnswered || 0;
+            var totalCorrect = data.totalCorrect || 0;
+            var accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+            
+            document.getElementById("stat-total").textContent = totalAnswered;
+            document.getElementById("stat-correct").textContent = totalCorrect;
+            document.getElementById("stat-accuracy").textContent = accuracy + "%";
+            document.getElementById("stat-best-streak").textContent = data.bestStreak || 0;
+            document.getElementById("stat-score").textContent = data.totalScore || 0;
+            
+            renderKnowledgeStats(data);
+            renderBadges(data);
+            checkBadgesFromStats(data);
+            
+            document.getElementById("reset-btn").addEventListener("click", function() {
+                if (confirm("确定要清空所有学习数据吗？此操作无法撤销！")) {
+                    localStorage.removeItem("grammar_app_data");
+                    location.reload();
+                }
+            });
+        }
+        
+        function renderKnowledgeStats(data) {
+            var kpList = document.getElementById("kp-list");
+            var keys = Object.keys(data.knowledgeStats || {});
+            
+            if (keys.length === 0) {
+                kpList.innerHTML = '<div class="kp-empty">还没有数据，先去练习几道题吧！</div>';
+                return;
+            }
+            
+            // Sort by accuracy ascending (worst first to highlight weak points)
+            keys.sort(function(a, b) {
+                var sa = data.knowledgeStats[a];
+                var sb = data.knowledgeStats[b];
+                var pa = sa.total > 0 ? sa.correct / sa.total : 0;
+                var pb = sb.total > 0 ? sb.correct / sb.total : 0;
+                return pa - pb;
+            });
+            
+            kpList.innerHTML = "";
+            keys.forEach(function(key) {
+                var stat = data.knowledgeStats[key];
+                var kpAccuracy = stat.total > 0 ? Math.round((stat.correct / stat.total) * 100) : 0;
+                var colorClass = kpAccuracy >= 80 ? "green" : kpAccuracy >= 60 ? "yellow" : "red";
+                
+                // Parse "grade_knowledgePoint"
+                var underscoreIdx = key.indexOf("_");
+                var gradeStr = underscoreIdx > -1 ? key.substring(0, underscoreIdx) : "";
+                var kpName = underscoreIdx > -1 ? key.substring(underscoreIdx + 1) : key;
+                var gradeLabel = gradeStr === "0" ? "中考" : (gradeStr ? gradeStr + "年级" : "");
+                
+                var item = document.createElement("div");
+                item.className = "kp-item";
+                item.innerHTML =
+                    '<div class="kp-name">' + (gradeLabel ? '<span style="color:var(--text-light);font-weight:500;">[' + gradeLabel + '] </span>' : '') + escapeHtml(kpName) + '</div>' +
+                    '<div class="kp-bar-bg"><div class="kp-bar ' + colorClass + '" style="width:' + kpAccuracy + '%"></div></div>' +
+                    '<div class="kp-percent">' + kpAccuracy + '% (' + stat.correct + '/' + stat.total + ')</div>';
+                kpList.appendChild(item);
+            });
+        }
+        
+        function renderBadges(data) {
+            var badgeWall = document.getElementById("badge-wall");
+            badgeWall.innerHTML = "";
+            ALL_BADGES.forEach(function(b) {
+                var earned = data.badges.indexOf(b.id) !== -1;
+                var item = document.createElement("div");
+                item.className = "badge-item" + (earned ? " earned" : "");
+                item.innerHTML =
+                    '<div class="badge-item-icon">' + (earned ? b.icon : "🔒") + '</div>' +
+                    '<div class="badge-item-title">' + b.title + '</div>' +
+                    '<div class="badge-item-desc">' + b.desc + '</div>';
+                badgeWall.appendChild(item);
+            });
+        }
+        
+        function checkBadgesFromStats(data) {
+            // Check knowledge_master badge: any knowledge point with >80% and at least 5 attempts
+            var hasKpMaster = false;
+            for (var key in data.knowledgeStats) {
+                var s = data.knowledgeStats[key];
+                if (s.total >= 5 && (s.correct / s.total) >= 0.8) {
+                    hasKpMaster = true;
+                    break;
+                }
+            }
+            if (hasKpMaster && data.badges.indexOf("knowledge_master") === -1) {
+                StorageManager.addBadge("knowledge_master");
+                renderBadges(StorageManager.load());
+            }
+            // Check persistent_50 badge
+            if (data.totalAnswered >= 50 && data.badges.indexOf("persistent_50") === -1) {
+                StorageManager.addBadge("persistent_50");
+                renderBadges(StorageManager.load());
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
+</html>

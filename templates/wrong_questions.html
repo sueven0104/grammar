@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>错题本</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+var StorageManager = (function () {
+    var STORAGE_KEY = "grammar_app_data";
+    var DEFAULT_DATA = {
+        wrongQuestions: [], knowledgeStats: {}, totalScore: 0, badges: [],
+        totalAnswered: 0, totalCorrect: 0, currentStreak: 0, bestStreak: 0, questionHistory: []
+    };
+    function load() {
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return JSON.parse(JSON.stringify(DEFAULT_DATA));
+            var data = JSON.parse(raw);
+            for (var key in DEFAULT_DATA) { if (!(key in data)) { data[key] = DEFAULT_DATA[key]; } }
+            return data;
+        } catch (e) { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }
+    }
+    function save(data) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
+        catch (e) { if (data.wrongQuestions.length > 20) { data.wrongQuestions = data.wrongQuestions.slice(-20); try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e2) {} } }
+    }
+    function addWrongQuestion(q) {
+        var data = load(); var id = simpleHash(q.question);
+        for (var i = 0; i < data.wrongQuestions.length; i++) {
+            if (data.wrongQuestions[i].id === id) { data.wrongQuestions[i].reviewCount = 0; data.wrongQuestions[i].timestamp = Date.now(); save(data); return; }
+        }
+        data.wrongQuestions.push({ id: id, question: q.question, questionType: q.questionType || q.type || "", grade: q.grade || 0, knowledgePoint: q.knowledge || q.knowledgePoint || "", userAnswer: q.userAnswer, correctAnswer: q.correctAnswer || q.answer, options: q.options || null, timestamp: Date.now(), reviewCount: 0 });
+        if (data.wrongQuestions.length > 50) { data.wrongQuestions = data.wrongQuestions.slice(-50); } save(data);
+    }
+    function removeWrongQuestion(id) { var data = load(); data.wrongQuestions = data.wrongQuestions.filter(function (q) { return q.id !== id; }); save(data); }
+    function updateKnowledgeStat(grade, knowledgePoint, isCorrect) {
+        var data = load(); var key = grade + "_" + knowledgePoint;
+        if (!data.knowledgeStats[key]) { data.knowledgeStats[key] = { total: 0, correct: 0 }; }
+        data.knowledgeStats[key].total++; if (isCorrect) { data.knowledgeStats[key].correct++; } save(data);
+    }
+    function addBadge(badgeId) { var data = load(); if (data.badges.indexOf(badgeId) === -1) { data.badges.push(badgeId); save(data); } }
+    function updateStats(isCorrect) {
+        var data = load(); data.totalAnswered++;
+        if (isCorrect) { data.totalCorrect++; data.currentStreak++; if (data.currentStreak > data.bestStreak) { data.bestStreak = data.currentStreak; } }
+        else { data.currentStreak = 0; } save(data);
+    }
+    function updateScore(points) { var data = load(); data.totalScore += points; save(data); }
+    function simpleHash(str) { var hash = 0; for (var i = 0; i < str.length; i++) { var ch = str.charCodeAt(i); hash = ((hash << 5) - hash) + ch; hash = hash & hash; } return Math.abs(hash).toString(36); }
+    function addQuestionHistory(questionText) {
+        var data = load();
+        if (!data.questionHistory) { data.questionHistory = []; }
+        for (var i = 0; i < data.questionHistory.length; i++) {
+            if (data.questionHistory[i] === questionText) { return; }
+        }
+        data.questionHistory.push(questionText);
+        if (data.questionHistory.length > 200) {
+            data.questionHistory = data.questionHistory.slice(-200);
+        }
+        save(data);
+    }
+    function getQuestionHistory() {
+        var data = load();
+        return data.questionHistory || [];
+    }
+    function clearQuestionHistory() {
+        var data = load();
+        data.questionHistory = [];
+        save(data);
+    }
+    return { load: load, save: save, addWrongQuestion: addWrongQuestion, removeWrongQuestion: removeWrongQuestion, updateKnowledgeStat: updateKnowledgeStat, addBadge: addBadge, updateStats: updateStats, updateScore: updateScore, simpleHash: simpleHash, addQuestionHistory: addQuestionHistory, getQuestionHistory: getQuestionHistory, clearQuestionHistory: clearQuestionHistory };
+})();
+var LearningBuddy = (function () {
+    var buddyEl = null, speechEl = null, idleTimer = null, IDLE_TIMEOUT = 5000;
+    var CORRECT_PHRASES = ["太棒了！", "你真厉害！", "完美！", "答对了！继续加油！", "很棒哦！"];
+    var WRONG_PHRASES = ["没关系，再试一次！", "加油，你可以的！", "别灰心，下次一定行！", "我们一起进步！"];
+    var STREAK_PHRASES = ["连续答对！你是语法大师！", "太强了，继续保持！", "哇，你真是太厉害了！"];
+    var IDLE_PHRASES = ["来做道题吧！", "准备好了吗？", "一起学英语！"];
+    function create() {
+        if (buddyEl) return;
+        buddyEl = document.createElement("div"); buddyEl.id = "learning-buddy";
+        buddyEl.innerHTML = '<div class="buddy-body"><div class="buddy-face"><div class="buddy-eyes"><span class="buddy-eye left"></span><span class="buddy-eye right"></span></div><div class="buddy-mouth"></div></div></div><div class="buddy-speech hidden"></div>';
+        document.body.appendChild(buddyEl); speechEl = buddyEl.querySelector(".buddy-speech"); resetIdle();
+    }
+    function say(text, duration) { if (!speechEl) return; speechEl.textContent = text; speechEl.classList.remove("hidden"); if (duration) { setTimeout(function () { speechEl.classList.add("hidden"); }, duration); } }
+    function onCorrect(streak) {
+        if (!buddyEl) return; clearIdle(); buddyEl.className = "buddy-happy";
+        if (streak >= 3) { buddyEl.className = "buddy-star"; say(STREAK_PHRASES[Math.floor(Math.random() * STREAK_PHRASES.length)], 2000); }
+        else { say(CORRECT_PHRASES[Math.floor(Math.random() * CORRECT_PHRASES.length)], 1800); }
+        setTimeout(function () { buddyEl.className = ""; }, 1500); resetIdle();
+    }
+    function onWrong() {
+        if (!buddyEl) return; clearIdle(); buddyEl.className = "buddy-sad";
+        say(WRONG_PHRASES[Math.floor(Math.random() * WRONG_PHRASES.length)], 2000);
+        setTimeout(function () { buddyEl.className = ""; speechEl.classList.add("hidden"); }, 2000); resetIdle();
+    }
+    function onIdle() { if (!buddyEl) return; say(IDLE_PHRASES[Math.floor(Math.random() * IDLE_PHRASES.length)], 3000); }
+    function resetIdle() { clearIdle(); idleTimer = setTimeout(onIdle, IDLE_TIMEOUT); }
+    function clearIdle() { if (idleTimer) { clearTimeout(idleTimer); idleTimer = null; } }
+    return { create: create, onCorrect: onCorrect, onWrong: onWrong, say: say };
+})();
+    </script>
+    <style>
+/* === Reset & Base === */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Warm kid-friendly palette */
+    --primary: #FF6B6B;
+    --primary-light: #FF8E8E;
+    --primary-dark: #E55A5A;
+    --secondary: #FFA94D;
+    --secondary-light: #FFBE7D;
+    --accent: #FFD43B;
+    --accent-light: #FFE066;
+    --success: #51CF66;
+    --success-light: #8CE99A;
+    --danger: #FF6B6B;
+    --danger-light: #FFA8A8;
+    --danger-dark: #C92A2A;
+    --info: #74C0FC;
+    --info-light: #A5D8FF;
+    --purple: #B197FC;
+    --purple-light: #D0BFFF;
+
+    --bg: #FFF4E6;
+    --bg-alt: #FFE8CC;
+    --card-bg: #FFFFFF;
+    --text: #4A3728;
+    --text-light: #8B7355;
+    --border: #FFD8A8;
+
+    --radius: 20px;
+    --radius-sm: 14px;
+    --shadow: 0 4px 20px rgba(255, 107, 107, 0.12);
+    --shadow-hover: 0 8px 30px rgba(255, 107, 107, 0.2);
+
+    --font-xl: 22px;
+    --font-lg: 18px;
+    --font-md: 16px;
+    --font-sm: 14px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 50%, #FFD8A8 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    font-size: var(--font-md);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+/* === Typography === */
+h1 {
+    font-size: 32px;
+    color: var(--primary-dark);
+    text-align: center;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 26px;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: var(--font-lg);
+    margin-top: 8px;
+}
+
+/* === Hero === */
+.hero {
+    padding: 30px 0 24px;
+    text-align: center;
+}
+
+/* === Card === */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    border: 2px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* === Page Header === */
+.page-header {
+    padding: 16px 0 0;
+}
+
+.page-header .back-link {
+    font-size: var(--font-md);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.page-header .back-link:hover {
+    text-decoration: underline;
+    background: transparent;
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn:active:not(:disabled) {
+    transform: scale(0.95) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--success), var(--success-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(81, 207, 102, 0.3);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(81, 207, 102, 0.4);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(255, 169, 77, 0.3);
+}
+
+.btn-warning:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 169, 77, 0.4);
+}
+
+.btn-large {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    margin-top: 12px;
+    border-radius: var(--radius-sm);
+}
+
+/* === Hidden === */
+.hidden {
+    display: none !important;
+}
+
+/* === Quiz Header === */
+.quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: var(--radius);
+    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.25);
+    color: #fff;
+}
+
+.quiz-header .back-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--font-md);
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.2s;
+}
+
+.quiz-header .back-link:hover {
+    background: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+}
+
+.progress-info {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    font-size: var(--font-md);
+    font-weight: 700;
+    color: #fff;
+}
+
+/* === Question Card === */
+.question-card {
+    padding: 32px 28px;
+}
+
+.question-text {
+    font-size: var(--font-xl);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFF8F0, #FFF0E0);
+    border-radius: var(--radius-sm);
+    border-left: 5px solid var(--secondary);
+    font-weight: 600;
+}
+
+.answer-area {
+    margin-bottom: 24px;
+}
+
+/* === Inputs === */
+.answer-input {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: var(--font-lg);
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-weight: 600;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+
+.answer-input.correct {
+    border-color: var(--success);
+    background: #EBFBEE;
+}
+
+.answer-input.wrong {
+    border-color: var(--danger);
+    background: #FFF0F0;
+    animation: shake 0.4s ease;
+}
+
+.answer-input:disabled {
+    background: #FFF8F0;
+}
+
+/* === Choice Options === */
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    font-size: var(--font-lg);
+    font-weight: 600;
+    text-align: left;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text);
+}
+.option-btn:hover {
+    border-color: var(--primary);
+    background: #FFF0F0;
+    transform: translateX(4px);
+}
+.option-btn.selected {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #FFF0F0, #FFE0E0);
+    font-weight: 700;
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+.option-btn.correct {
+    border-color: var(--success);
+    background: #EBFBEE;
+    color: #2B8A3E;
+}
+.option-btn.wrong {
+    border-color: var(--danger);
+    background: #FFF0F0;
+}
+.option-btn:disabled {
+    cursor: default;
+}
+
+/* === Judge Buttons === */
+.judge-buttons {
+    display: flex;
+    gap: 20px;
+}
+.judge-btn {
+    flex: 1;
+    padding: 22px;
+    font-size: 22px;
+    font-weight: 700;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text);
+}
+.judge-btn:hover {
+    transform: translateY(-2px);
+}
+.judge-btn.judge-true:hover {
+    border-color: var(--success);
+    background: #EBFBEE;
+}
+.judge-btn.judge-false:hover {
+    border-color: var(--danger);
+    background: #FFF0F0;
+}
+.judge-btn.selected.judge-true {
+    border-color: var(--success);
+    background: #EBFBEE;
+    color: #2B8A3E;
+    box-shadow: 0 0 0 4px rgba(81, 207, 102, 0.25);
+}
+.judge-btn.selected.judge-false {
+    border-color: var(--danger);
+    background: #FFF0F0;
+    color: var(--danger-dark);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.25);
+}
+.judge-btn:disabled {
+    cursor: default;
+}
+
+/* === Feedback Area === */
+.feedback-area {
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    font-size: var(--font-lg);
+    font-weight: 700;
+    text-align: center;
+    animation: popIn 0.3s ease;
+}
+
+.feedback-area.correct {
+    background: #EBFBEE;
+    border: 3px solid var(--success);
+    color: #2B8A3E;
+}
+
+.feedback-area.wrong {
+    background: #FFF0F0;
+    border: 3px solid var(--danger);
+    color: var(--danger-dark);
+}
+
+.feedback-area .correct-answer {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: var(--font-md);
+}
+
+.feedback-area .encourage-text {
+    margin-top: 8px;
+    font-size: var(--font-md);
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* === Action Buttons === */
+.action-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* === Results === */
+.results-card {
+    text-align: center;
+    padding: 40px 28px;
+}
+
+.score-display {
+    font-size: 72px;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 20px 0;
+}
+
+.score-display .score-total {
+    font-size: 36px;
+    color: var(--text-light);
+}
+
+.encourage-text {
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+}
+
+/* === Review List === */
+.review-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    transition: transform 0.2s;
+    border: 2px solid var(--border);
+}
+
+.review-item:hover {
+    transform: translateY(-2px);
+}
+
+.review-item-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.review-badge.correct {
+    background: var(--success);
+}
+
+.review-badge.wrong {
+    background: var(--danger);
+}
+
+.review-item-question {
+    flex: 1;
+    font-size: var(--font-md);
+    color: var(--text);
+    word-break: break-word;
+}
+
+.review-item-detail {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 2px solid var(--border);
+    font-size: var(--font-md);
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* === Explain Result === */
+.explain-result {
+    padding: 16px;
+    background: linear-gradient(135deg, #FFF9DB, #FFF3BF);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-sm);
+    margin-top: 12px;
+    font-size: var(--font-md);
+    line-height: 1.8;
+    color: #5C4700;
+    text-align: left;
+}
+
+.explain-result h4 {
+    margin-bottom: 12px;
+    font-size: var(--font-lg);
+    color: #7A6000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.explain-result p {
+    margin-bottom: 10px;
+}
+
+.explain-result ul, .explain-result ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.explain-result li {
+    margin-bottom: 6px;
+}
+
+.explain-result code {
+    background: rgba(255,255,255,0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.explain-result .explain-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.explain-result .explain-actions button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+/* === Speak Button === */
+.speak-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.speak-btn:hover {
+    background: var(--primary-light);
+}
+
+.speak-btn.speaking {
+    background: var(--primary);
+    color: white;
+    animation: pulse 1s infinite;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.15); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* === Learning Buddy === */
+#learning-buddy {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+.buddy-body {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFD43B, #FFA94D);
+    box-shadow: 0 4px 16px rgba(255, 169, 77, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+.buddy-face {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.buddy-eyes {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    margin-top: 6px;
+}
+.buddy-eye {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4A3728;
+    display: block;
+}
+.buddy-mouth {
+    width: 12px;
+    height: 6px;
+    border-bottom: 3px solid #4A3728;
+    border-radius: 0 0 50% 50%;
+    margin: 6px auto 0;
+}
+.buddy-happy .buddy-body {
+    animation: bounceIn 0.5s ease;
+}
+.buddy-happy .buddy-mouth {
+    width: 16px;
+    height: 8px;
+    border-bottom: 4px solid #4A3728;
+}
+.buddy-sad .buddy-body {
+    transform: rotate(-5deg);
+}
+.buddy-sad .buddy-eye {
+    height: 3px;
+    border-radius: 2px;
+    margin-top: 3px;
+}
+.buddy-sad .buddy-mouth {
+    border-bottom: none;
+    border-top: 3px solid #4A3728;
+    border-radius: 50% 50% 0 0;
+}
+.buddy-star .buddy-body {
+    animation: bounceIn 0.5s ease;
+    box-shadow: 0 0 30px rgba(255, 212, 59, 0.6);
+}
+.buddy-star .buddy-eye {
+    background: none;
+    position: relative;
+}
+.buddy-star .buddy-eye::before {
+    content: "\2605";
+    font-size: 10px;
+    color: #4A3728;
+    position: absolute;
+    top: -6px;
+    left: -3px;
+}
+.buddy-speech {
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 150px;
+    text-align: center;
+    animation: popIn 0.3s ease;
+}
+.buddy-speech.hidden { display: none; }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 16px 10px 40px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .question-text {
+        font-size: var(--font-lg);
+        padding: 16px;
+    }
+
+    .quiz-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .quiz-header .back-link {
+        text-align: center;
+    }
+
+    .progress-info {
+        order: -1;
+    }
+
+    .score-display {
+        font-size: 56px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+
+    .review-item {
+        padding: 16px 18px;
+    }
+
+    #learning-buddy { bottom: 16px; right: 16px; }
+    .buddy-body { width: 52px; height: 52px; }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="{{ config.APPLICATION_ROOT }}/" class="back-link">← 返回首页</a>
+        </div>
+        <div class="hero">
+            <h1>📒 错题本</h1>
+            <p class="subtitle" id="wrong-count-desc">复习答错的题目</p>
+        </div>
+
+        <div class="card" id="empty-state" style="text-align: center;">
+            <div style="font-size: 64px; margin-bottom: 16px;">🎉</div>
+            <h2>还没有错题！</h2>
+            <p class="subtitle">继续努力，保持下去！</p>
+        </div>
+
+        <div id="content-area" class="hidden">
+            <div class="action-buttons" style="margin-bottom: 20px;">
+                <button id="review-btn" class="btn btn-primary btn-large">🚀 开始复习</button>
+                <button id="clean-btn" class="btn btn-warning btn-large">🧹 移除已掌握</button>
+                <button id="clear-history-btn" class="btn btn-secondary btn-large">🗑️ 清除做题历史</button>
+            </div>
+
+            <div id="wrong-list" class="review-list"></div>
+        </div>
+
+        <!-- Review mode (hidden by default) -->
+        <div id="review-mode" class="hidden">
+            <!-- Will be populated dynamically -->
+        </div>
+    </div>
+
+    <script>
+        const APP_ROOT = "{{ config.APPLICATION_ROOT|safe }}";
+
+        function escapeHtml(str) {
+            if (typeof str !== "string") return str;
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+
+        // ---- Speech functions ----
+        function speakText(text, lang) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            var utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang || "zh-CN";
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function stopSpeaking() {
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+        }
+
+        function createSpeakButton(text, lang, label) {
+            var btn = document.createElement("button");
+            btn.className = "speak-btn";
+            btn.textContent = label || "🔊 朗读";
+            btn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                if (window.speechSynthesis.speaking) {
+                    stopSpeaking();
+                    btn.classList.remove("speaking");
+                    return;
+                }
+                btn.classList.add("speaking");
+                speakText(text, lang);
+                var checkDone = setInterval(function () {
+                    if (!window.speechSynthesis.speaking) {
+                        btn.classList.remove("speaking");
+                        clearInterval(checkDone);
+                    }
+                }, 200);
+            });
+            return btn;
+        }
+
+        function fetchJSON(url, body) {
+            return fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(body)
+            }).then(function (resp) {
+                if (!resp.ok) throw new Error("HTTP " + resp.status);
+                return resp.json();
+            });
+        }
+
+        function init() {
+            LearningBuddy.create();
+            renderList();
+
+            document.getElementById("review-btn").addEventListener("click", startReview);
+            document.getElementById("clean-btn").addEventListener("click", cleanMastered);
+            document.getElementById("clear-history-btn").addEventListener("click", function() {
+                if (confirm("确定要清除所有做题历史吗？清除后可能会出现之前做过的题目。")) {
+                    StorageManager.clearQuestionHistory();
+                    LearningBuddy.say("做题历史已清除！", 2000);
+                }
+            });
+        }
+
+        function renderList() {
+            var data = StorageManager.load();
+            var emptyState = document.getElementById("empty-state");
+            var contentArea = document.getElementById("content-area");
+            var listEl = document.getElementById("wrong-list");
+            var countDesc = document.getElementById("wrong-count-desc");
+
+            if (data.wrongQuestions.length === 0) {
+                emptyState.classList.remove("hidden");
+                contentArea.classList.add("hidden");
+                countDesc.textContent = "还没有错题，继续加油！";
+                return;
+            }
+
+            emptyState.classList.add("hidden");
+            contentArea.classList.remove("hidden");
+            countDesc.textContent = "共 " + data.wrongQuestions.length + " 道错题";
+
+            listEl.innerHTML = "";
+            data.wrongQuestions.slice().reverse().forEach(function (q) {
+                var item = document.createElement("div");
+                item.className = "review-item";
+                var typeLabel = getTypeLabel(q.questionType);
+                var optionsHtml = "";
+                if (q.questionType === "choice" && q.options && q.options.length > 0) {
+                    optionsHtml = '<div style="margin-top: 8px;">📋 选项：';
+                    q.options.forEach(function(opt) {
+                        optionsHtml += '<span style="display: inline-block; margin-right: 12px; padding: 4px 8px; background: #f5f5f5; border-radius: 4px;">' + escapeHtml(opt) + '</span>';
+                    });
+                    optionsHtml += '</div>';
+                }
+                item.innerHTML =
+                    '<div class="review-item-header">' +
+                        '<span class="review-badge wrong">✗</span>' +
+                        '<span class="review-item-question">' + escapeHtml(q.question) + '</span>' +
+                    '</div>' +
+                    '<div class="review-item-detail">' +
+                        '<div>📝 题型：' + typeLabel + (q.grade ? ' · ' + q.grade + '年级' : '') + '</div>' +
+                        optionsHtml +
+                        '<div>❌ 你的答案：' + escapeHtml(String(q.userAnswer)) + '</div>' +
+                        '<div>✅ 正确答案：' + escapeHtml(String(q.correctAnswer)) + '</div>' +
+                        (q.knowledgePoint ? '<div>💡 知识点：' + escapeHtml(q.knowledgePoint) + '</div>' : '') +
+                        '<div style="margin-top: 10px; color: var(--primary);">🔄 已复习：' + q.reviewCount + '/3 ' + (q.reviewCount >= 3 ? '✨已掌握' : '') + '</div>' +
+                        '<button class="btn btn-info btn-small explain-wrong-btn" data-id="' + q.id + '" style="margin-top: 8px;">🤖 AI 讲解</button>' +
+                        '<div class="explain-result hidden" id="explain-wrong-' + q.id + '" style="margin-top: 8px;"></div>' +
+                    '</div>';
+                listEl.appendChild(item);
+            });
+            
+            // 绑定AI讲解按钮事件
+            listEl.querySelectorAll(".explain-wrong-btn").forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var id = this.getAttribute("data-id");
+                    explainWrongQuestion(id);
+                });
+            });
+        }
+        
+        function explainWrongQuestion(id) {
+            var data = StorageManager.load();
+            var q = null;
+            for (var i = 0; i < data.wrongQuestions.length; i++) {
+                if (data.wrongQuestions[i].id === id) {
+                    q = data.wrongQuestions[i];
+                    break;
+                }
+            }
+            if (!q) return;
+            
+            var btn = document.querySelector('.explain-wrong-btn[data-id="' + id + '"]');
+            var resultEl = document.getElementById("explain-wrong-" + id);
+            
+            btn.textContent = "正在生成讲解...";
+            btn.disabled = true;
+            
+            fetchJSON(APP_ROOT + "/api/explain", {
+                question: q.question,
+                user_answer: q.userAnswer,
+                correct_answer: q.correctAnswer,
+                is_correct: false,
+                question_type: q.questionType,
+                knowledge: q.knowledgePoint || ""
+            }).then(function(resp) {
+                btn.textContent = "🤖 AI 讲解";
+                btn.disabled = false;
+                
+                if (resp.success && resp.explanation) {
+                    resultEl.classList.remove("hidden");
+                    var renderedContent = "";
+                    if (typeof marked !== "undefined") {
+                        renderedContent = marked.parse(resp.explanation);
+                    } else {
+                        renderedContent = "<p>" + escapeHtml(resp.explanation) + "</p>";
+                    }
+                    // 添加朗读和收起按钮
+                    var speakBtn = createSpeakButton(resp.explanation, "zh-CN", "🔊 朗读讲解");
+                    resultEl.innerHTML = 
+                        "<h4>💡 语法讲解</h4>" + 
+                        renderedContent + 
+                        '<div class="explain-actions">' +
+                            '<button class="speak-btn" id="speak-btn-' + id + '">🔊 朗读讲解</button>' +
+                            '<button class="btn btn-secondary btn-small" onclick="this.closest(\'.explain-result\').classList.add(\'hidden\');">收起讲解</button>' +
+                        '</div>';
+                    // 绑定朗读按钮事件
+                    var speakBtnEl = document.getElementById("speak-btn-" + id);
+                    if (speakBtnEl) {
+                        speakBtnEl.addEventListener("click", function(e) {
+                            e.stopPropagation();
+                            if (window.speechSynthesis.speaking) {
+                                stopSpeaking();
+                                speakBtnEl.classList.remove("speaking");
+                                return;
+                            }
+                            speakBtnEl.classList.add("speaking");
+                            speakText(resp.explanation, "zh-CN");
+                            var checkDone = setInterval(function() {
+                                if (!window.speechSynthesis.speaking) {
+                                    speakBtnEl.classList.remove("speaking");
+                                    clearInterval(checkDone);
+                                }
+                            }, 200);
+                        });
+                    }
+                    // 不隐藏讲解按钮，用户可以再次点击展开
+                } else {
+                    resultEl.classList.remove("hidden");
+                    resultEl.innerHTML = "<p class='error-msg'>生成讲解失败，请重试。</p>";
+                }
+            }).catch(function(err) {
+                btn.textContent = "🤖 AI 讲解";
+                btn.disabled = false;
+                resultEl.classList.remove("hidden");
+                resultEl.innerHTML = "<p class='error-msg'>网络错误，请重试。</p>";
+            });
+        }
+
+        function getTypeLabel(type) {
+            var labels = {
+                "choice": "选择题",
+                "fill": "填空题",
+                "judge": "判断题",
+                "correction": "改错题",
+                "cloze": "完形填空"
+            };
+            return labels[type] || type;
+        }
+
+        function cleanMastered() {
+            var data = StorageManager.load();
+            var before = data.wrongQuestions.length;
+            data.wrongQuestions = data.wrongQuestions.filter(function (q) {
+                return q.reviewCount < 3;
+            });
+            StorageManager.save(data);
+            var removed = before - data.wrongQuestions.length;
+            if (removed > 0) {
+                LearningBuddy.say("已移除 " + removed + " 道掌握的题目！", 2000);
+            } else {
+                LearningBuddy.say("还没有已掌握的题目哦！", 2000);
+            }
+            renderList();
+        }
+
+        // ===== Review Mode =====
+        var reviewState = {
+            questions: [],
+            currentIndex: 0,
+            correct: 0,
+            isSubmitted: false,
+            selectedAnswer: null
+        };
+
+        function startReview() {
+            var data = StorageManager.load();
+            if (data.wrongQuestions.length === 0) {
+                LearningBuddy.say("没有错题可复习！", 2000);
+                return;
+            }
+            // Shuffle and take up to 5
+            var shuffled = data.wrongQuestions.slice().sort(function() { return Math.random() - 0.5; });
+            reviewState.questions = shuffled.slice(0, 5);
+            reviewState.currentIndex = 0;
+            reviewState.correct = 0;
+
+            document.getElementById("content-area").classList.add("hidden");
+            document.getElementById("review-mode").classList.remove("hidden");
+            renderReviewQuestion();
+        }
+
+        function renderReviewQuestion() {
+            reviewState.isSubmitted = false;
+            reviewState.selectedAnswer = null;
+            var q = reviewState.questions[reviewState.currentIndex];
+            var modeEl = document.getElementById("review-mode");
+
+            var inputHtml = "";
+            if (q.questionType === "choice" && q.options && q.options.length > 0) {
+                // 有选项，渲染选择题按钮（options 已包含 A./B. 前缀）
+                inputHtml = '<div class="choice-options">';
+                q.options.forEach(function(opt, idx) {
+                    var letter = String.fromCharCode(65 + idx);
+                    inputHtml += '<button class="option-btn" data-letter="' + letter + '">' + escapeHtml(opt) + '</button>';
+                });
+                inputHtml += '</div>';
+            } else if (q.questionType === "judge") {
+                // 判断题
+                inputHtml = '<div class="judge-buttons">' +
+                    '<button class="judge-btn judge-true" data-value="true">👍 对</button>' +
+                    '<button class="judge-btn judge-false" data-value="false">👎 错</button>' +
+                    '</div>';
+            } else {
+                // 填空题、改错题等
+                inputHtml = '<input type="text" class="answer-input" id="review-input" placeholder="请输入你的答案...">';
+            }
+
+            modeEl.innerHTML =
+                '<div class="quiz-header">' +
+                    '<span class="back-link" onclick="exitReview()" style="cursor:pointer;">← 退出复习</span>' +
+                    '<div class="progress-info"><span id="review-progress">' + (reviewState.currentIndex + 1) + ' / ' + reviewState.questions.length + '</span></div>' +
+                '</div>' +
+                '<div class="card question-card">' +
+                    '<div class="question-text"><span>' + escapeHtml(q.question) + '</span></div>' +
+                    '<div class="answer-area" id="review-answer-area">' + inputHtml + '</div>' +
+                    '<div class="feedback-area hidden" id="review-feedback"></div>' +
+                    '<div class="action-buttons">' +
+                        '<button class="btn btn-primary btn-large" id="review-submit">提交答案</button>' +
+                        '<button class="btn btn-secondary btn-large hidden" id="review-next">下一题</button>' +
+                    '</div>' +
+                '</div>';
+
+            document.getElementById("review-submit").addEventListener("click", submitReview);
+            document.getElementById("review-next").addEventListener("click", nextReview);
+
+            // 绑定选择题/判断题按钮事件
+            var answerArea = document.getElementById("review-answer-area");
+            if (q.questionType === "choice" && q.options) {
+                answerArea.querySelectorAll(".option-btn").forEach(function(btn) {
+                    btn.addEventListener("click", function() {
+                        if (reviewState.isSubmitted) return;
+                        answerArea.querySelectorAll(".option-btn").forEach(function(b) { b.classList.remove("selected"); });
+                        btn.classList.add("selected");
+                        reviewState.selectedAnswer = btn.getAttribute("data-letter");
+                    });
+                });
+            } else if (q.questionType === "judge") {
+                answerArea.querySelectorAll(".judge-btn").forEach(function(btn) {
+                    btn.addEventListener("click", function() {
+                        if (reviewState.isSubmitted) return;
+                        answerArea.querySelectorAll(".judge-btn").forEach(function(b) { b.classList.remove("selected"); });
+                        btn.classList.add("selected");
+                        reviewState.selectedAnswer = btn.getAttribute("data-value");
+                    });
+                });
+            } else {
+                var input = document.getElementById("review-input");
+                if (input) {
+                    input.focus();
+                    input.addEventListener("keydown", function(e) {
+                        if (e.key === "Enter" && !reviewState.isSubmitted) submitReview();
+                    });
+                }
+            }
+        }
+
+        function submitReview() {
+            if (reviewState.isSubmitted) return;
+            var q = reviewState.questions[reviewState.currentIndex];
+            var userAnswer = "";
+            var answerArea = document.getElementById("review-answer-area");
+
+            if (q.questionType === "choice" && q.options) {
+                // 选择题
+                if (!reviewState.selectedAnswer) {
+                    LearningBuddy.say("请先选择答案！", 1500);
+                    return;
+                }
+                userAnswer = reviewState.selectedAnswer;
+            } else if (q.questionType === "judge") {
+                // 判断题
+                if (!reviewState.selectedAnswer) {
+                    LearningBuddy.say("请先选择答案！", 1500);
+                    return;
+                }
+                userAnswer = reviewState.selectedAnswer;
+            } else {
+                // 填空题、改错题等
+                var input = document.getElementById("review-input");
+                if (!input || !input.value.trim()) {
+                    LearningBuddy.say("请先作答！", 1500);
+                    return;
+                }
+                userAnswer = input.value.trim();
+            }
+
+            reviewState.isSubmitted = true;
+
+            // 判断答案是否正确
+            var isCorrect = false;
+            if (q.questionType === "choice") {
+                isCorrect = userAnswer.toUpperCase() === String(q.correctAnswer).toUpperCase();
+            } else if (q.questionType === "judge") {
+                var userBool = userAnswer === "true";
+                var correctBool = q.correctAnswer === true || q.correctAnswer === "true";
+                isCorrect = userBool === correctBool;
+            } else {
+                isCorrect = userAnswer.toLowerCase() === String(q.correctAnswer).trim().toLowerCase();
+            }
+
+            var feedbackEl = document.getElementById("review-feedback");
+            feedbackEl.classList.remove("hidden");
+            if (isCorrect) {
+                reviewState.correct++;
+                // Increment review count
+                var data = StorageManager.load();
+                for (var i = 0; i < data.wrongQuestions.length; i++) {
+                    if (data.wrongQuestions[i].id === q.id) {
+                        data.wrongQuestions[i].reviewCount++;
+                        break;
+                    }
+                }
+                StorageManager.save(data);
+
+                feedbackEl.className = "feedback-area correct";
+                feedbackEl.innerHTML = "✅ 答对了！这道题你又掌握了一次！";
+                LearningBuddy.onCorrect(reviewState.correct);
+            } else {
+                feedbackEl.className = "feedback-area wrong";
+                var correctDisplay = q.questionType === "judge" ? (q.correctAnswer === true ? "对" : "错") : q.correctAnswer;
+                feedbackEl.innerHTML = "❌ 答错了" +
+                    '<div class="correct-answer">正确答案：' + escapeHtml(String(correctDisplay)) + '</div>' +
+                    '<div class="encourage-text">💪 再想想，下次一定行！</div>';
+                LearningBuddy.onWrong();
+            }
+
+            // 禁用答案区域
+            if (q.questionType === "choice" && q.options) {
+                answerArea.querySelectorAll(".option-btn").forEach(function(btn) {
+                    btn.disabled = true;
+                    var letter = btn.getAttribute("data-letter");
+                    if (letter === String(q.correctAnswer).toUpperCase()) {
+                        btn.classList.add("correct");
+                    } else if (btn.classList.contains("selected")) {
+                        btn.classList.add("wrong");
+                    }
+                });
+            } else if (q.questionType === "judge") {
+                answerArea.querySelectorAll(".judge-btn").forEach(function(btn) {
+                    btn.disabled = true;
+                });
+            } else {
+                var input = document.getElementById("review-input");
+                if (input) {
+                    input.disabled = true;
+                    input.classList.add(isCorrect ? "correct" : "wrong");
+                }
+            }
+
+            document.getElementById("review-submit").classList.add("hidden");
+            document.getElementById("review-next").classList.remove("hidden");
+        }
+
+        function nextReview() {
+            reviewState.currentIndex++;
+            if (reviewState.currentIndex < reviewState.questions.length) {
+                renderReviewQuestion();
+            } else {
+                showReviewSummary();
+            }
+        }
+
+        function showReviewSummary() {
+            var modeEl = document.getElementById("review-mode");
+            var total = reviewState.questions.length;
+            modeEl.innerHTML =
+                '<div class="card results-card">' +
+                    '<h2>🎉 复习完成！</h2>' +
+                    '<div class="score-display"><span>' + reviewState.correct + '</span><span class="score-total"> / ' + total + '</span></div>' +
+                    '<div class="encourage-text" style="background:' + (reviewState.correct === total ? 'var(--success-light)' : 'var(--secondary-light)') + ';">' +
+                        (reviewState.correct === total ? '太棒了！全部答对！' : '加油，多复习就会掌握的！') +
+                    '</div>' +
+                    '<div class="action-buttons" style="margin-top: 24px;">' +
+                        '<button class="btn btn-primary btn-large" onclick="exitReview()">返回错题列表</button>' +
+                        '<a href="' + APP_ROOT + '/" class="btn btn-secondary btn-large">🏠 返回首页</a>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        function exitReview() {
+            document.getElementById("review-mode").classList.add("hidden");
+            document.getElementById("content-area").classList.remove("hidden");
+            renderList();
+        }
+
+        window.exitReview = exitReview;
+
+        document.addEventListener("DOMContentLoaded", init);
+    </script>
+</body>
+</html>

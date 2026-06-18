@@ -1,0 +1,4457 @@
+[
+    {
+        "id": "q-001",
+        "sourceType": "choice",
+        "stem": "My sister ____ a teacher in the school.",
+        "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+        ],
+        "gradeBand": "primary-upper",
+        "examSource": "项目内置示例题",
+        "knowledgePointId": "kp-be-verb",
+        "difficulty": "easy"
+    },
+    {
+        "id": "q-002",
+        "sourceType": "choice",
+        "stem": "We have an English class ____ Monday morning.",
+        "options": [
+            "in",
+            "on",
+            "at",
+            "for"
+        ],
+        "gradeBand": "primary-upper",
+        "examSource": "项目内置示例题",
+        "knowledgePointId": "kp-preposition-time",
+        "difficulty": "easy"
+    },
+    {
+        "id": "q-003",
+        "sourceType": "choice",
+        "stem": "Tom and I are good friends. ____ often play football after school.",
+        "options": [
+            "He",
+            "She",
+            "We",
+            "They"
+        ],
+        "gradeBand": "primary-upper",
+        "examSource": "项目内置示例题",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "easy"
+    },
+    {
+        "id": "q-006",
+        "sourceType": "choice",
+        "stem": "This is my new classmate. ____ name is Anna.",
+        "options": [
+            "He",
+            "She",
+            "Her",
+            "His"
+        ],
+        "gradeBand": "primary-upper",
+        "examSource": "项目内置示例题",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "easy"
+    },
+    {
+        "id": "sh-2008-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "Some girls get sick after they try so hard to lose ______ weight.",
+        "options": [
+            "a",
+            "the",
+            "/",
+            "an"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "The plane will take off ______ an hour. Please check in right now.",
+        "options": [
+            "at",
+            "in",
+            "on",
+            "to"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "Did Mary visit that old town by ______ last week?",
+        "options": [
+            "her",
+            "she",
+            "hers",
+            "herself"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "After moving to their new house, the Lees bought some ______ in the mall nearby.",
+        "options": [
+            "furniture",
+            "chair",
+            "table",
+            "shelf"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-noun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "______ her great joy, her daughter was finally saved by the doctors.",
+        "options": [
+            "In",
+            "To",
+            "At",
+            "For"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "\"Have ______ try, you are so close to the answer,\" the teacher said to Eric.",
+        "options": [
+            "the other",
+            "one another",
+            "other",
+            "another"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Everyone likes Kevin because he talks to others ______.",
+        "options": [
+            "friendly",
+            "lovely",
+            "politely",
+            "luckily"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "Jenny goes to school ______ than any other student in her class.",
+        "options": [
+            "early",
+            "earlier",
+            "earliest",
+            "the earliest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Which one is heavier, the wooden ball ______ the iron ball?",
+        "options": [
+            "or",
+            "and",
+            "but",
+            "so"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "Tim didn't have dinner ______ he finished watching the cartoon.",
+        "options": [
+            "while",
+            "unless",
+            "until",
+            "since"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "Landing on the moon sounds ______. I hope I can go there one day.",
+        "options": [
+            "wonderful",
+            "wonderfully",
+            "terrible",
+            "terribly"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Soon you ______ a senior high school student. Isn't it exciting!",
+        "options": [
+            "become",
+            "will become",
+            "became",
+            "have become"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "I ______ a copy of Yi Zhongtian's book yet. I might buy one tomorrow.",
+        "options": [
+            "hadn't bought",
+            "don't buy",
+            "won't buy",
+            "haven't bought"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "You ______ write the poem down. Our teacher will give us a copy.",
+        "options": [
+            "can't",
+            "shouldn't",
+            "needn't",
+            "mustn't"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "-- Would you like to play table tennis with me?\n-- I don't feel like it. I would rather ______ at home and watch TV.",
+        "options": [
+            "stay",
+            "to stay",
+            "staying",
+            "stayed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-46",
+        "sourceType": "choice",
+        "stem": "After Donghai Bridge ______, it became a new tourist attraction.",
+        "options": [
+            "completed",
+            "complete",
+            "is completed",
+            "was completed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-47",
+        "sourceType": "choice",
+        "stem": "How long can I ______ this magazine?",
+        "options": [
+            "borrow",
+            "return",
+            "buy",
+            "keep"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-48",
+        "sourceType": "choice",
+        "stem": "As soon as he ______ the bus, the poor man realized he had left his wallet on it.",
+        "options": [
+            "got on",
+            "got off",
+            "got to",
+            "got in"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-49",
+        "sourceType": "choice",
+        "stem": "The Oriental Pearl TV Tower is ______ all Shanghai citizens.",
+        "options": [
+            "famous for",
+            "familiar to",
+            "pleased with",
+            "interested in"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2008-part2-choice-50",
+        "sourceType": "choice",
+        "stem": "-- I won the 100-meter race on our sports day.\n-- ______ We are proud of you!",
+        "options": [
+            "That's all right.",
+            "Sorry to hear that.",
+            "Congratulations.",
+            "I'd love to."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2008 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "Can I have ______ look at the photo of your pen friend?",
+        "options": [
+            "a",
+            "an",
+            "/",
+            "the"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "The teacher often takes his students to visit the Science Museum ______ Saturdays.",
+        "options": [
+            "in",
+            "by",
+            "at",
+            "on"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "The foreign visitors asked ______ lots of questions about Chinese culture during the tour.",
+        "options": [
+            "I",
+            "my",
+            "me",
+            "mine"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "______ of these two hats looks good on my daughter. Do you have another one?",
+        "options": [
+            "Both",
+            "All",
+            "Neither",
+            "None"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "The little boy saved his classmates in the earthquake. ______ brave he was!",
+        "options": [
+            "What",
+            "How",
+            "What a",
+            "What an"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "The American student could speak only ______ Chinese, but he managed to communicate with us.",
+        "options": [
+            "few",
+            "little",
+            "a few",
+            "a little"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Thanks to the new inventions, our lives are much ______ than before.",
+        "options": [
+            "convenient",
+            "more convenient",
+            "most convenient",
+            "the most convenient"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "The home-made ice-cream in this restaurant tastes ______. Would you like some?",
+        "options": [
+            "softly",
+            "greatly",
+            "nice",
+            "well"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "When summer ______, some children will go to the seaside for fun.",
+        "options": [
+            "comes",
+            "came",
+            "will come",
+            "would come"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "I ______ you already that washing hands often will help prevent the A-H1N1 Flu.",
+        "options": [
+            "tell",
+            "told",
+            "have told",
+            "am telling"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "He was still working on his project while other people ______ a rest.",
+        "options": [
+            "were having",
+            "are having",
+            "will have",
+            "have"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Many houses ______ in the big fire a few days ago. What a shame!",
+        "options": [
+            "were damaged",
+            "damage",
+            "were damaging",
+            "damaged"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "To everyone's surprise, Alex ______ play chess very well when he was only four.",
+        "options": [
+            "might",
+            "should",
+            "would",
+            "could"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "The woman feels that she should let her son ______ his own decision this time.",
+        "options": [
+            "makes",
+            "make",
+            "to make",
+            "making"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "Susan finally became a popular singer after she practised ______ for years.",
+        "options": [
+            "sing",
+            "to sing",
+            "singing",
+            "sang"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-46",
+        "sourceType": "choice",
+        "stem": "______ John failed to climb to the top of the mountain several times, he didn't give up.",
+        "options": [
+            "Although",
+            "Because",
+            "Whether",
+            "Unless"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-47",
+        "sourceType": "choice",
+        "stem": "Keep an English diary, ______ your English will improve.",
+        "options": [
+            "or",
+            "since",
+            "when",
+            "and"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-48",
+        "sourceType": "choice",
+        "stem": "Could you please tell us ______ in Shanghai?",
+        "options": [
+            "when will you visit the World Expo",
+            "when you will visit the World Expo",
+            "when the World Expo will you visit",
+            "when the World Expo you will visit"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-49",
+        "sourceType": "choice",
+        "stem": "The room is very dark. I can't ______ anything clearly without a light.",
+        "options": [
+            "watch",
+            "look",
+            "see",
+            "notice"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-50",
+        "sourceType": "choice",
+        "stem": "It's ______ to read the map before you travel to a new place.",
+        "options": [
+            "helpful",
+            "harmful",
+            "powerful",
+            "awful"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-51",
+        "sourceType": "choice",
+        "stem": "Once a year, people take part in \"______ Lights\" activity to help save energy.",
+        "options": [
+            "Show off",
+            "Turn off",
+            "Take off",
+            "Put off"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-phrasal-verb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-52",
+        "sourceType": "choice",
+        "stem": "Our headmaster invited Christine to ______ the English Festival last term.",
+        "options": [
+            "be late for",
+            "be angry with",
+            "be familiar with",
+            "be responsible for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-53",
+        "sourceType": "choice",
+        "stem": "Many sports players became well-known after they joined in the Beijing Olympic Games. (closest meaning)",
+        "options": [
+            "rich",
+            "strong",
+            "lucky",
+            "famous"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-54",
+        "sourceType": "choice",
+        "stem": "Be careful! There's some broken glass on the ground. (closest meaning)",
+        "options": [
+            "Look out",
+            "Go ahead",
+            "Get ready",
+            "Keep quiet"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-55",
+        "sourceType": "choice",
+        "stem": "-- How about raising some money for the charity?\n-- ______",
+        "options": [
+            "Enjoy yourself.",
+            "Good idea.",
+            "You're welcome.",
+            "Never mind."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2009-part2-choice-56",
+        "sourceType": "choice",
+        "stem": "-- You've done a great job, Grace.\n-- ______",
+        "options": [
+            "I'm afraid not.",
+            "Thanks a lot.",
+            "I agree with you.",
+            "It's hard to say."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2009 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "The famous actor often plays ______ his children in the park.",
+        "options": [
+            "about",
+            "in",
+            "at",
+            "with"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "The volunteers love ______ students in that small village in the west of China.",
+        "options": [
+            "they",
+            "them",
+            "their",
+            "themselves"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "You can get much ______ about the World Expo on the Internet.",
+        "options": [
+            "map",
+            "picture",
+            "ticket",
+            "information"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-noun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "New Zealand has two islands. One is North Island and ______ is South Island.",
+        "options": [
+            "another",
+            "the other",
+            "other",
+            "the others"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "Listening is just as ______ as speaking in language learning.",
+        "options": [
+            "important",
+            "more important",
+            "most important",
+            "the most important"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "Is this a photo of your daughter? She looks ______ in the pink dress!",
+        "options": [
+            "lovely",
+            "quietly",
+            "politely",
+            "happily"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "We will have no water to drink ______ we don't protect the earth.",
+        "options": [
+            "until",
+            "before",
+            "though",
+            "if"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "Money is important, ______ it can't buy everything.",
+        "options": [
+            "for",
+            "but",
+            "or",
+            "so"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Today is Father's Day. My mother ______ a special dinner for my grandpa now.",
+        "options": [
+            "prepare",
+            "prepared",
+            "is preparing",
+            "will prepare"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "Tina and her parents ______ to England for sightseeing last summer.",
+        "options": [
+            "go",
+            "went",
+            "will go",
+            "have gone"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "The Harry Potter books ______ pretty popular since they were published.",
+        "options": [
+            "become",
+            "will become",
+            "have become",
+            "are becoming"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "A Disneyland Park ______ in Shanghai Pudong New Area in the near future.",
+        "options": [
+            "builds",
+            "has built",
+            "will build",
+            "will be built"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "Richard turned off the computer after he had finished ______ the email.",
+        "options": [
+            "write",
+            "to write",
+            "writing",
+            "wrote"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "Before going to the History Museum, our teacher told us ______ the public rules.",
+        "options": [
+            "obey",
+            "to obey",
+            "obeying",
+            "obeyed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "Everyone ______ go through the security check when entering the World Expo Park.",
+        "options": [
+            "can",
+            "may",
+            "must",
+            "ought"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-46",
+        "sourceType": "choice",
+        "stem": "-- ______ is it from here to the railway station?\n-- About ten kilometres.",
+        "options": [
+            "How far",
+            "How fast",
+            "How soon",
+            "How often"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-47",
+        "sourceType": "choice",
+        "stem": "______ exciting sport it is to climb the mountains!",
+        "options": [
+            "How",
+            "What",
+            "What a",
+            "What an"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-48",
+        "sourceType": "choice",
+        "stem": "I want to know ______.",
+        "options": [
+            "when we should arrive at the airport",
+            "when should we arrive at the airport",
+            "when the airport we should arrive at",
+            "when the airport should we arrive at"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-49",
+        "sourceType": "choice",
+        "stem": "My dog is gentle and never bites, so you needn't be ______.",
+        "options": [
+            "excited",
+            "frightened",
+            "satisfied",
+            "interested"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-50",
+        "sourceType": "choice",
+        "stem": "Your homework is well done. Just ______ some small mistakes in it.",
+        "options": [
+            "create",
+            "connect",
+            "correct",
+            "control"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-51",
+        "sourceType": "choice",
+        "stem": "The customers are pleased with the ______ of the restaurant.",
+        "options": [
+            "balance",
+            "experience",
+            "surface",
+            "service"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-52",
+        "sourceType": "choice",
+        "stem": "The bus is coming. Be careful when you ______ the bus.",
+        "options": [
+            "get on",
+            "get off",
+            "get up",
+            "get to"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-53",
+        "sourceType": "choice",
+        "stem": "Angel is keen on all kinds of pop music. (closest meaning)",
+        "options": [
+            "is surprised at",
+            "is famous for",
+            "is fond of",
+            "is worried about"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-54",
+        "sourceType": "choice",
+        "stem": "The bridge enables people to get to the island in less than an hour. (closest meaning)",
+        "options": [
+            "makes it safe for",
+            "makes it possible for",
+            "makes it necessary for",
+            "makes it enjoyable for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-55",
+        "sourceType": "choice",
+        "stem": "-- I'm really sorry to have broken your coffee cup.\n-- ______",
+        "options": [
+            "Good idea.",
+            "That's all right.",
+            "I don't think so.",
+            "You are welcome."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2010-part2-choice-56",
+        "sourceType": "choice",
+        "stem": "-- Sharon, remember to lock the door before leaving the house.\n-- ______",
+        "options": [
+            "OK. I will.",
+            "Yes, please.",
+            "It's hard to say.",
+            "It doesn't matter."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2010 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "This novel can make you laugh and cry at ______ same time.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "The university student borrowed some money ______ his friends to start his own business.",
+        "options": [
+            "from",
+            "onto",
+            "at",
+            "in"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "I have two children, and ______ of them are working in the west of China.",
+        "options": [
+            "all",
+            "both",
+            "neither",
+            "either"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "The old man used to raise many ______ to make a living on the farm.",
+        "options": [
+            "duck",
+            "horse",
+            "bird",
+            "sheep"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "The students from Xinjiang enjoy staying in our school because everyone is ______ to them.",
+        "options": [
+            "friendly",
+            "gently",
+            "happily",
+            "politely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "We hope that with the help of the new skill, Liu Xiang can run ______ than before.",
+        "options": [
+            "fast",
+            "faster",
+            "fastest",
+            "the fastest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Take the exam carefully, ______ you won't get full marks.",
+        "options": [
+            "but",
+            "and",
+            "or",
+            "so"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "We didn't start our discussion ______ everybody arrived.",
+        "options": [
+            "since",
+            "if",
+            "while",
+            "until"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "You ______ lose your way if you walk alone in the mountains at night.",
+        "options": [
+            "may",
+            "need",
+            "should",
+            "ought to"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "By the end of the last month, I ______ all the CDs of Justin Bieber.",
+        "options": [
+            "collect",
+            "collected",
+            "have collected",
+            "had collected"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "Now my father ______ his bike to work every day instead of driving.",
+        "options": [
+            "ride",
+            "rode",
+            "rides",
+            "will ride"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "We are glad to hear that the Greens ______ to a new flat next week.",
+        "options": [
+            "moved",
+            "moved",
+            "will move",
+            "have moved"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "An official ______ by some reporters on food problems in Shanghai yesterday.",
+        "options": [
+            "is interviewing",
+            "is interviewed",
+            "was interviewing",
+            "was interviewed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "As we all know, it's not polite to keep others ______ for a long time.",
+        "options": [
+            "wait",
+            "waited",
+            "to wait",
+            "waiting"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "You had better ______ because you have to drive back home.",
+        "options": [
+            "not drinking",
+            "not drink",
+            "don't drink",
+            "not to drink"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-46",
+        "sourceType": "choice",
+        "stem": "Your English teacher has never lost his temper, ______ he?",
+        "options": [
+            "has",
+            "hasn't",
+            "did",
+            "didn't"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-47",
+        "sourceType": "choice",
+        "stem": "-- ______ T-shirt do you like better, the red one or the blue one?\n-- I prefer the red one.",
+        "options": [
+            "How much",
+            "How many",
+            "Whose",
+            "Which"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-48",
+        "sourceType": "choice",
+        "stem": "There ______ still some milk in the fridge. It's not necessary to go to the store today.",
+        "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-49",
+        "sourceType": "choice",
+        "stem": "These natural disasters have warned us that everyone should start to protect the ______ immediately.",
+        "options": [
+            "amusement",
+            "development",
+            "environment",
+            "government"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-50",
+        "sourceType": "choice",
+        "stem": "Edward, you have grown up. You should learn to make your own room ______.",
+        "options": [
+            "empty",
+            "noisy",
+            "dirty",
+            "tidy"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-51",
+        "sourceType": "choice",
+        "stem": "Though I ______ the phone number many times, the foreigner couldn't write it down.",
+        "options": [
+            "repeated",
+            "refused",
+            "researched",
+            "recognized"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-52",
+        "sourceType": "choice",
+        "stem": "The lady ______ dancing as a hobby in her sixties, and she is really good at it now.",
+        "options": [
+            "dressed up",
+            "looked up",
+            "took up",
+            "put up"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-53",
+        "sourceType": "choice",
+        "stem": "I have no idea what life would be like without water. (closest meaning)",
+        "options": [
+            "don't remember",
+            "don't know",
+            "don't believe",
+            "don't expect"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-54",
+        "sourceType": "choice",
+        "stem": "When you have western food, you should use knife and fork properly. (closest meaning)",
+        "options": [
+            "in a quick way",
+            "in the right way",
+            "in a different way",
+            "in the usual way"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-word-formation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-55",
+        "sourceType": "choice",
+        "stem": "-- I think honesty is the most important thing in doing everything.\n-- ______",
+        "options": [
+            "All right",
+            "Never mind",
+            "I think so, too",
+            "Yes, please"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2011-part2-choice-56",
+        "sourceType": "choice",
+        "stem": "-- I'm leaving for Canada on a study trip next week.\n-- ______",
+        "options": [
+            "Enjoy your time",
+            "That's all right",
+            "You're welcome",
+            "It's a pleasure"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2011 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "Could I have an early morning call ______ six o'clock tomorrow?",
+        "options": [
+            "on",
+            "to",
+            "at",
+            "in"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "We have decided to try ______ best to raise more money for the local charity.",
+        "options": [
+            "us",
+            "our",
+            "we",
+            "ours"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "You really don't have to worry ______ your weight. You look just right.",
+        "options": [
+            "for",
+            "from",
+            "with",
+            "about"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "I can't connect my computer to the Internet. There must be ______ wrong with it.",
+        "options": [
+            "something",
+            "everything",
+            "anything",
+            "nothing"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "The baby feels ______ while his mother holds him in her arms.",
+        "options": [
+            "save",
+            "safe",
+            "safely",
+            "safety"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "Pudong International Airport is one of ______ airports in the world.",
+        "options": [
+            "big",
+            "bigger",
+            "biggest",
+            "the biggest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Martin and his friends didn't eat up all the food they ordered, ______ they took the rest away.",
+        "options": [
+            "for",
+            "or",
+            "so",
+            "as"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "Peter will cook for his parents ______ the International Day of Families comes.",
+        "options": [
+            "unless",
+            "when",
+            "until",
+            "though"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "With the help of the new technology, you ______ e-mail your friends by mobile phone.",
+        "options": [
+            "can",
+            "must",
+            "need",
+            "should"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "______ Tony ______ Frank likes the CD. They think the music is too noisy.",
+        "options": [
+            "Neither...nor",
+            "Either...or",
+            "Both...and",
+            "Not only...but also"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "Stop ______ about the traffic. Just think about what we can do to improve it.",
+        "options": [
+            "complain",
+            "to complain",
+            "complaining",
+            "complained"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Don't jump to a conclusion! Let's ______ the problem first.",
+        "options": [
+            "to discuss",
+            "discuss",
+            "discussed",
+            "discussing"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "-- ______ do millions of online users visit the home page of the government?\n-- To read the news and search for the information they need.",
+        "options": [
+            "When",
+            "Where",
+            "Why",
+            "What"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "The volunteers ______ a lot of help to the community for nearly ten years.",
+        "options": [
+            "offered",
+            "will offer",
+            "are offering",
+            "have offered"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "The students ______ the Art Festival when I passed by their school.",
+        "options": [
+            "celebrate",
+            "were celebrating",
+            "will celebrate",
+            "have celebrated"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-46",
+        "sourceType": "choice",
+        "stem": "Jenny told me that she ______ an English Speech Contest the next month.",
+        "options": [
+            "takes part in",
+            "is taking part in",
+            "took part in",
+            "would take part in"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-47",
+        "sourceType": "choice",
+        "stem": "______ wonderful concert they are putting on in the city square!",
+        "options": [
+            "How",
+            "What",
+            "What a",
+            "What an"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-48",
+        "sourceType": "choice",
+        "stem": "I'm sure that stricter rules to control cigarette smoking ______ very soon.",
+        "options": [
+            "made",
+            "will make",
+            "were made",
+            "will be made"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-49",
+        "sourceType": "choice",
+        "stem": "-- Shall we join in the Green World Summer Camp?\n-- ______",
+        "options": [
+            "Good idea.",
+            "You're welcome.",
+            "Not at all.",
+            "Never mind."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2012-part2-choice-50",
+        "sourceType": "choice",
+        "stem": "-- Congratulations! You've got a chance to be an exchange student!\n-- ______",
+        "options": [
+            "Thank you.",
+            "I agree.",
+            "Of course.",
+            "Good luck."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2012 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "Perhaps the famous football star won't play ______ football any longer.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "My parents showed ______ some old pictures that brought back sweet memories.",
+        "options": [
+            "I",
+            "me",
+            "my",
+            "mine"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "Wow! Ten students in our class will celebrate their fourteenth birthdays ______ October!",
+        "options": [
+            "in",
+            "on",
+            "at",
+            "to"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "The chemicals in the vegetables and fruit are bad ______ our health.",
+        "options": [
+            "from",
+            "with",
+            "of",
+            "for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "A lot of foreigners ______ familiar with the famous places of interest in China.",
+        "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "The student didn't find much ______ about the topic on that website.",
+        "options": [
+            "report",
+            "article",
+            "information",
+            "story"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-noun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "______ is waiting for you at the gate. He wants to say thanks to you.",
+        "options": [
+            "Somebody",
+            "Anybody",
+            "Everybody",
+            "Nobody"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "-- ______ have you been in the sports club?\n-- Since the first month I came to the school.",
+        "options": [
+            "How old",
+            "How long",
+            "How much",
+            "How soon"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "My old neighbor Charles felt ______ after his children moved out.",
+        "options": [
+            "lonely",
+            "safely",
+            "angrily",
+            "happily"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "-- Must I go to medical school and be a doctor like you, Dad?\n-- No, you ______, son. You're free to make your own decision.",
+        "options": [
+            "can't",
+            "mustn't",
+            "shouldn't",
+            "needn't"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "The volunteer spoke as ______ as she could to make the visitors understand her.",
+        "options": [
+            "clearly",
+            "more clearly",
+            "most clearly",
+            "the most clearly"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Which do you prefer to use to keep in touch with your friends, QQ ______ MSN?",
+        "options": [
+            "and",
+            "but",
+            "or",
+            "so"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "I hate travelling by air ______ you usually have to wait for hours before the plane takes off.",
+        "options": [
+            "because",
+            "though",
+            "until",
+            "unless"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "Look, so many passengers ______ with their smart phones on the underground.",
+        "options": [
+            "played",
+            "will play",
+            "are playing",
+            "have played"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "The schoolboy ______ to the blind man on his way home yesterday afternoon.",
+        "options": [
+            "apologizes",
+            "apologized",
+            "will apologize",
+            "has apologized"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-46",
+        "sourceType": "choice",
+        "stem": "The official said they ______ a new law to protect the tourists the next year.",
+        "options": [
+            "makes",
+            "would make",
+            "made",
+            "have made"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-47",
+        "sourceType": "choice",
+        "stem": "Even Tony's granddaughter, a five-year-old girl, asked him ______ smoking.",
+        "options": [
+            "give up",
+            "gave up",
+            "to give up",
+            "giving up"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-48",
+        "sourceType": "choice",
+        "stem": "The retired couple enjoy ______ photos. They always go out with their cameras.",
+        "options": [
+            "take",
+            "took",
+            "to take",
+            "taking"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-49",
+        "sourceType": "choice",
+        "stem": "-- Tim and I will visit the exhibition this weekend. Would you like to join us?\n-- ______",
+        "options": [
+            "Well done.",
+            "That's right.",
+            "You're welcome.",
+            "I'd love to."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2013-part2-choice-50",
+        "sourceType": "choice",
+        "stem": "-- We'll study in different schools next term. Enjoy your time in the new school!\n-- ______",
+        "options": [
+            "I'll take your advice.",
+            "The same to you.",
+            "Congratulations!",
+            "Me too."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2013 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Garden School is very famous and it's Mary's first choice. Which of the following is correct for the underlined word?",
+        "options": [
+            "/fɜːst/",
+            "/fi:st/",
+            "/fri:st/",
+            "/frist/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "Do you see that good-looking young man? ______ is a famous Korean film star.",
+        "options": [
+            "He",
+            "His",
+            "Him",
+            "Himself"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "More and more people in Shanghai choose to go to work ______ underground.",
+        "options": [
+            "in",
+            "with",
+            "by",
+            "for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "Students are encouraged to share their learning experience ______ their classmates.",
+        "options": [
+            "to",
+            "in",
+            "at",
+            "with"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "The traffic is moving very slowly as so many cars ______ on their way back to Shanghai.",
+        "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "-- ______ can you finish the report on food safety?\n-- In two days.",
+        "options": [
+            "How far",
+            "How much",
+            "How often",
+            "How soon"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "Old Mr. Black lives happily with his three dogs. ______ of them are part of his family.",
+        "options": [
+            "Both",
+            "All",
+            "None",
+            "Neither"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "Air pollution has become ______ than ever before. We must do something to stop it.",
+        "options": [
+            "serious",
+            "more serious",
+            "most serious",
+            "the most serious"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "______ carefully, Michael! There's a school ahead.",
+        "options": [
+            "Drive",
+            "To drive",
+            "Drove",
+            "Driving"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "All passengers ______ go through safety check before they take a plane.",
+        "options": [
+            "can",
+            "may",
+            "must",
+            "ought"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "-- Would you like to go to the cartoon show with me?\n-- It sounds like fun, ______ I'm too busy.",
+        "options": [
+            "so",
+            "for",
+            "or",
+            "but"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "John didn't give up looking for a job ______ he got an offer from a German company.",
+        "options": [
+            "until",
+            "since",
+            "because",
+            "if"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "Aunt Lucy will tell us something about her trip to Australia when she ______ back.",
+        "options": [
+            "came",
+            "comes",
+            "would come",
+            "will come"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "The robot can help me sweep the floor. ______ smart invention it is!",
+        "options": [
+            "What",
+            "What a",
+            "What an",
+            "How"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "Susan and Lily ______ tomatoes and other vegetables on the farm this time yesterday.",
+        "options": [
+            "pick",
+            "are picking",
+            "will pick",
+            "were picking"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "By the end of last week, she ______ in the west of China for two months helping the homeless children.",
+        "options": [
+            "will stay",
+            "has stayed",
+            "would stay",
+            "had stayed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Harry has decided ______ an online shop after graduating from school.",
+        "options": [
+            "open",
+            "to open",
+            "opened",
+            "opening"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "I wouldn't mind ______ a roommate. We can help each other and save money as well.",
+        "options": [
+            "having",
+            "to have",
+            "have",
+            "had"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "-- Remember to print on both sides of the paper.\n-- ______",
+        "options": [
+            "Me, too",
+            "Well done.",
+            "Sure. I will",
+            "That's all right."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2014-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "-- I was just in time to get there for the meeting. Thank you for lending me the bike.\n-- ______",
+        "options": [
+            "That's right.",
+            "Of course not.",
+            "You're welcome.",
+            "The same to you."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2014 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Which of the following words is pronounced /ʃeɪp/?",
+        "options": [
+            "shape",
+            "sheep",
+            "shop",
+            "ship"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "Nowadays I can choose online courses and study by ______.",
+        "options": [
+            "I",
+            "me",
+            "my",
+            "myself"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "I love this picture ______ you beside the music fountain.",
+        "options": [
+            "in",
+            "of",
+            "on",
+            "at"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "There was a big crowd waiting ______ the opening ceremony to start.",
+        "options": [
+            "by",
+            "from",
+            "for",
+            "with"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "Rose received a letter full of love from her parents on her ______ birthday.",
+        "options": [
+            "sixteen",
+            "sixteen's",
+            "sixteenth",
+            "sixteenths"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "Alex did the project on community service ______ better than his classmates.",
+        "options": [
+            "so",
+            "very",
+            "too",
+            "much"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "Leave the reference books behind, ______ you won't be able to think independently.",
+        "options": [
+            "or",
+            "and",
+            "so",
+            "but"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "______ Mike didn't win the race, he was still wearing a smile on his face.",
+        "options": [
+            "If",
+            "Since",
+            "Although",
+            "Because"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "The little dancer from Australia looks ______ in the long skirt.",
+        "options": [
+            "gently",
+            "happily",
+            "beautifully",
+            "lovely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "Now Jerry ______ the exchange programme with his classmates in the meeting room.",
+        "options": [
+            "discussed",
+            "is discussing",
+            "was discussing",
+            "has discussed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "Tim told us that his company ______ robots to do some of the work.",
+        "options": [
+            "uses",
+            "will use",
+            "has used",
+            "would use"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Over $30,000 ______ for a children's hospital by a British girl several months ago.",
+        "options": [
+            "is raised",
+            "was raised",
+            "will be raised",
+            "has been raised"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "My friend invited me ______ the art club, and I accepted it with pleasure.",
+        "options": [
+            "join",
+            "to join",
+            "joined",
+            "joining"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Martin was so busy ______ the old that he gave up his part-time job.",
+        "options": [
+            "helping",
+            "helped",
+            "to help",
+            "help"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "-- Mum, ______ I visit the Movie Museum tomorrow?\n-- I'm afraid you can't. It is closed on Monday.",
+        "options": [
+            "must",
+            "may",
+            "should",
+            "need"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "______ important it is for kids to imagine freely!",
+        "options": [
+            "What",
+            "What a",
+            "What an",
+            "How"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Please ______ your exam papers once again before handing them in.",
+        "options": [
+            "going over",
+            "went over",
+            "go over",
+            "to go over"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "-- ______ father took part in the charity activity in the neighbourhood yesterday?\n-- Peter's.",
+        "options": [
+            "Whose",
+            "What",
+            "Which",
+            "Who"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "-- Don't throw plastic bags towards the animals in the zoo.\n-- ______",
+        "options": [
+            "All right.",
+            "My pleasure.",
+            "Not at all.",
+            "Don't mention."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2015-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "-- You look sad, Betty. What's the matter with you?\n-- ______",
+        "options": [
+            "I've got the first prize.",
+            "I'm sorry to hear that.",
+            "I can't attend the summer camp.",
+            "I don't quite agree with you."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2015 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Let's take a rest and listen to some music. Which is correct for the underlined part?",
+        "options": [
+            "/e/",
+            "/i:/",
+            "/i/",
+            "/ə/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "The teenagers had ______ good time in the summer camp in their sister school.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "When James arrived at the railway station, he tried to look ______ a place to park his car.",
+        "options": [
+            "after",
+            "at",
+            "up",
+            "for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "The local community centre is open ______ Monday to Saturday.",
+        "options": [
+            "in",
+            "from",
+            "for",
+            "on"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "The retired couple have decided to go to college. It's time for ______ to begin a new life.",
+        "options": [
+            "they",
+            "them",
+            "their",
+            "theirs"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "This temple is one of ______ buildings in the town. We must take action to protect it.",
+        "options": [
+            "old",
+            "older",
+            "oldest",
+            "the oldest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "The manager sounded ______ on the phone. He offered to show us around the company.",
+        "options": [
+            "softly",
+            "friendly",
+            "gently",
+            "seriously"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "The light went out suddenly. It was very dark and ______ could be seen clearly.",
+        "options": [
+            "anything",
+            "something",
+            "nothing",
+            "everything"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "- ______ Disney amusement parks are there in China? - Two.",
+        "options": [
+            "How many",
+            "How often",
+            "How soon",
+            "How long"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "The flight was delayed by the storm, ______ the passengers had to wait at the airport.",
+        "options": [
+            "but",
+            "or",
+            "so",
+            "for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "The nurse won't leave her patients ______ she's sure they are all taken good care of.",
+        "options": [
+            "unless",
+            "because",
+            "since",
+            "if"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "A good friend is someone you ______ share your pleasure and pain with.",
+        "options": [
+            "ought",
+            "need",
+            "can",
+            "must"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "Last week Vivian ______ a dress for her mother with her first-month salary.",
+        "options": [
+            "buy",
+            "bought",
+            "will buy",
+            "would buy"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "This medicine ______ millions of people's lives since it was put into use.",
+        "options": [
+            "is saving",
+            "will save",
+            "has saved",
+            "had saved"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "After she finished ______ the story, Alice wrote a review for her school newspaper.",
+        "options": [
+            "read",
+            "reads",
+            "to read",
+            "reading"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "I can't tell you what she said. I've promised ______ it a secret.",
+        "options": [
+            "keep",
+            "to keep",
+            "keeping",
+            "kept"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "The twins ______ fond of the new idea in the magazine article.",
+        "options": [
+            "be",
+            "am",
+            "is",
+            "are"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "______ wonderful speech Emma gave at the UN conference!",
+        "options": [
+            "How",
+            "What",
+            "What a",
+            "What an"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "- Excuse me, where is the Moonlight Hotel? - ______. I'm a stranger myself.",
+        "options": [
+            "Sorry, I don't know.",
+            "No, I don't think so.",
+            "It doesn't matter.",
+            "Thank you all the same."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2016-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "- The Art Festival is coming. We're going to watch the play Twelfth Night. - ______.",
+        "options": [
+            "That's all right.",
+            "Never mind.",
+            "You're welcome.",
+            "Enjoy your time."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2016 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Which of the following underlined parts is different in pronunciation?",
+        "options": [
+            "fly",
+            "lazy",
+            "already",
+            "cloudy"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "Christine is selling her house, but on ______ other hand she doesn't want to move.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "We won! The honor belongs ______ all the members of our team.",
+        "options": [
+            "by",
+            "of",
+            "at",
+            "to"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "Shirley is still waiting for her flight to New York City ______ the airport.",
+        "options": [
+            "at",
+            "under",
+            "on",
+            "with"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "The headmaster introduced ______ to the German visitors before the welcome party.",
+        "options": [
+            "we",
+            "us",
+            "our",
+            "ours"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "______ knowledge and experience are important to finish that task.",
+        "options": [
+            "Either",
+            "Neither",
+            "None",
+            "Both"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "Did the policeman give much ______ on how to protect personal information?",
+        "options": [
+            "note",
+            "tip",
+            "advice",
+            "book"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-noun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "Alex believes he will soon be able to play chess as ______ as the computer.",
+        "options": [
+            "well",
+            "better",
+            "best",
+            "the best"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "Nowadays people wish to have ______ food than before as their life improves.",
+        "options": [
+            "healthy",
+            "healthier",
+            "healthiest",
+            "the healthiest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "Some exchange students ______ with their host families this time yesterday.",
+        "options": [
+            "are chatting",
+            "will chat",
+            "were chatting",
+            "have chatted"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "-- Do you know ______ a 5-day trip to Hong Kong costs?\n-- I guess it's about ¥4,000.",
+        "options": [
+            "how fast",
+            "how long",
+            "how soon",
+            "how much"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Several journalists ______ the lawyer about the international case an hour ago.",
+        "options": [
+            "interview",
+            "interviewed",
+            "will interview",
+            "had interviewed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "The museum ______ next month to celebrate the Science & Technology Festival.",
+        "options": [
+            "is decorated",
+            "will decorate",
+            "is decorating",
+            "will be decorated"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Vivian refuses ______ her children to the weekend training centre for extra classes.",
+        "options": [
+            "to send",
+            "sending",
+            "sent",
+            "sends"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "The workers are busy ______ windows to the new building these days.",
+        "options": [
+            "fix",
+            "fixed",
+            "fixing",
+            "to fix"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "-- ______ I park my car here for a while?\n-- No, you mustn't. Do you see the sign 'NO PARKING'?",
+        "options": [
+            "Would",
+            "May",
+            "Must",
+            "Should"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "The two companies decided to work together ______ they had common interest.",
+        "options": [
+            "because",
+            "unless",
+            "but",
+            "or"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "Professor Tu Youyou never stops doing research on Chinese medicine, ______?",
+        "options": [
+            "is she",
+            "does she",
+            "isn't she",
+            "doesn't she"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "-- Would you like to join me in making cakes tomorrow?\n-- ______",
+        "options": [
+            "It doesn't matter.",
+            "Don't worry.",
+            "You're welcome.",
+            "I'd love to."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2017-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "-- ______\n-- Congratulations!",
+        "options": [
+            "Sorry for breaking the glass.",
+            "How are you feeling today?",
+            "I was awarded first prize in the writing contest.",
+            "Why not take the underground to the university?"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2017 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Which of the following underlined parts is different in pronunciation?",
+        "options": [
+            "back",
+            "chat",
+            "hate",
+            "taxi"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "Hurry up! The concert will begin in ______ minute.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "My father is a good doctor. ______ works hard to help his patients.",
+        "options": [
+            "He",
+            "Him",
+            "His",
+            "Himself"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "Karen and Lily will go to Russia to watch the 2018 World Cup ______ July.",
+        "options": [
+            "on",
+            "in",
+            "at",
+            "of"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "Peter spent half a day fishing by the river, ______ he didn't catch anything.",
+        "options": [
+            "so",
+            "or",
+            "for",
+            "but"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "Catherine has two cousins. One is quiet, and ______ is noisy.",
+        "options": [
+            "another",
+            "the other",
+            "other",
+            "others"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "The bridge between the two islands is ______ one in Shanghai.",
+        "options": [
+            "long",
+            "longer",
+            "longest",
+            "the longest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "Frank is an independent boy. His parents are proud ______ him.",
+        "options": [
+            "on",
+            "to",
+            "in",
+            "of"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "- Must I do the project on my own? - No, you ______. You can work with your classmates.",
+        "options": [
+            "needn't",
+            "can't",
+            "shouldn't",
+            "mustn't"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "Michael ______ in a school in Yunnan from February to June next year.",
+        "options": [
+            "teach",
+            "taught",
+            "will teach",
+            "was teaching"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "Mr Black walked around and offered help ______ we were doing an experiment.",
+        "options": [
+            "while",
+            "although",
+            "until",
+            "unless"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Old Mr. Green doesn't feel ______ because some students visit him regularly.",
+        "options": [
+            "sadly",
+            "gently",
+            "lonely",
+            "angrily"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "The film Operation Red Sea ______ a lot of praise since its first show months ago.",
+        "options": [
+            "wins",
+            "win",
+            "will win",
+            "has won"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Mr. Zhou is good at cooking and he has decided ______ his own restaurant.",
+        "options": [
+            "open",
+            "opened",
+            "to open",
+            "opening"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "The debate on whether to keep pets ______ forty minutes yesterday afternoon.",
+        "options": [
+            "last",
+            "lasted",
+            "will last",
+            "has lasted"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "Sue practises ______ the violin hard and often gives wonderful performances.",
+        "options": [
+            "play",
+            "played",
+            "to play",
+            "playing"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "The self-driving plane proves to be useful in many ways. ______ smart invention it is!",
+        "options": [
+            "What",
+            "What a",
+            "What an",
+            "How"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "Please ______ the rubbish into different litter bins according to the signs.",
+        "options": [
+            "puts",
+            "put",
+            "putting",
+            "to put"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "- I'm awfully sorry for bringing you so much trouble. - ______",
+        "options": [
+            "Never mind.",
+            "It's a pleasure.",
+            "Of course not.",
+            "You are welcome."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2018-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "- ______ - That's a good idea.",
+        "options": [
+            "I've got the first prize in the English speech contest.",
+            "I'd like to invite you to my birthday party tomorrow.",
+            "Shall we go to the farm to pick peaches this weekend?",
+            "Would you mind opening the window a bit more?"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2018 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Which of the following words is pronounced /pri'vent/?",
+        "options": [
+            "present",
+            "pretend",
+            "prevent",
+            "pleasant"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "Emma, an actress, has become a superstar because of ______ hard work and talent.",
+        "options": [
+            "she",
+            "her",
+            "hers",
+            "herself"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "We communicate ______ each other in many ways, such as by e-mail or by phone.",
+        "options": [
+            "on",
+            "through",
+            "in",
+            "with"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "I couldn't get much ______ of the exhibition of clean-energy products from the website.",
+        "options": [
+            "news",
+            "photos",
+            "posters",
+            "advertisements"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "______ beautifully little Simon dances in front of the camera!",
+        "options": [
+            "What",
+            "What a",
+            "How",
+            "How a"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "David's responses were ______ than anyone else's and he won the competition.",
+        "options": [
+            "quick",
+            "quicker",
+            "quickest",
+            "the quickest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "Look! They ______ about the solution to the network problems again.",
+        "options": [
+            "argue",
+            "are arguing",
+            "argued",
+            "were arguing"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "The host told a joke at the party and made the guests ______ a lot.",
+        "options": [
+            "laugh",
+            "laughing",
+            "to laugh",
+            "laughed"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "Would you mind ______ care of my pet fish while I'm away on holiday?",
+        "options": [
+            "take",
+            "taken",
+            "to take",
+            "taking"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "By the end of last month, Jane ______ enough money for the poor sick boy.",
+        "options": [
+            "raised",
+            "would raise",
+            "had raised",
+            "has raised"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "Frank held his breath ______ the water to search for his ring in the swimming pool.",
+        "options": [
+            "at",
+            "by",
+            "over",
+            "under"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Worries in life ______ if you speak out to your close friend.",
+        "options": [
+            "will reduce",
+            "were reducing",
+            "will be reduced",
+            "were reduced"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "According to the rule, used batteries ______ be dropped in the red bin for harmful wastes.",
+        "options": [
+            "must",
+            "need",
+            "can",
+            "may"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Benjamin has learned that it is not polite to make ______ fun of others.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "The New Year Concert was so amazing that ______ left in the middle of it.",
+        "options": [
+            "everybody",
+            "anybody",
+            "nobody",
+            "somebody"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "There was something wrong with my car, ______ I went to work by underground.",
+        "options": [
+            "for",
+            "so",
+            "or",
+            "but"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "______ the journey was tiring, Jeff thought it was worth both the time and the money.",
+        "options": [
+            "As",
+            "Since",
+            "Unless",
+            "Although"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "The climbers made a fire during the night in order to be ______ in the mountain.",
+        "options": [
+            "safe",
+            "safely",
+            "save",
+            "safe"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "-- There is an oil painting show of the city development. Shall we go for it tomorrow?\n-- ______",
+        "options": [
+            "It doesn't matter.",
+            "Great idea.",
+            "Not at all.",
+            "My pleasure."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2019-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "-- ______\n-- Come on! Just give it a try.",
+        "options": [
+            "I'm afraid I can't ride the bike.",
+            "I'm sorry for breaking the window.",
+            "I'm glad to win first place.",
+            "I'm sure it's bad for your eyes."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2019 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "Which of the following words is pronounced /spi:tN/?",
+        "options": [
+            "speech",
+            "space",
+            "speed",
+            "spend"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "Kelly's cheese cakes were sold out within half ______ hour at the night market.",
+        "options": [
+            "a",
+            "an",
+            "the",
+            "/"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-article",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "Mr. Smith always encourages his students to be active ______ class.",
+        "options": [
+            "in",
+            "by",
+            "with",
+            "from"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "The ancient town has been open to visitors ______ about ten years.",
+        "options": [
+            "by",
+            "for",
+            "on",
+            "though"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "______ friend Claude from France is keen on Chinese culture.",
+        "options": [
+            "I",
+            "Me",
+            "My",
+            "Mine"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "There ______ more than two ways to solve this maths problem.",
+        "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "Randy wrote two novels. ______ of them were made into films. I've seen them.",
+        "options": [
+            "None",
+            "Both",
+            "All",
+            "Neither"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "-______ is in charge of the summer concert? -Jessie. She has a lot of experience.",
+        "options": [
+            "Where",
+            "Why",
+            "What",
+            "Who"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "Balanced diets are just as ______ as regular exercise in our daily life.",
+        "options": [
+            "important",
+            "more important",
+            "most important",
+            "the most important"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "Emma felt ______ when her parents were on business trips.",
+        "options": [
+            "sadly",
+            "angrily",
+            "unfortunately",
+            "lonely"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-36",
+        "sourceType": "choice",
+        "stem": "Every year thousands of tourists ______ the mountain area to relax themselves.",
+        "options": [
+            "visited",
+            "were visiting",
+            "visit",
+            "have visited"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-37",
+        "sourceType": "choice",
+        "stem": "Mike ______ the furniture into his new flat this time yesterday.",
+        "options": [
+            "would move",
+            "was moving",
+            "has moved",
+            "had moved"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-38",
+        "sourceType": "choice",
+        "stem": "The engineers will keep ______ the project with the manager of the company.",
+        "options": [
+            "discuss",
+            "discussed",
+            "discussing",
+            "to discuss"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-39",
+        "sourceType": "choice",
+        "stem": "Doctors tell us ______ our hands before and after every meal.",
+        "options": [
+            "wash",
+            "washed",
+            "washing",
+            "to wash"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-40",
+        "sourceType": "choice",
+        "stem": "According to the traffic law, children under 12 ______ ride bicycles on the road.",
+        "options": [
+            "won't",
+            "wouldn't",
+            "needn't",
+            "mustn't"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-41",
+        "sourceType": "choice",
+        "stem": "-Tom, ______ here to carry the luggage upstairs for me, will you? -All right.",
+        "options": [
+            "come",
+            "came",
+            "coming",
+            "to come"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-42",
+        "sourceType": "choice",
+        "stem": "Which club do you prefer to join, the chess club ______ the dancing club?",
+        "options": [
+            "so",
+            "but",
+            "or",
+            "for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-43",
+        "sourceType": "choice",
+        "stem": "Vivian will take her daughter to the amusement park ______ she gets the tickets.",
+        "options": [
+            "if",
+            "until",
+            "although",
+            "unless"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-44",
+        "sourceType": "choice",
+        "stem": "-______ -It's a pleasure.",
+        "options": [
+            "Don't worry about the task.",
+            "Thank you for showing me around.",
+            "Be careful when you travel.",
+            "You'd better go to the dentist's now."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2020-part2-choice-45",
+        "sourceType": "choice",
+        "stem": "-I think wearing seat belts is very important for road safety. -______",
+        "options": [
+            "That's all right.",
+            "I'm sorry.",
+            "That's a good idea.",
+            "I agree."
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2020 上海市中考英语真题（图片人工补录）",
+        "knowledgePointId": "kp-mixed",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-21",
+        "sourceType": "choice",
+        "stem": "Many medical workers are busy ______ their work during lunch time.",
+        "options": [
+            "to",
+            "of",
+            "from",
+            "with"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-preposition",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-22",
+        "sourceType": "choice",
+        "stem": "I haven't brought my dictionary with me. Can I use ______?",
+        "options": [
+            "you",
+            "your",
+            "yours",
+            "yourself"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-pronoun",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-23",
+        "sourceType": "choice",
+        "stem": "There was ______ to eat at home, so I went out to get some food.",
+        "options": [
+            "anything",
+            "nothing",
+            "something",
+            "everything"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-24",
+        "sourceType": "choice",
+        "stem": "Yuan Longping is recognized as one of ______ agricultural scientists in the world.",
+        "options": [
+            "great",
+            "greater",
+            "greatest",
+            "the greatest"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-comparative",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-25",
+        "sourceType": "choice",
+        "stem": "Your idea of a day on the beach sounds ______. Can I join you?",
+        "options": [
+            "lovely",
+            "softly",
+            "politely",
+            "beautifully"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-adjective-adverb",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-26",
+        "sourceType": "choice",
+        "stem": "- The 10th China Flower Expo is being held in Chongming. ______ does it last? - About 40 days.",
+        "options": [
+            "How long",
+            "How soon",
+            "How far",
+            "How often"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-question",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-27",
+        "sourceType": "choice",
+        "stem": "- ______ I have two tickets for the Chinese Farmers' Painting Exhibition? - Sorry. The tickets are sold out.",
+        "options": [
+            "Must",
+            "Need",
+            "Should",
+            "May"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-modal",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-28",
+        "sourceType": "choice",
+        "stem": "Last weekend, David ______ a visit to his grandparents in the countryside.",
+        "options": [
+            "pays",
+            "paid",
+            "will pay",
+            "has paid"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-29",
+        "sourceType": "choice",
+        "stem": "The headmaster is not available now. He ______ to the new teachers.",
+        "options": [
+            "speaks",
+            "spoke",
+            "is speaking",
+            "was speaking"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-30",
+        "sourceType": "choice",
+        "stem": "Michael and his friends practise ______ table tennis after school every day.",
+        "options": [
+            "play",
+            "played",
+            "playing",
+            "to play"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-nonfinite",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-31",
+        "sourceType": "choice",
+        "stem": "The manager asked his secretary ______ the report before Friday.",
+        "options": [
+            "finish",
+            "finishes",
+            "finishing",
+            "to finish"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-passive-voice",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-32",
+        "sourceType": "choice",
+        "stem": "We should look forward to the future, ______ never forget the past.",
+        "options": [
+            "or",
+            "so",
+            "but",
+            "for"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-33",
+        "sourceType": "choice",
+        "stem": "The fridge is environmentally friendly ______ it uses less electricity.",
+        "options": [
+            "because",
+            "until",
+            "before",
+            "though"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-conjunction",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-34",
+        "sourceType": "choice",
+        "stem": "The amusement park has received many visitors, ______?",
+        "options": [
+            "has it",
+            "hasn't it",
+            "does it",
+            "doesn't it"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-tense",
+        "difficulty": "pending"
+    },
+    {
+        "id": "sh-2021-part2-choice-35",
+        "sourceType": "choice",
+        "stem": "______ amazing the film Hi, Mom is! Mother's love always touches my heart.",
+        "options": [
+            "How an",
+            "How",
+            "What an",
+            "What"
+        ],
+        "gradeBand": "middle-school-source",
+        "examSource": "2021 上海市中考英语真题（文本人工校准）",
+        "knowledgePointId": "kp-exclamation",
+        "difficulty": "pending"
+    }
+]
