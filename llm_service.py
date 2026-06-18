@@ -129,7 +129,7 @@ def _build_generate_prompt(grade, question_type, count, knowledge_point=None, hi
         f"{knowledge_constraint}"
         f"{history_constraint}"
         f"要求：\n"
-        f"1. 题目难度适合小学{grade_label}学生\n"
+        f"1. 题目难度适合小学{grade_label}学生,稍微高于教材基础难度,考查学生对知识点的深入理解和灵活运用\n"
         f"2. 每道题必须有明确的知识点（kp字段用简洁的中文描述，如'be动词'、'一般现在时'）\n"
         f"3. **选择题（choice）格式要求**：\n"
         f"   - opts字段必须包含4个选项（纯文本，不带A/B/C/D前缀）\n"
