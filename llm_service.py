@@ -45,7 +45,6 @@ GRADE_LABELS = {
     3: "三年级",
     4: "四年级",
     5: "五年级",
-    6: "六年级",
 }
 
 QUESTION_TYPE_LABELS = {
